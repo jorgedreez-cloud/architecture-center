@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "entity.schema.json",
+  "title": "Entity node",
+  "description": "One row per extracted entity mention, resolved to a canonical node. Covers all node types except Document/ReferenceArchitecture (document.schema.json) and Source (source.schema.json): SAPProduct, SAPService, Capability, Agent, Protocol, API, DataSource, IdentitySecurity, UseCase, Requirement, Constraint, Diagram, TechnologyDomain.",
+  "type": "object",
+  "required": [
+    "node_id",
+    "type",
+    "name",
+    "source_id",
+    "source_url",
+    "source_file",
+    "source_section",
+    "evidence",
+    "evidence_type",
+    "confidence",
+    "repository_commit",
+    "extraction_date"
+  ],
+  "properties": {
+    "node_id": {
+      "type": "string",
+      "description": "'entity:<canonical_id>' for canonical-registry entities, else 'entity:<type>:<slugified-name>'."
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "SAPProduct", "SAPService", "Capability", "Agent", "Protocol", "API",
+        "DataSource", "IdentitySecurity", "UseCase", "Requirement",
+        "Constraint", "Diagram", "TechnologyDomain"
+      ]
+    },
+    "name": { "type": "string" },
+    "canonical_id": {
+      "type": ["string", "null"],
+      "description": "Matched entry from config/ontology.yaml canonical_entities, if any."
+    },
+    "extraction_method": {
+      "type": "string",
+      "enum": [
+        "front_matter_tag",
+        "services_and_components_link",
+        "resources_link",
+        "canonical_lexicon_match",
+        "explicit_sentence",
+        "drawio_reference",
+        "use_case_bullet"
+      ]
+    },
+    "found_in_document": {
+      "type": "string",
+      "description": "node_id of the Document this mention was found in, e.g. 'doc:76ec36'."
+    },
+    "source_id": { "type": "string" },
+    "source_url": { "type": ["string", "null"] },
+    "source_file": { "type": "string" },
+    "source_section": { "type": ["string", "null"] },
+    "evidence": { "type": "string" },
+    "evidence_type": { "type": "string", "enum": ["explicit", "inferred"] },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "repository_commit": { "type": "string" },
+    "extraction_date": { "type": "string", "format": "date-time" }
+  }
+}

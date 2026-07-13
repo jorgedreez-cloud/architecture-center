@@ -1,0 +1,84 @@
+# Target topics for the agentic-ai-knowledge-graph research project.
+# Used by scripts/extract_inventory.py to flag which documents are
+# in-scope for deep extraction, and by scripts/extract_document.py
+# as a starting lexicon for rule-based entity matching.
+#
+# This file is research tooling. It does not modify or influence the
+# SAP Architecture Center site content in docs/.
+
+topics:
+  - id: agentic-ai
+    label: Agentic AI / AI Agents
+    keywords:
+      - agentic ai
+      - ai agent
+      - ai agents
+      - multi-agent
+      - autonomous agent
+      - embodied ai
+
+  - id: joule
+    label: Joule & Joule Studio
+    keywords:
+      - joule
+      - joule studio
+      - joule skills
+      - joule copilot
+      - joule agents
+
+  - id: sap-btp
+    label: SAP Business Technology Platform
+    keywords:
+      - sap btp
+      - business technology platform
+      - sap cloud identity services
+      - sap ai core
+      - generative ai hub
+
+  - id: sap-bdc
+    label: SAP Business Data Cloud
+    keywords:
+      - business data cloud
+      - sap bdc
+
+  - id: sap-hana-cloud
+    label: SAP HANA Cloud
+    keywords:
+      - sap hana cloud
+      - hana cloud
+
+  - id: sap-datasphere
+    label: SAP Datasphere
+    keywords:
+      - sap datasphere
+      - datasphere
+
+  - id: sap-s4hana
+    label: SAP S/4HANA
+    keywords:
+      - s/4hana
+      - s4hana
+      - sap s/4hana
+
+  - id: knowledge-graph
+    label: Knowledge Graph
+    keywords:
+      - knowledge graph
+      - knowledge core
+      - canonical model
+      - semantic model
+
+  - id: rag
+    label: RAG / GraphRAG
+    keywords:
+      - retrieval augmented generation
+      - retrieval-augmented generation
+      - " rag "
+      - graphrag
+      - semantic search
+      - vector search
+      - document grounding
+
+# Matching is case-insensitive substring matching over document body text
+# (front matter fields keywords/tags/title/description are also checked).
+# A document is "in scope" if it matches at least one topic keyword.

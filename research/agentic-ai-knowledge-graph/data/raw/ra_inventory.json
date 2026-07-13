@@ -1,0 +1,5489 @@
+{
+  "generated_at": "2026-07-13T12:38:07.870975+00:00",
+  "repository_commit": "4635f734f2f82c6497bc53d5cf972b5cbfec5e52",
+  "site_url": "https://architecture.learning.sap.com",
+  "summary": {
+    "total_readme_files": 120,
+    "landing_page_count": 1,
+    "ra_folder_count_total": 32,
+    "ra_folder_count_real": 31,
+    "ra_docs_total": 119,
+    "real_ra_docs": 118,
+    "real_ra_root_docs": 31,
+    "real_ra_subpage_docs": 87,
+    "draft_count": 4,
+    "unlisted_count": 2,
+    "published_and_listed_count": 114,
+    "topic_matched_count": 81
+  },
+  "documents": [
+    {
+      "source_file": "docs/ref-arch/RA0000/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0000",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": true,
+      "front_matter_id": "id-ra0000",
+      "slug": "/ref-arch/demo",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/demo",
+      "title": "This is the demo page [RA0000]",
+      "tags": [
+        "demo",
+        "azure",
+        "aws",
+        "gcp"
+      ],
+      "keywords": [
+        "sap",
+        "cloud",
+        "demo"
+      ],
+      "draft": false,
+      "unlisted": true,
+      "sidebar_position": 10,
+      "last_update": {
+        "date": "2025-05-15",
+        "author": "cernus76"
+      },
+      "contributors": [
+        "cernus76",
+        "jmsrpp",
+        "navyakhurana"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0000/drawio/demo.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0001/1-event-driven-arch/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0001",
+      "subfolder": "1-event-driven-arch",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "59c1f6",
+      "slug": "/ref-arch/59c1f6",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/59c1f6",
+      "title": "Introduction and SAP's EDA Strategy",
+      "tags": [
+        "azure",
+        "aws",
+        "integration",
+        "appdev",
+        "eda"
+      ],
+      "keywords": [
+        "sap",
+        "btp",
+        "event-driven architecture",
+        "eda integration",
+        "azure",
+        "cloud application programming model"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "anbazhagan-uma",
+        "date": "2025-10-18"
+      },
+      "contributors": [
+        "anbazhagan-uma",
+        "pra1veenk",
+        "AjitKP91",
+        "swatimaste00"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0001/1-event-driven-arch/drawio/eda_hybrid_enterprise.drawio",
+        "docs/ref-arch/RA0001/1-event-driven-arch/drawio/eda_sap_enterprise.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0001/2-design-considerations/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0001",
+      "subfolder": "2-design-considerations",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "ee6233",
+      "slug": "/ref-arch/ee6233",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/ee6233",
+      "title": "Design Considerations for EDA Applications",
+      "tags": [
+        "azure",
+        "aws",
+        "integration",
+        "appdev",
+        "eda"
+      ],
+      "keywords": [
+        "sap",
+        "event-driven patterns",
+        "eda applications",
+        "cloud design considerations",
+        "architecture challenges"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "anbazhagan-uma",
+        "date": "2025-10-18"
+      },
+      "contributors": [
+        "anbazhagan-uma",
+        "pra1veenk",
+        "AjitKP91",
+        "swatimaste00"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0001/2-design-considerations/drawio/e2b-cc.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0001/2-design-considerations/images/eda-sap.png",
+        "docs/ref-arch/RA0001/2-design-considerations/images/event-sources.png"
+      ],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0001/3-sap-eda-patterns/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0001",
+      "subfolder": "3-sap-eda-patterns",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "6de922",
+      "slug": "/ref-arch/6de922",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/6de922",
+      "title": "EDA Sample Use Cases",
+      "tags": [
+        "appdev",
+        "integration",
+        "eda"
+      ],
+      "keywords": [
+        "sap",
+        "eda",
+        "integration"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "anbazhagan-uma",
+        "date": "2025-10-24"
+      },
+      "contributors": [
+        "anbazhagan-uma"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0001/3-sap-eda-patterns/drawio/eda_eventhub.drawio",
+        "docs/ref-arch/RA0001/3-sap-eda-patterns/drawio/eda_inbound_eventhub.drawio",
+        "docs/ref-arch/RA0001/3-sap-eda-patterns/drawio/eda_pattern1_s4.drawio",
+        "docs/ref-arch/RA0001/3-sap-eda-patterns/drawio/eda_pattern2_sf.drawio",
+        "docs/ref-arch/RA0001/3-sap-eda-patterns/drawio/enterprise_eda.drawio",
+        "docs/ref-arch/RA0001/3-sap-eda-patterns/drawio/event_enablement.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0001/4-e2b-framework/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0001",
+      "subfolder": "4-e2b-framework",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "2a28bd",
+      "slug": "/ref-arch/2a28bd",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/2a28bd",
+      "title": "SAP CAP Framework for Events to Business Actions Integration",
+      "tags": [
+        "cap",
+        "aws",
+        "appdev",
+        "integration",
+        "eda"
+      ],
+      "keywords": [
+        "sap",
+        "aws iot integration",
+        "event-to-business actions",
+        "cloud application programming"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "swatimaste00",
+        "date": "2025-05-10"
+      },
+      "contributors": [
+        "anbazhagan-uma",
+        "pra1veenk",
+        "AjitKP91",
+        "swatimaste00"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0001/4-e2b-framework/drawio/e2b-cc.drawio",
+        "docs/ref-arch/RA0001/4-e2b-framework/drawio/e2b-privatelink.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0001/5-aws-iot-integration/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0001",
+      "subfolder": "5-aws-iot-integration",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "448754",
+      "slug": "/ref-arch/448754",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/448754",
+      "title": "Build Events-to-Business Actions Scenarios with SAP BTP and AWS IoT SiteWise",
+      "tags": [
+        "cap",
+        "aws",
+        "appdev",
+        "integration",
+        "eda"
+      ],
+      "keywords": [
+        "sap",
+        "aws iot integration",
+        "event-to-business actions",
+        "cloud application programming"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "swatimaste00",
+        "date": "2025-05-10"
+      },
+      "contributors": [
+        "anbazhagan-uma",
+        "pra1veenk",
+        "AjitKP91",
+        "swatimaste00"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0001/5-aws-iot-integration/drawio/e2b-awsiot-cc.drawio",
+        "docs/ref-arch/RA0001/5-aws-iot-integration/drawio/e2b-awsiot-pl.drawio",
+        "docs/ref-arch/RA0001/5-aws-iot-integration/drawio/e2b-awsiot-sqs.drawio",
+        "docs/ref-arch/RA0001/5-aws-iot-integration/drawio/e2b-awsiotsitewise-pl.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0001/5-aws-iot-integration/images/aws-businessprocess.png"
+      ],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0001/6-azure-iot-integration/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0001",
+      "subfolder": "6-azure-iot-integration",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "988fb1",
+      "slug": "/ref-arch/988fb1",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/988fb1",
+      "title": "Build Events-to-Business Actions Scenarios with SAP BTP and Microsoft Azure",
+      "tags": [
+        "cap",
+        "azure",
+        "appdev",
+        "integration",
+        "eda"
+      ],
+      "keywords": [
+        "sap",
+        "microsoft azure",
+        "events-to-business",
+        "event-driven architecture",
+        "iot integration"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "pra1veenk",
+        "date": "2025-05-10"
+      },
+      "contributors": [
+        "anbazhagan-uma",
+        "pra1veenk",
+        "AjitKP91",
+        "swatimaste00"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0001/6-azure-iot-integration/drawio/e2b-azure-cc.drawio",
+        "docs/ref-arch/RA0001/6-azure-iot-integration/drawio/e2b-azure-pl.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0001/6-azure-iot-integration/images/businessprocess.png"
+      ],
+      "matched_topics": [
+        "sap-btp",
+        "sap-s4hana"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0001/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0001",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "196eba",
+      "slug": "/ref-arch/196eba",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/196eba",
+      "title": "Designing Event-Driven Applications",
+      "tags": [
+        "azure",
+        "aws",
+        "integration",
+        "appdev",
+        "eda"
+      ],
+      "keywords": [
+        "sap",
+        "event-driven applications",
+        "eda patterns",
+        "cap framework",
+        "business event processing",
+        "advanced event mesh",
+        "event mesh"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 20,
+      "last_update": {
+        "author": "anbazhagan-uma",
+        "date": "2025-10-10"
+      },
+      "contributors": [
+        "anbazhagan-uma",
+        "pra1veenk",
+        "AjitKP91",
+        "swatimaste00",
+        "anirban-sap"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0001/drawio/eda_enterprise.drawio",
+        "docs/ref-arch/RA0001/drawio/eda_ref_arch.drawio",
+        "docs/ref-arch/RA0001/drawio/eda_strategy.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/1-fundamentals/1-single-region-resiliency/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": "1-fundamentals",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "a134ec",
+      "slug": "/ref-arch/a134ec",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/a134ec",
+      "title": "Single-region resiliency",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "integration",
+        "single-region resiliency",
+        "disaster recovery",
+        "business continuity",
+        "high availability"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "mahesh0431",
+        "date": "2025-05-12"
+      },
+      "contributors": [
+        "martinfrick",
+        "maxstreifeneder",
+        "kshanth",
+        "mahesh0431",
+        "anirban-sap",
+        "jmsrpp",
+        "uklasing",
+        "alperdedeoglu",
+        "arajsinha"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0002/1-fundamentals/1-single-region-resiliency/drawio/multi-az.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/1-fundamentals/2-multi-region-resiliency/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": "1-fundamentals",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "332db2",
+      "slug": "/ref-arch/332db2",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/332db2",
+      "title": "Multi-region resiliency",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "multi-region resilience",
+        "cloud disaster recovery",
+        "application availability"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "mahesh0431",
+        "date": "2025-05-12"
+      },
+      "contributors": [
+        "martinfrick",
+        "maxstreifeneder",
+        "kshanth",
+        "mahesh0431",
+        "anirban-sap",
+        "jmsrpp",
+        "uklasing",
+        "alperdedeoglu",
+        "arajsinha"
+      ],
+      "drawio_files": [],
+      "image_files": [],
+      "matched_topics": [
+        "rag"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/1-fundamentals/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": "1-fundamentals",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "33c25f",
+      "slug": "/ref-arch/33c25f",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/33c25f",
+      "title": "Single-region and Multi-region resiliency",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "multi-region",
+        "resiliency architecture",
+        "regional outages",
+        "cloud disaster recovery"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "arajsinha",
+        "date": "2025-01-31"
+      },
+      "contributors": [],
+      "drawio_files": [],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/2-geographic-redundancy/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": "2-geographic-redundancy",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "cbc081",
+      "slug": "/ref-arch/cbc081",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/cbc081",
+      "title": "Geographic Redundancy",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "geographic redundancy",
+        "disaster recovery",
+        "business continuity solutions"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "arajsinha",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "martinfrick",
+        "maxstreifeneder",
+        "kshanth",
+        "mahesh0431",
+        "anirban-sap",
+        "jmsrpp",
+        "uklasing",
+        "alperdedeoglu",
+        "arajsinha"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0002/2-geographic-redundancy/drawio/geographic-redundancy.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/3-loadbalancers/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": "3-loadbalancers",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "b66add",
+      "slug": "/ref-arch/b66add",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/b66add",
+      "title": "Load Balancers",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "load balancing",
+        "multi-region setup",
+        "traffic distribution",
+        "business reliability"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "arajsinha",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "martinfrick",
+        "maxstreifeneder",
+        "kshanth",
+        "mahesh0431",
+        "anirban-sap",
+        "jmsrpp",
+        "uklasing",
+        "alperdedeoglu",
+        "arajsinha"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0002/3-loadbalancers/drawio/loadbalancer.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/4-data-synchronization/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": "4-data-synchronization",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "dd9a38",
+      "slug": "/ref-arch/dd9a38",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/dd9a38",
+      "title": "Data Synchronization",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "multi-region synchronization",
+        "data replication",
+        "failover capabilities",
+        "cloud-integrated resiliency"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "arajsinha",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "martinfrick",
+        "maxstreifeneder",
+        "kshanth",
+        "mahesh0431",
+        "anirban-sap",
+        "jmsrpp",
+        "uklasing",
+        "alperdedeoglu",
+        "arajsinha"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0002/4-data-synchronization/drawio/data-replication.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-hana-cloud"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/5-event-synchronization/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": "5-event-synchronization",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "b6ca4c",
+      "slug": "/ref-arch/b6ca4c",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/b6ca4c",
+      "title": "Events Synchronization",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration",
+        "eda"
+      ],
+      "keywords": [
+        "sap",
+        "resiliency design",
+        "multi-region",
+        "event synchronization",
+        "advanced event mesh"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "arajsinha",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "martinfrick",
+        "maxstreifeneder",
+        "kshanth",
+        "mahesh0431",
+        "anirban-sap",
+        "jmsrpp",
+        "uklasing",
+        "alperdedeoglu",
+        "arajsinha"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0002/5-event-synchronization/drawio/event-replication.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/6-control-plane/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": "6-control-plane",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "6cbe7d",
+      "slug": "/ref-arch/6cbe7d",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/6cbe7d",
+      "title": "Control Plane for Orchestration",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "application reliability",
+        "ha dr architecture",
+        "business continuity",
+        "failover strategies"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "arajsinha",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "martinfrick",
+        "maxstreifeneder",
+        "kshanth",
+        "mahesh0431",
+        "anirban-sap",
+        "jmsrpp",
+        "uklasing",
+        "alperdedeoglu",
+        "arajsinha"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0002/6-control-plane/drawio/multi-region-manager.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/7-sample-implementations/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": "7-sample-implementations",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "cc4e29",
+      "slug": "/ref-arch/cc4e29",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/cc4e29",
+      "title": "HA/DR Sample Implementations",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "disaster recovery",
+        "ha dr solutions",
+        "azure traffic manager",
+        "Google Cloud DNS",
+        "aws route 53"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "mahesh0431",
+        "date": "2025-05-12"
+      },
+      "contributors": [
+        "martinfrick",
+        "maxstreifeneder",
+        "kshanth",
+        "mahesh0431",
+        "anirban-sap",
+        "jmsrpp",
+        "uklasing",
+        "alperdedeoglu",
+        "arajsinha"
+      ],
+      "drawio_files": [],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/8-security/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": "8-security",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "90706a",
+      "slug": "/ref-arch/90706a",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/90706a",
+      "title": "Security",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration",
+        "security"
+      ],
+      "keywords": [
+        "sap",
+        "multi-region security",
+        "enterprise cloud protection",
+        "service-to-service security"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "mahesh0431",
+        "date": "2025-05-12"
+      },
+      "contributors": [
+        "martinfrick",
+        "maxstreifeneder",
+        "kshanth",
+        "mahesh0431",
+        "anirban-sap",
+        "jmsrpp",
+        "uklasing",
+        "alperdedeoglu",
+        "arajsinha"
+      ],
+      "drawio_files": [],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/9-tco/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": "9-tco",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "d7ab1e",
+      "slug": "/ref-arch/d7ab1e",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/d7ab1e",
+      "title": "Cost of Ownership",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "cost optimization",
+        "multi-region architecture",
+        "cloud compliance",
+        "efficient setups"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "mahesh0431",
+        "date": "2025-05-12"
+      },
+      "contributors": [
+        "martinfrick",
+        "maxstreifeneder",
+        "kshanth",
+        "mahesh0431",
+        "anirban-sap",
+        "jmsrpp",
+        "uklasing",
+        "alperdedeoglu",
+        "arajsinha"
+      ],
+      "drawio_files": [],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0002/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0002",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "bbfc34",
+      "slug": "/ref-arch/bbfc34",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/bbfc34",
+      "title": "Architecting Multi-Region HA/DR resiliency patterns",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "multi-region architecture",
+        "ha dr strategies",
+        "business reliability",
+        "failover management"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 30,
+      "last_update": {
+        "author": "mahesh0431",
+        "date": "2025-02-19"
+      },
+      "contributors": [
+        "martinfrick",
+        "maxstreifeneder",
+        "kshanth",
+        "mahesh0431",
+        "anirban-sap",
+        "jmsrpp",
+        "uklasing",
+        "alperdedeoglu",
+        "arajsinha"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0002/drawio/architecting-multi-region-resiliency-for-sap-btp-use-cases.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0003/fedml-aws/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0003",
+      "subfolder": "fedml-aws",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "d764f7",
+      "slug": "/ref-arch/d764f7",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/d764f7",
+      "title": "FedML-AWS for Amazon Sagemaker",
+      "tags": [
+        "aws",
+        "data"
+      ],
+      "keywords": [
+        "sap",
+        "aws",
+        "amazon sagemaker",
+        "machine learning",
+        "fedml integration",
+        "business data training"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2025-01-23"
+      },
+      "contributors": [
+        "s-krishnamoorthy",
+        "jackseeburger",
+        "chaturvedakash",
+        "karishma-kapur",
+        "ranbian",
+        "ThatDodoBird"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0003/fedml-aws/drawio/fedml-aws.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0003/fedml-azure/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0003",
+      "subfolder": "fedml-azure",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "02c5f1",
+      "slug": "/ref-arch/02c5f1",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/02c5f1",
+      "title": "FedML-Azure for Azure Machine Learning",
+      "tags": [
+        "azure",
+        "data"
+      ],
+      "keywords": [
+        "sap",
+        "azure machine learning",
+        "fedml",
+        "data integration",
+        "live business data"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2025-01-23"
+      },
+      "contributors": [
+        "s-krishnamoorthy",
+        "jackseeburger",
+        "chaturvedakash",
+        "karishma-kapur",
+        "ranbian",
+        "ThatDodoBird"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0003/fedml-azure/drawio/fedml-azure.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0003/fedml-databricks/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0003",
+      "subfolder": "fedml-databricks",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "6e2937",
+      "slug": "/ref-arch/6e2937",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/6e2937",
+      "title": "FedML-Databricks for Databricks platform",
+      "tags": [
+        "databricks",
+        "data"
+      ],
+      "keywords": [
+        "sap",
+        "databricks platform",
+        "fedml integration",
+        "machine learning",
+        "live business data"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2025-01-23"
+      },
+      "contributors": [
+        "s-krishnamoorthy",
+        "jackseeburger",
+        "chaturvedakash",
+        "karishma-kapur",
+        "ranbian",
+        "ThatDodoBird"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0003/fedml-databricks/drawio/fedml-databricks.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0003/fedml-gcp/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0003",
+      "subfolder": "fedml-gcp",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "494ec6",
+      "slug": "/ref-arch/494ec6",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/494ec6",
+      "title": "FedML-GCP for Google Vertex AI",
+      "tags": [
+        "gcp",
+        "data"
+      ],
+      "keywords": [
+        "sap",
+        "gcp vertex ai",
+        "fedml integration",
+        "google cloud platforms",
+        "machine learning"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2025-01-23"
+      },
+      "contributors": [
+        "s-krishnamoorthy",
+        "jackseeburger",
+        "chaturvedakash",
+        "karishma-kapur",
+        "ranbian",
+        "ThatDodoBird"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0003/fedml-gcp/drawio/fedml-gcp.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0003/fedml-nvidia/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0003",
+      "subfolder": "fedml-nvidia",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "d5d3ce",
+      "slug": "/ref-arch/d5d3ce",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/d5d3ce",
+      "title": "FedML's support for NVIDIA GPUs",
+      "tags": [
+        "nvidia",
+        "data"
+      ],
+      "keywords": [
+        "sap",
+        "nvidia gpu integration",
+        "datasphere federation",
+        "machine learning acceleration",
+        "fedml gpu processing"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2025-01-23"
+      },
+      "contributors": [
+        "s-krishnamoorthy",
+        "jackseeburger",
+        "chaturvedakash",
+        "karishma-kapur",
+        "ranbian",
+        "ThatDodoBird"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0003/fedml-nvidia/drawio/fedml-nvidia.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-datasphere"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0003/fedml-watsonx/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0003",
+      "subfolder": "fedml-watsonx",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "2ce40f",
+      "slug": "/ref-arch/2ce40f",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/2ce40f",
+      "title": "FedML and IBM watsonx.ai / IBM Watson Studio integration",
+      "tags": [
+        "ibm",
+        "data"
+      ],
+      "keywords": [
+        "sap",
+        "ibm watsonx",
+        "machine learning",
+        "fedml",
+        "data integration",
+        "model training",
+        "critical business data"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2025-01-23"
+      },
+      "contributors": [
+        "s-krishnamoorthy",
+        "jackseeburger",
+        "chaturvedakash",
+        "karishma-kapur",
+        "ranbian",
+        "ThatDodoBird"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0003/fedml-watsonx/drawio/fedml-watson.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0003/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0003",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "17c8c5",
+      "slug": "/ref-arch/17c8c5",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/17c8c5",
+      "title": "Federated Machine Learning with SAP Datasphere",
+      "tags": [
+        "azure",
+        "aws",
+        "gcp",
+        "data",
+        "databricks",
+        "nvidia"
+      ],
+      "keywords": [
+        "sap",
+        "federated machine learning",
+        "datasphere integration",
+        "ai insights",
+        "machine learning platforms"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 40,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2025-01-23"
+      },
+      "contributors": [
+        "s-krishnamoorthy",
+        "jackseeburger",
+        "chaturvedakash",
+        "karishma-kapur",
+        "ranbian",
+        "ThatDodoBird"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0003/drawio/fedml-final.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-datasphere"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0004/1-aws-data-integration/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0004",
+      "subfolder": "1-aws-data-integration",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "af1cc6",
+      "slug": "/ref-arch/af1cc6",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/af1cc6",
+      "title": "Integration with AWS data sources",
+      "tags": [
+        "aws",
+        "data",
+        "bdc"
+      ],
+      "keywords": [
+        "sap",
+        "aws data integration",
+        "datasphere",
+        "cloud harmonization",
+        "advanced analytics models"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2025-01-23"
+      },
+      "contributors": [
+        "sivakumar",
+        "s-krishnamoorthy",
+        "feng",
+        "karishma-kapur"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0004/1-aws-data-integration/drawio/aws-data-integration.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-datasphere"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0004/2-azure-data-integration/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0004",
+      "subfolder": "2-azure-data-integration",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "9ce2bd",
+      "slug": "/ref-arch/9ce2bd",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/9ce2bd",
+      "title": "Integration with Azure data sources",
+      "tags": [
+        "azure",
+        "data",
+        "bdc"
+      ],
+      "keywords": [
+        "sap",
+        "microsoft azure",
+        "datasphere integration",
+        "data governance",
+        "real-time analytics"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 2,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2025-01-23"
+      },
+      "contributors": [
+        "sivakumar",
+        "s-krishnamoorthy",
+        "karishma-kapur"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0004/2-azure-data-integration/drawio/azure-data-integration.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-datasphere",
+        "rag"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0004/3-databricks-data-integration/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0004",
+      "subfolder": "3-databricks-data-integration",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "b7629d",
+      "slug": "/ref-arch/b7629d",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/b7629d",
+      "title": "Integration with Databricks",
+      "tags": [
+        "databricks",
+        "data",
+        "bdc"
+      ],
+      "keywords": [
+        "sap",
+        "databricks",
+        "data federation",
+        "analytics harmonization",
+        "integration models",
+        "bdc connect"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 3,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2026-04-10"
+      },
+      "contributors": [
+        "s-krishnamoorthy",
+        "chaturvedakash"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0004/3-databricks-data-integration/drawio/databricks-data-integration.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-datasphere"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0004/4-gcp-data-integration/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0004",
+      "subfolder": "4-gcp-data-integration",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "bffef5",
+      "slug": "/ref-arch/bffef5",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/bffef5",
+      "title": "Integration with Google Cloud Platform sources",
+      "tags": [
+        "gcp",
+        "data",
+        "bdc"
+      ],
+      "keywords": [
+        "sap",
+        "cloud performance",
+        "google bigquery",
+        "data harmonization",
+        "advanced analytics",
+        "bdc connect",
+        "bdc connect for google big query",
+        "delta share"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 4,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2026-05-08"
+      },
+      "contributors": [
+        "sivakumar",
+        "s-krishnamoorthy",
+        "jackseeburger",
+        "karishma-kapur"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0004/4-gcp-data-integration/drawio/gcp-data-integration.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-bdc"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0004/5-snowflake-data-integration/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0004",
+      "subfolder": "5-snowflake-data-integration",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "053d2b",
+      "slug": "/ref-arch/053d2b",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/053d2b",
+      "title": "Integration with Snowflake",
+      "tags": [
+        "snowflake",
+        "data",
+        "bdc"
+      ],
+      "keywords": [
+        "sap",
+        "cloud performance",
+        "snowflake",
+        "data harmonization",
+        "advanced analytics",
+        "bdc connect",
+        "delta share",
+        "sap snowflake",
+        "enterprise snowflake",
+        "bdc connect for snowflake"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 5,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2026-04-10"
+      },
+      "contributors": [
+        "sivakumar",
+        "s-krishnamoorthy"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0004/5-snowflake-data-integration/drawio/snowflake-data-integration.drawio",
+        "docs/ref-arch/RA0004/5-snowflake-data-integration/drawio/snowflake-solex-data-integration.drawio",
+        "docs/ref-arch/RA0004/5-snowflake-data-integration/drawio/solex-data-integration.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-bdc"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0004/6-latency-performance-considerations/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0004",
+      "subfolder": "6-latency-performance-considerations",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "200b3d",
+      "slug": "/ref-arch/200b3d",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/200b3d",
+      "title": "Latency and Performance considerations",
+      "tags": [
+        "data",
+        "bdc"
+      ],
+      "keywords": [
+        "sap",
+        "latency optimization",
+        "data federation",
+        "performance management",
+        "analytics efficiency"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 6,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2025-01-23"
+      },
+      "contributors": [
+        "sivakumar",
+        "s-krishnamoorthy",
+        "karishma-kapur"
+      ],
+      "drawio_files": [],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0004/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0004",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "b27373",
+      "slug": "/ref-arch/b27373",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/b27373",
+      "title": "Explore your Hyperscaler data with SAP Business Data Cloud",
+      "tags": [
+        "azure",
+        "aws",
+        "gcp",
+        "data",
+        "snowflake",
+        "databricks",
+        "bdc"
+      ],
+      "keywords": [
+        "sap",
+        "datasphere",
+        "federated architecture",
+        "business-driven decisions",
+        "cloud hyperscaler data",
+        "bdc connect",
+        "zero copy"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 50,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2026-05-08"
+      },
+      "contributors": [
+        "sivakumar",
+        "anirban-sap",
+        "s-krishnamoorthy",
+        "jackseeburger",
+        "chaturvedakash",
+        "karishma-kapur",
+        "ranbian",
+        "jasoncwluo"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0004/drawio/explore-hyperscaler-data.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-bdc",
+        "sap-datasphere"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0005/1-basics/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0005",
+      "subfolder": "1-basics",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "01aa03",
+      "slug": "/ref-arch/01aa03",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/01aa03",
+      "title": "Basic Prompting",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "genai"
+      ],
+      "keywords": [
+        "sap",
+        "ai integration",
+        "prompting techniques",
+        "generative ai applications",
+        "natural language systems"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "kay-schmitteckert",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "kay-schmitteckert",
+        "AdiPleyer",
+        "vedant-aero-ml",
+        "madankumarpichamuthu"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0005/1-basics/drawio/reference-architecture-generative-ai-basic.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0005/2-semantic-search/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0005",
+      "subfolder": "2-semantic-search",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "876f58",
+      "slug": "/ref-arch/876f58",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/876f58",
+      "title": "Embeddings & Semantic Search",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "genai"
+      ],
+      "keywords": [
+        "sap",
+        "semantic search",
+        "embeddings",
+        "ai-driven search",
+        "vector database efficiency"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 2,
+      "last_update": {
+        "author": "kay-schmitteckert",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "kay-schmitteckert",
+        "AdiPleyer",
+        "vedant-aero-ml",
+        "madankumarpichamuthu"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0005/2-semantic-search/drawio/reference-architecture-generative-ai-semantic-search.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "rag"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0005/3-retrieval-augmented-generation/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0005",
+      "subfolder": "3-retrieval-augmented-generation",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "8063d2",
+      "slug": "/ref-arch/8063d2",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/8063d2",
+      "title": "Retrieval Augmented Generation (RAG)",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "genai",
+        "data"
+      ],
+      "keywords": [
+        "sap",
+        "ai",
+        "retrieval augmented generation",
+        "LLM control",
+        "generation accuracy",
+        "cross-domain integration"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 3,
+      "last_update": {
+        "author": "xammaxx",
+        "date": "2025-07-21"
+      },
+      "contributors": [
+        "kay-schmitteckert",
+        "madankumarpichamuthu",
+        "xammaxx"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0005/3-retrieval-augmented-generation/drawio/reference-architecture-generative-ai-rag.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0005/3-retrieval-augmented-generation/images/multi-modal-RAG.svg",
+        "docs/ref-arch/RA0005/3-retrieval-augmented-generation/images/rag-components.svg",
+        "docs/ref-arch/RA0005/3-retrieval-augmented-generation/images/rag-development.svg"
+      ],
+      "matched_topics": [
+        "rag"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0005/4-conversational-ai/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0005",
+      "subfolder": "4-conversational-ai",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "d0e5c7",
+      "slug": "/ref-arch/d0e5c7",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/d0e5c7",
+      "title": "Conversational AI & Joule",
+      "tags": [
+        "genai",
+        "agents",
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "keywords": [
+        "sap",
+        "conversational AI",
+        "joule platform",
+        "intelligent interactions"
+      ],
+      "draft": true,
+      "unlisted": false,
+      "sidebar_position": 4,
+      "last_update": {
+        "author": "jmsrpp",
+        "date": "2025-01-01"
+      },
+      "contributors": [],
+      "drawio_files": [],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0005/5-pillars/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0005",
+      "subfolder": "5-pillars",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "c9cdd2",
+      "slug": "/ref-arch/c9cdd2",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/c9cdd2",
+      "title": "Non-Functional Pillars",
+      "tags": [
+        "genai",
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "keywords": [
+        "sap",
+        "reference architecture",
+        "non-functional design",
+        "system considerations"
+      ],
+      "draft": true,
+      "unlisted": false,
+      "sidebar_position": 5,
+      "last_update": {
+        "author": "jmsrpp",
+        "date": "2025-01-01"
+      },
+      "contributors": [],
+      "drawio_files": [],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0005/6-vibe-code-with-cline/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0005",
+      "subfolder": "6-vibe-code-with-cline",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "35863c",
+      "slug": "/ref-arch/35863c",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/35863c",
+      "title": "Vibe Coding with Cline and SAP AI Core",
+      "tags": [
+        "genai",
+        "appdev"
+      ],
+      "keywords": [
+        "sap",
+        "cline",
+        "ai core",
+        "generative ai",
+        "autonomous coding"
+      ],
+      "draft": true,
+      "unlisted": false,
+      "sidebar_position": 6,
+      "last_update": {
+        "author": "mahesh0431",
+        "date": "2025-07-17"
+      },
+      "contributors": [
+        "jmsrpp",
+        "mahesh0431",
+        "AjitKP91"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0005/6-vibe-code-with-cline/drawio/cline-vibe-code-diagram.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0005/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0005",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "39eb58",
+      "slug": "/ref-arch/39eb58",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/39eb58",
+      "title": "Generative AI on SAP BTP",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "genai",
+        "agents"
+      ],
+      "keywords": [
+        "sap",
+        "generative ai hub",
+        "cloud foundry",
+        "vector engine integration",
+        "advanced ai solutions"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 60,
+      "last_update": {
+        "author": "kay-schmitteckert",
+        "date": "2025-09-02"
+      },
+      "contributors": [
+        "kay-schmitteckert",
+        "AdiPleyer",
+        "vedant-aero-ml",
+        "madankumarpichamuthu"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0005/drawio/reference-architecture-generative-ai.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "sap-btp",
+        "sap-hana-cloud"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0006/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0006",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "c16841",
+      "slug": "/ref-arch/c16841",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/c16841",
+      "title": "Secure connectivity with SAP Private Link service",
+      "tags": [
+        "appdev",
+        "security",
+        "azure",
+        "aws"
+      ],
+      "keywords": [
+        "sap",
+        "secure connectivity",
+        "private link service",
+        "hyperscaler workloads",
+        "cloud network security"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 70,
+      "last_update": {
+        "author": "hterminasyan",
+        "date": "2025-01-22"
+      },
+      "contributors": [
+        "hterminasyan"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0006/drawio/secure-connectivity-with-sap-private-link-service.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0007/2-mt-benefits/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0007",
+      "subfolder": "2-mt-benefits",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "f756ab",
+      "slug": "/ref-arch/f756ab",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/f756ab",
+      "title": "Benefits of Multitenant Applications",
+      "tags": [
+        "appdev",
+        "cap"
+      ],
+      "keywords": [
+        "sap",
+        "multitenant benefits",
+        "cloud solutions",
+        "saas scalability",
+        "cost optimization"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "Ajit Kumar Panda",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "AjitKP91",
+        "alperdedeoglu"
+      ],
+      "drawio_files": [],
+      "image_files": [
+        "docs/ref-arch/RA0007/2-mt-benefits/images/saas-multitenant.svg",
+        "docs/ref-arch/RA0007/2-mt-benefits/images/saas-singletenant.svg"
+      ],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0007/3-mt-models/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0007",
+      "subfolder": "3-mt-models",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "a5c409",
+      "slug": "/ref-arch/a5c409",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/a5c409",
+      "title": "Tenant Model on SAP BTP",
+      "tags": [
+        "appdev",
+        "cap"
+      ],
+      "keywords": [
+        "sap",
+        "btp",
+        "tenant management",
+        "multitenant application",
+        "saas architecture",
+        "cap model"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "Ajit Kumar Panda",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "AjitKP91",
+        "alperdedeoglu"
+      ],
+      "drawio_files": [],
+      "image_files": [
+        "docs/ref-arch/RA0007/3-mt-models/images/mt-consumer-pov.svg",
+        "docs/ref-arch/RA0007/3-mt-models/images/mt-data-separation.svg",
+        "docs/ref-arch/RA0007/3-mt-models/images/mt-provider-pov.svg",
+        "docs/ref-arch/RA0007/3-mt-models/images/mt-user-roles.svg"
+      ],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0007/4-mt-lifecycle/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0007",
+      "subfolder": "4-mt-lifecycle",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "1efe95",
+      "slug": "/ref-arch/1efe95",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/1efe95",
+      "title": "Tenant Lifecycle Management",
+      "tags": [
+        "appdev",
+        "cap"
+      ],
+      "keywords": [
+        "sap",
+        "tenant lifecycle",
+        "service management",
+        "multitenancy model"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "Ajit Kumar Panda",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "AjitKP91",
+        "alperdedeoglu"
+      ],
+      "drawio_files": [],
+      "image_files": [
+        "docs/ref-arch/RA0007/4-mt-lifecycle/images/cap-saas-overview.svg",
+        "docs/ref-arch/RA0007/4-mt-lifecycle/images/mt-cap-mtx-offboarding.svg",
+        "docs/ref-arch/RA0007/4-mt-lifecycle/images/mt-cap-mtx-provisioning.svg"
+      ],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0007/5-mt-architecture/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0007",
+      "subfolder": "5-mt-architecture",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "29b7c8",
+      "slug": "/ref-arch/29b7c8",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/29b7c8",
+      "title": "Reference Architecture",
+      "tags": [
+        "appdev",
+        "cap"
+      ],
+      "keywords": [
+        "sap",
+        "multitenant applications",
+        "scalable saas solutions",
+        "btp reference models"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "Ajit Kumar Panda",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "AjitKP91",
+        "alperdedeoglu"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0007/5-mt-architecture/drawio/susaas-app-architecture.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0007/5-mt-architecture/images/cap-saas-overview.svg",
+        "docs/ref-arch/RA0007/5-mt-architecture/images/susaas-app-architecture-expert-cf.png"
+      ],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0007/6-mt-tco/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0007",
+      "subfolder": "6-mt-tco",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "0124a3",
+      "slug": "/ref-arch/0124a3",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/0124a3",
+      "title": "Cost of Ownership",
+      "tags": [
+        "appdev",
+        "cap",
+        "security"
+      ],
+      "keywords": [
+        "sap",
+        "tenant lifecycle",
+        "multitenant applications",
+        "btp cost analysis",
+        "application scalability"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "Ajit Kumar Panda",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "AjitKP91",
+        "alperdedeoglu"
+      ],
+      "drawio_files": [],
+      "image_files": [
+        "docs/ref-arch/RA0007/6-mt-tco/images/shc-0-5gb-10.png",
+        "docs/ref-arch/RA0007/6-mt-tco/images/shc-0-5gb-25.png",
+        "docs/ref-arch/RA0007/6-mt-tco/images/shc-0-5gb-5.png",
+        "docs/ref-arch/RA0007/6-mt-tco/images/shc-1gb-10.png",
+        "docs/ref-arch/RA0007/6-mt-tco/images/shc-1gb-25.png",
+        "docs/ref-arch/RA0007/6-mt-tco/images/shc-1gb-5.png"
+      ],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0007/7-mt-authentication/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0007",
+      "subfolder": "7-mt-authentication",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "98c985",
+      "slug": "/ref-arch/98c985",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/98c985",
+      "title": "Authentication Strategies",
+      "tags": [
+        "appdev",
+        "cap"
+      ],
+      "keywords": [
+        "sap",
+        "authentication model",
+        "tenant lifecycle",
+        "btp security"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "Ajit Kumar Panda",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "AjitKP91",
+        "alperdedeoglu"
+      ],
+      "drawio_files": [],
+      "image_files": [
+        "docs/ref-arch/RA0007/7-mt-authentication/images/mt-cap-auth-consumer-idp-c-a.svg",
+        "docs/ref-arch/RA0007/7-mt-authentication/images/mt-cap-auth-consumer-idp-c-b.svg",
+        "docs/ref-arch/RA0007/7-mt-authentication/images/mt-cap-auth-consumer-idp-p-a.svg",
+        "docs/ref-arch/RA0007/7-mt-authentication/images/mt-cap-auth-consumer-idp-p-b.svg",
+        "docs/ref-arch/RA0007/7-mt-authentication/images/mt-cap-auth-provider-cis.svg",
+        "docs/ref-arch/RA0007/7-mt-authentication/images/mt-cap-auth-sap-idp.svg"
+      ],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0007/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0007",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "5942d2",
+      "slug": "/ref-arch/5942d2",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/5942d2",
+      "title": "Multitenant SaaS Application using CAP",
+      "tags": [
+        "appdev",
+        "cap"
+      ],
+      "keywords": [
+        "sap",
+        "multitenant saas",
+        "application scalability",
+        "btp innovation",
+        "industry solutions"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 80,
+      "last_update": {
+        "author": "Ajit Kumar Panda",
+        "date": "2025-01-31"
+      },
+      "contributors": [
+        "AjitKP91",
+        "alperdedeoglu"
+      ],
+      "drawio_files": [],
+      "image_files": [
+        "docs/ref-arch/RA0007/images/multi-tenant.svg",
+        "docs/ref-arch/RA0007/images/single-tenant.svg",
+        "docs/ref-arch/RA0007/images/susaas-app-architecture-expertcf.drawio.png"
+      ],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0008/1-edge-integration-cell-on-aws/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0008",
+      "subfolder": "1-edge-integration-cell-on-aws",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "cd0961",
+      "slug": "/ref-arch/cd0961",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/cd0961",
+      "title": "Edge Integration Cell on AWS",
+      "tags": [
+        "aws",
+        "eic",
+        "integration",
+        "appdev"
+      ],
+      "keywords": [
+        "aws",
+        "edge integration",
+        "sap integration suite",
+        "real-time cloud connections"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "adarshnarayanhegde",
+        "date": "2025-02-20"
+      },
+      "contributors": [
+        "adarshnarayanhegde"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0008/1-edge-integration-cell-on-aws/drawio/sap-edge-integration-cell-aws.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0008/2-edge-integration-cell-on-azure/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0008",
+      "subfolder": "2-edge-integration-cell-on-azure",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "0ae6b4",
+      "slug": "/ref-arch/0ae6b4",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/0ae6b4",
+      "title": "Edge Integration Cell on Azure",
+      "tags": [
+        "azure",
+        "eic",
+        "integration",
+        "appdev"
+      ],
+      "keywords": [
+        "azure",
+        "edge integration",
+        "sap integration suite",
+        "real-time architecture"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 2,
+      "last_update": {
+        "author": "adarshnarayanhegde",
+        "date": "2026-04-13"
+      },
+      "contributors": [
+        "madankumarpichamuthu",
+        "adarshnarayanhegde"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0008/2-edge-integration-cell-on-azure/drawio/sap-edge-integration-cell-azure.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0008/2-edge-integration-cell-on-azure/images/sap-EIC-azure-Basic.svg",
+        "docs/ref-arch/RA0008/2-edge-integration-cell-on-azure/images/sap-EIC-azure-HA.svg"
+      ],
+      "matched_topics": [
+        "rag"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0008/3-edge-integration-cell-on-gcp/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0008",
+      "subfolder": "3-edge-integration-cell-on-gcp",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "04c9a0",
+      "slug": "/ref-arch/04c9a0",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/04c9a0",
+      "title": "Edge Integration Cell on GCP",
+      "tags": [
+        "gcp",
+        "eic",
+        "integration",
+        "appdev"
+      ],
+      "keywords": [
+        "sap",
+        "gcp edge integration",
+        "integration suite",
+        "real-time connectivity"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 3,
+      "last_update": {
+        "author": "adarshnarayanhegde",
+        "date": "2026-04-13"
+      },
+      "contributors": [
+        "AFK-Python",
+        "adarshnarayanhegde"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0008/3-edge-integration-cell-on-gcp/drawio/sap-edge-integration-cell-gcp.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "rag"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0008/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0008",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "0a229d",
+      "slug": "/ref-arch/0a229d",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/0a229d",
+      "title": "Edge Integration Cell on Hyperscalers",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "eic",
+        "integration",
+        "appdev"
+      ],
+      "keywords": [
+        "sap",
+        "btp",
+        "integration suite",
+        "edge integration",
+        "hyperscalers",
+        "azure",
+        "aws",
+        "gcp cloud services"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 90,
+      "last_update": {
+        "author": "adarshnarayanhegde",
+        "date": "2025-04-18"
+      },
+      "contributors": [
+        "adarshnarayanhegde",
+        "madankumarpichamuthu",
+        "AFK-Python"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0008/drawio/sap_eic.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0008/images/eic_components.png",
+        "docs/ref-arch/RA0008/images/eic_landscape.png"
+      ],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0009/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0009",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "c1e07f",
+      "slug": "/ref-arch/c1e07f",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/c1e07f",
+      "title": "Establish a central inbox with SAP Task Center",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev"
+      ],
+      "keywords": [
+        "sap",
+        "btp",
+        "cloud",
+        "sap task center",
+        "central inbox",
+        "architecture flow"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 100,
+      "last_update": {
+        "author": "fabianleh",
+        "date": "2025-02-11"
+      },
+      "contributors": [
+        "fabianleh"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0009/drawio/establish-a-central-inbox-with-sap-task-center.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0010/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0010",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "1a8cb9",
+      "slug": "/ref-arch/1a8cb9",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/1a8cb9",
+      "title": "Establish a central entry point with SAP Build Work Zone",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "buildworkzone"
+      ],
+      "keywords": [
+        "sap",
+        "btp",
+        "digital workplace",
+        "sap build work zone",
+        "integration ecosystem",
+        "business applications",
+        "joule work",
+        "joule"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 110,
+      "last_update": {
+        "author": "f-buech",
+        "date": "2026-05-22"
+      },
+      "contributors": [
+        "f-buech",
+        "fabianleh"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0010/drawio/sap-build-work-zone.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "joule",
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0011/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0011",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "e4f25a",
+      "slug": "/ref-arch/e4f25a",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/e4f25a",
+      "title": "SAP HANA Cloud as an Esri Geodatabase",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "data"
+      ],
+      "keywords": [
+        "sap",
+        "hana cloud",
+        "esri integration",
+        "geospatial database",
+        "enterprise infrastructure",
+        "spatial data management"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 120,
+      "last_update": {
+        "author": "aldapooh",
+        "date": "2025-03-25"
+      },
+      "contributors": [
+        "aldapooh"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0011/drawio/esri-and-hana-cloud.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-hana-cloud"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0012/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0012",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "8aceea",
+      "slug": "/ref-arch/8aceea",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/8aceea",
+      "title": "Medallion Reference Architecture for Big Data Processing in SAP HANA Cloud",
+      "tags": [
+        "data",
+        "azure",
+        "aws",
+        "gcp"
+      ],
+      "keywords": [
+        "sap",
+        "big data architecture",
+        "sap hana cloud",
+        "data lake",
+        "medallion design"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 130,
+      "last_update": {
+        "author": "aldapooh",
+        "date": "2025-04-03"
+      },
+      "contributors": [
+        "aldapooh"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0012/drawio/medallion-big-data-architecture.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-hana-cloud"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0013/1-data-products-in-sap-business-data-cloud/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0013",
+      "subfolder": "1-data-products-in-sap-business-data-cloud",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "4ab8f2",
+      "slug": "/ref-arch/4ab8f2",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/4ab8f2",
+      "title": "Data Products in SAP Business Data Cloud",
+      "tags": [
+        "data",
+        "aws",
+        "azure",
+        "gcp",
+        "bdc"
+      ],
+      "keywords": [
+        "sap",
+        "data products",
+        "business data cloud solutions",
+        "metadata quality",
+        "integration optimization"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "anbazhagan-uma",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "jasoncwluo",
+        "jmsrpp",
+        "anbazhagan-uma",
+        "peterfendt"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0013/1-data-products-in-sap-business-data-cloud/drawio/bdc-dataproduct1.drawio",
+        "docs/ref-arch/RA0013/1-data-products-in-sap-business-data-cloud/drawio/dp-extensibility.drawio",
+        "docs/ref-arch/RA0013/1-data-products-in-sap-business-data-cloud/drawio/sap-dp.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-bdc"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0013/2-intelligent-content/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0013",
+      "subfolder": "2-intelligent-content",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "a71aa9",
+      "slug": "/ref-arch/a71aa9",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/a71aa9",
+      "title": "Intelligent content in SAP BDC",
+      "tags": [
+        "data",
+        "aws",
+        "azure",
+        "gcp",
+        "bdc"
+      ],
+      "keywords": [
+        "sap",
+        "intelligent apps",
+        "business data cloud",
+        "prebuilt analytics solutions",
+        "modernized configurations"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 2,
+      "last_update": {
+        "author": "anbazhagan-uma",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "jasoncwluo",
+        "jmsrpp",
+        "anbazhagan-uma",
+        "peterfendt"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0013/2-intelligent-content/drawio/intelligent-content.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-bdc"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0013/3-extend-implement-intelligent-content/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0013",
+      "subfolder": "3-extend-implement-intelligent-content",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "519093",
+      "slug": "/ref-arch/519093",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/519093",
+      "title": "Implementing and Extending SAP-managed domain content in SAP BDC",
+      "tags": [
+        "data",
+        "aws",
+        "azure",
+        "gcp",
+        "bdc"
+      ],
+      "keywords": [
+        "sap",
+        "business data cloud",
+        "intelligent apps",
+        "analytics optimization",
+        "data foundation"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 3,
+      "last_update": {
+        "author": "anbazhagan-uma",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "s-krishnamoorthy",
+        "jmsrpp",
+        "anbazhagan-uma",
+        "jasoncwluo",
+        "peterfendt"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0013/3-extend-implement-intelligent-content/drawio/sap-managed-custom-intelligent-application.drawio",
+        "docs/ref-arch/RA0013/3-extend-implement-intelligent-content/drawio/sap-managed-intelligent-application.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-bdc",
+        "sap-s4hana"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0013/4-modernizing-sap-bw-with-sap-bdc/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0013",
+      "subfolder": "4-modernizing-sap-bw-with-sap-bdc",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "6550e4",
+      "slug": "/ref-arch/6550e4",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/6550e4",
+      "title": "Modernizing SAP BW with SAP Business Data Cloud",
+      "tags": [
+        "data",
+        "aws",
+        "azure",
+        "gcp",
+        "bdc",
+        "transition"
+      ],
+      "keywords": [
+        "sap",
+        "business warehouse modernization",
+        "data cloud integration",
+        "ai-driven analytics",
+        "real-time architecture"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 4,
+      "last_update": {
+        "author": "anbazhagan-uma",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "jasoncwluo",
+        "jmsrpp",
+        "anbazhagan-uma",
+        "peterfendt"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0013/4-modernizing-sap-bw-with-sap-bdc/drawio/bw-approach-1.drawio",
+        "docs/ref-arch/RA0013/4-modernizing-sap-bw-with-sap-bdc/drawio/bw-approach-2.drawio",
+        "docs/ref-arch/RA0013/4-modernizing-sap-bw-with-sap-bdc/drawio/bw-approach-3.drawio",
+        "docs/ref-arch/RA0013/4-modernizing-sap-bw-with-sap-bdc/drawio/bw-bdc-detailed.drawio",
+        "docs/ref-arch/RA0013/4-modernizing-sap-bw-with-sap-bdc/drawio/bw-transformations.drawio",
+        "docs/ref-arch/RA0013/4-modernizing-sap-bw-with-sap-bdc/drawio/bwpce-sapbdc.drawio",
+        "docs/ref-arch/RA0013/4-modernizing-sap-bw-with-sap-bdc/drawio/migration-pathways.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-bdc"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0013/5-sap-databricks-in-business-data-cloud/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0013",
+      "subfolder": "5-sap-databricks-in-business-data-cloud",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "12d55f",
+      "slug": "/ref-arch/12d55f",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/12d55f",
+      "title": "SAP Databricks in SAP BDC",
+      "tags": [
+        "data",
+        "aws",
+        "azure",
+        "gcp",
+        "databricks",
+        "bdc"
+      ],
+      "keywords": [
+        "sap",
+        "databricks",
+        "sap business data cloud",
+        "real-time ai",
+        "advanced analytics"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 5,
+      "last_update": {
+        "author": "s-krishnamoorthy",
+        "date": "2025-09-09"
+      },
+      "contributors": [
+        "s-krishnamoorthy",
+        "jmsrpp",
+        "peterfendt"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0013/5-sap-databricks-in-business-data-cloud/drawio/bdc-databricks-brownfield.drawio",
+        "docs/ref-arch/RA0013/5-sap-databricks-in-business-data-cloud/drawio/bdc-databricks.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-bdc",
+        "rag"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0013/6-cloud-identity-services-bdc/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0013",
+      "subfolder": "6-cloud-identity-services-bdc",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "2c8491",
+      "slug": "/ref-arch/2c8491",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/2c8491",
+      "title": "Unifying Access Across SAP BDC with SAP Cloud Identity Services",
+      "tags": [
+        "data",
+        "security",
+        "databricks",
+        "bdc"
+      ],
+      "keywords": [
+        "sap business data cloud",
+        "sap databricks",
+        "sap cloud identity services",
+        "ias",
+        "ips",
+        "sso",
+        "saml",
+        "oidc",
+        "scim 2.0",
+        "unity catalog",
+        "zero trust"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 6,
+      "last_update": {
+        "author": "guilherme-segantini",
+        "date": "2025-11-04"
+      },
+      "contributors": [
+        "guilherme-segantini",
+        "jmsrpp",
+        "anbazhagan-uma"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0013/6-cloud-identity-services-bdc/drawio/cloud-identity-services-bdc.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp",
+        "sap-bdc"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0013/7-bdc-powered-by-ai-core/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0013",
+      "subfolder": "7-bdc-powered-by-ai-core",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "4f7406",
+      "slug": "/ref-arch/4f7406",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/4f7406",
+      "title": "SAP Business Data Cloud powered by SAP AI Core",
+      "tags": [
+        "data",
+        "genai",
+        "databricks",
+        "bdc"
+      ],
+      "keywords": [
+        "sap business data cloud",
+        "sap ai core",
+        "generative ai hub",
+        "sap databricks",
+        "data products",
+        "model lifecycle",
+        "enterprise ai",
+        "reference architecture"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 7,
+      "last_update": {
+        "author": "guilherme-segantini",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "seeobjectively",
+        "guilherme-segantini",
+        "jmsrpp",
+        "anbazhagan-uma"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0013/7-bdc-powered-by-ai-core/drawio/bdc-ai-core-integration-future-release.drawio",
+        "docs/ref-arch/RA0013/7-bdc-powered-by-ai-core/drawio/bdc-ai-core-integration.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp",
+        "sap-bdc"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0013/8-joule-analytical-insights/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0013",
+      "subfolder": "8-joule-analytical-insights",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "9efadc",
+      "slug": "/ref-arch/9efadc",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/9efadc",
+      "title": "Analytical Insights in Joule",
+      "tags": [
+        "data",
+        "genai",
+        "bdc"
+      ],
+      "keywords": [
+        "sap business data cloud",
+        "sap ai core",
+        "joule",
+        "analytics"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 8,
+      "last_update": {
+        "author": "anbazhagan-uma",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "gpuntoancona",
+        "anbazhagan-uma"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0013/8-joule-analytical-insights/drawio/joule-justask-anaytical.drawio",
+        "docs/ref-arch/RA0013/8-joule-analytical-insights/drawio/joule-justask-auth.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "joule",
+        "sap-btp",
+        "sap-bdc"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0013/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0013",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "e1732d",
+      "slug": "/ref-arch/e1732d",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/e1732d",
+      "title": "Transforming Enterprise Data Strategy with SAP Business Data Cloud",
+      "tags": [
+        "data",
+        "aws",
+        "azure",
+        "gcp",
+        "databricks",
+        "snowflake"
+      ],
+      "keywords": [
+        "sap",
+        "business data cloud",
+        "advanced analytics applications",
+        "data-driven strategies"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 140,
+      "last_update": {
+        "author": "anbazhagan-uma",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "jasoncwluo",
+        "jmsrpp",
+        "anbazhagan-uma",
+        "s-krishnamoorthy",
+        "peterfendt",
+        "sundar-sap",
+        "alphageek7443"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0013/drawio/sap-bdc-highlevel.drawio",
+        "docs/ref-arch/RA0013/drawio/sap-bdc.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-bdc"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0014/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0014",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "24c626",
+      "slug": "/ref-arch/24c626",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/24c626",
+      "title": "Understanding Network Performance in a Multi Regional Solution",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "appdev",
+        "integration",
+        "security"
+      ],
+      "keywords": [
+        "sap",
+        "btp",
+        "network performance",
+        "multi-regional solution",
+        "hyperscaler",
+        "S/4 HANA",
+        "aws",
+        "azure",
+        "cloud design"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 150,
+      "last_update": {
+        "author": "uklasing",
+        "date": "2025-05-07"
+      },
+      "contributors": [
+        "uklasing",
+        "kshanth",
+        "AjitKP91"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0014/drawio/Direct_OData_Call.drawio",
+        "docs/ref-arch/RA0014/drawio/OData_Call_App_Router.drawio",
+        "docs/ref-arch/RA0014/drawio/OData_Call_App_Router_PrivateLink.drawio",
+        "docs/ref-arch/RA0014/drawio/OData_Call_App_Router_SCC.drawio",
+        "docs/ref-arch/RA0014/drawio/OData_Call_CAP_App.drawio",
+        "docs/ref-arch/RA0014/drawio/OData_Call_CAP_PrivateLink.drawio",
+        "docs/ref-arch/RA0014/drawio/OData_Call_CAP_SCC.drawio",
+        "docs/ref-arch/RA0014/drawio/measurement_landscape.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0014/images/Direct_OData_Call.drawio.png",
+        "docs/ref-arch/RA0014/images/OData_Call_App_Router.drawio.png",
+        "docs/ref-arch/RA0014/images/OData_Call_App_Router_PrivateLink.drawio.png",
+        "docs/ref-arch/RA0014/images/OData_Call_App_Router_SCC.drawio.png",
+        "docs/ref-arch/RA0014/images/OData_Call_CAP_App.drawio.png",
+        "docs/ref-arch/RA0014/images/OData_Call_CAP_PrivateLink.drawio.png",
+        "docs/ref-arch/RA0014/images/OData_Call_CAP_SCC.drawio.png",
+        "docs/ref-arch/RA0014/images/dashboard-drill.jpg",
+        "docs/ref-arch/RA0014/images/dashboard.jpg"
+      ],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0015/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0015",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "b3c3ac",
+      "slug": "/ref-arch/b3c3ac",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/b3c3ac",
+      "title": "Business to Government Integration",
+      "tags": [
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "b2g compliance",
+        "governance integration",
+        "secure document exchange",
+        "automated reporting"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 160,
+      "last_update": {
+        "author": "avikSap",
+        "date": "2024-08-01"
+      },
+      "contributors": [
+        "avikSap",
+        "fabianleh"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0015/drawio/business-to-government-integration.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0016/1-secure-service-consumption-on-aws/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0016",
+      "subfolder": "1-secure-service-consumption-on-aws",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "544638",
+      "slug": "/ref-arch/544638",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/544638",
+      "title": "Secure Service Consumption on AWS",
+      "tags": [
+        "security",
+        "aws"
+      ],
+      "keywords": [
+        "aws",
+        "secure access",
+        "iam",
+        "oidc",
+        "cloud applications",
+        "architecture integration"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "alperdedeoglu",
+        "date": "2025-05-14"
+      },
+      "contributors": [
+        "alperdedeoglu"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0016/1-secure-service-consumption-on-aws/drawio/iam-roles-anywhere.drawio",
+        "docs/ref-arch/RA0016/1-secure-service-consumption-on-aws/drawio/oidc-sts.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0016/2-secure-service-consumption-on-gcp/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0016",
+      "subfolder": "2-secure-service-consumption-on-gcp",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "bd327f",
+      "slug": "/ref-arch/bd327f",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/bd327f",
+      "title": "Secure Service Consumption on GCP",
+      "tags": [
+        "gcp",
+        "security"
+      ],
+      "keywords": [
+        "gcp",
+        "oidc federation",
+        "workload identity",
+        "secure keyless access",
+        "sap btp security"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 2,
+      "last_update": {
+        "author": "alperdedeoglu",
+        "date": "2025-05-14"
+      },
+      "contributors": [
+        "alperdedeoglu"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0016/2-secure-service-consumption-on-gcp/drawio/gcp-oidc.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0016/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0016",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "8e8d58",
+      "slug": "/ref-arch/8e8d58",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/8e8d58",
+      "title": "Secure Service Consumption Across Hyperscalers",
+      "tags": [
+        "security",
+        "aws",
+        "gcp"
+      ],
+      "keywords": [
+        "sap",
+        "multi-cloud security",
+        "hyperscaler applications",
+        "authentication solutions",
+        "secure service consumption"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 170,
+      "last_update": {
+        "author": "alperdedeoglu",
+        "date": "2025-05-14"
+      },
+      "contributors": [
+        "alperdedeoglu"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0016/drawio/gcp-oidc.drawio",
+        "docs/ref-arch/RA0016/drawio/iam-roles-anywhere.drawio",
+        "docs/ref-arch/RA0016/drawio/oidc-sts.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0017/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0017",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "ffc84b",
+      "slug": "/ref-arch/ffc84b",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/ffc84b",
+      "title": "Connect Business Processes with SAP Master Data Integration",
+      "tags": [
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "master data integration",
+        "mdi architecture",
+        "secure integration",
+        "business synchronization"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 180,
+      "last_update": {
+        "author": "avikSap",
+        "date": "2024-08-01"
+      },
+      "contributors": [
+        "avikSap",
+        "fabianleh"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0017/drawio/master-data-integration.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0018/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0018",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "b86487",
+      "slug": "/ref-arch/b86487",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/b86487",
+      "title": "Integrate and Extend with SAP Build Process Automation",
+      "tags": [
+        "build",
+        "azure",
+        "aws",
+        "gcp",
+        "appdev"
+      ],
+      "keywords": [
+        "sap",
+        "build process automation",
+        "workflow integration",
+        "robotic process automation",
+        "no-code automation"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 190,
+      "last_update": {
+        "author": "fabianleh",
+        "date": "2025-05-14"
+      },
+      "contributors": [
+        "fabianleh"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0018/drawio/integrate-and-extend-with-sap-build-process-automation.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0019/1-authentication-and-single-sign-on/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0019",
+      "subfolder": "1-authentication-and-single-sign-on",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "3ec73b",
+      "slug": "/ref-arch/3ec73b",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/3ec73b",
+      "title": "Authentication with SAP Cloud Identity Services",
+      "tags": [
+        "security"
+      ],
+      "keywords": [
+        "sap",
+        "identity authentication",
+        "cloud identity lifecycle",
+        "erp security solutions",
+        "access management"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "sapgunnar",
+        "date": "2025-05-13"
+      },
+      "contributors": [
+        "sapgunnar",
+        "gunnar-kosche_sap"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0019/1-authentication-and-single-sign-on/drawio/public-sap-authn-sd.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0019/2-identity-lifecycle/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0019",
+      "subfolder": "2-identity-lifecycle",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "0f59a3",
+      "slug": "/ref-arch/0f59a3",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/0f59a3",
+      "title": "Identity lifecycle with SAP Cloud Identity Services",
+      "tags": [
+        "security"
+      ],
+      "keywords": [
+        "sap",
+        "sap iam integration",
+        "cloud identity",
+        "identity lifecycle",
+        "authorization management",
+        "sap security solutions"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 2,
+      "last_update": {
+        "author": "sapgunnar",
+        "date": "2025-05-13"
+      },
+      "contributors": [
+        "sapgunnar",
+        "gunnar-kosche_sap"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0019/2-identity-lifecycle/drawio/public-sap-identity-lifecycle-sd.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0019/3-authorization-design/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0019",
+      "subfolder": "3-authorization-design",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "206025",
+      "slug": "/ref-arch/206025",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/206025",
+      "title": "Authorization with SAP Cloud Identity Services",
+      "tags": [
+        "security"
+      ],
+      "keywords": [
+        "sap",
+        "authorization management",
+        "identity lifecycle",
+        "cloud erp security",
+        "identity provisioning"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 3,
+      "last_update": {
+        "author": "sapgunnar",
+        "date": "2025-05-13"
+      },
+      "contributors": [
+        "sapgunnar",
+        "gunnar-kosche_sap"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0019/3-authorization-design/drawio/public-sap-authz-sd.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0019/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0019",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "89ab6b",
+      "slug": "/ref-arch/89ab6b",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/89ab6b",
+      "title": "SAP IAM integration with SAP Cloud Identity Services",
+      "tags": [
+        "security",
+        "genai"
+      ],
+      "keywords": [
+        "sap",
+        "cloud identity",
+        "identity management",
+        "security",
+        "authentication",
+        "single sign-on",
+        "access authorizations",
+        "SAP Cloud Identity Services"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 200,
+      "last_update": {
+        "author": "sapgunnar",
+        "date": "2025-05-13"
+      },
+      "contributors": [
+        "sapgunnar",
+        "gunnar-kosche_sap"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0019/drawio/public-sap-iam-sd.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0020/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0020",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "e9b7df",
+      "slug": "/ref-arch/e9b7df",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/e9b7df",
+      "title": "Business to Business Integration",
+      "tags": [
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "b2b integration",
+        "secure document exchange",
+        "scalability solutions",
+        "integration architecture"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 210,
+      "last_update": {
+        "author": "avikSap",
+        "date": "2024-08-01"
+      },
+      "contributors": [
+        "avikSap",
+        "fabianleh"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0020/drawio/business-to-business-integration.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0021/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0021",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "6501d5",
+      "slug": "/ref-arch/6501d5",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/6501d5",
+      "title": "Application to Application Integration",
+      "tags": [
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "application interoperability",
+        "app-to-app integration",
+        "transactional data exchange",
+        "integration suite"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 220,
+      "last_update": {
+        "author": "avikSap",
+        "date": "2024-08-01"
+      },
+      "contributors": [
+        "avikSap",
+        "fabianleh"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0021/drawio/application-to-application-integration.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0021/images/a2a-edge-integration-cell-diagram.png"
+      ],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0022/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0022",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "5f90af",
+      "slug": "/ref-arch/5f90af",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/5f90af",
+      "title": "API Managed Integration",
+      "tags": [
+        "integration"
+      ],
+      "keywords": [
+        "sap",
+        "api integration",
+        "business application access",
+        "secure consumption",
+        "governance",
+        "cross-platform compatibility"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 230,
+      "last_update": {
+        "author": "avikSap",
+        "date": "2024-08-01"
+      },
+      "contributors": [
+        "avikSap",
+        "fabianleh"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0022/drawio/api-managed-integration.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0023/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0023",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "b51e91",
+      "slug": "/ref-arch/b51e91",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/b51e91",
+      "title": "DevOps with SAP BTP",
+      "tags": [
+        "appdev",
+        "build",
+        "cap",
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "keywords": [
+        "sap",
+        "btp",
+        "devops",
+        "agile methodology",
+        "cicd pipelines"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 240,
+      "last_update": {
+        "author": "bzarske",
+        "date": "2025-06-06"
+      },
+      "contributors": [
+        "bzarske"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0023/drawio/devops-with-sap-btp.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0024/1-joule-for-sap-s4-hana/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0024",
+      "subfolder": "1-joule-for-sap-s4-hana",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "ebe268",
+      "slug": "/ref-arch/ebe268",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/ebe268",
+      "title": "Joule in SAP S/4HANA Cloud Private Edition and SAP S/4HANA Cloud Public Edition",
+      "tags": [
+        "genai",
+        "agents",
+        "build",
+        "appdev"
+      ],
+      "keywords": [
+        "sap",
+        "joule",
+        "ai"
+      ],
+      "draft": false,
+      "unlisted": true,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "pra1veenk",
+        "date": "2025-10-29"
+      },
+      "contributors": [
+        "pra1veenk",
+        "anbazhagan-uma",
+        "nagesh-caparthy1"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0024/1-joule-for-sap-s4-hana/drawio/joule-s4-public-cloud.drawio",
+        "docs/ref-arch/RA0024/1-joule-for-sap-s4-hana/drawio/joule-s4pce.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule",
+        "sap-hana-cloud",
+        "sap-s4hana"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0024/2-joule-iam/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0024",
+      "subfolder": "2-joule-iam",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "ea5d4f",
+      "slug": "/ref-arch/ea5d4f",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/ea5d4f",
+      "title": "Identity and Access Management for SAP Joule",
+      "tags": [
+        "genai",
+        "agents",
+        "build",
+        "appdev",
+        "security"
+      ],
+      "keywords": [
+        "sap",
+        "joule",
+        "ai",
+        "identity authentication",
+        "cloud identity lifecycle",
+        "erp security solutions",
+        "access management"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 2,
+      "last_update": {
+        "author": "fabianleh",
+        "date": "2025-09-22"
+      },
+      "contributors": [
+        "sapgunnar",
+        "gunnar-kosche_sap"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0024/2-joule-iam/drawio/public-sap-iam-joule-sd-authn.drawio",
+        "docs/ref-arch/RA0024/2-joule-iam/drawio/public-sap-iam-joule-sd-authz.drawio",
+        "docs/ref-arch/RA0024/2-joule-iam/drawio/public-sap-iam-joule-sd-cdm.drawio",
+        "docs/ref-arch/RA0024/2-joule-iam/drawio/public-sap-iam-joule-sd-user.drawio",
+        "docs/ref-arch/RA0024/2-joule-iam/drawio/public-sap-iam-joule-sd.drawio",
+        "docs/ref-arch/RA0024/2-joule-iam/drawio/template.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule",
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0024",
+      "subfolder": "3-extend-joule-with-joule-studio",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "ff07b1",
+      "slug": "/ref-arch/ff07b1",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/ff07b1",
+      "title": "Extend Joule with Joule Studio",
+      "tags": [
+        "genai",
+        "agents",
+        "build",
+        "appdev"
+      ],
+      "keywords": [
+        "sap build",
+        "joule studio",
+        "custom joule skills",
+        "ai agents",
+        "sap integration",
+        "sap ai",
+        "automation",
+        "sap btp",
+        "hybrid landscapes"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 3,
+      "last_update": {
+        "author": "fabianleh",
+        "date": "2026-03-12"
+      },
+      "contributors": [
+        "maria-kondratyeva",
+        "miguelmezamartinez",
+        "fabianleh",
+        "bernhardthimmel",
+        "mar-hol"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/drawio/joule-studio-ref-arch.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/images/kasimir.png"
+      ],
+      "matched_topics": [
+        "agentic-ai",
+        "joule",
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0024/4-integrate-joule-and-microsoft-copilot/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0024",
+      "subfolder": "4-integrate-joule-and-microsoft-copilot",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "c6e18f",
+      "slug": "/ref-arch/c6e18f",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/c6e18f",
+      "title": "Integrate Joule and Microsoft Copilot",
+      "tags": [
+        "genai",
+        "agents",
+        "build",
+        "appdev"
+      ],
+      "keywords": [
+        "sap",
+        "joule",
+        "ai",
+        "microsoft"
+      ],
+      "draft": true,
+      "unlisted": false,
+      "sidebar_position": 4,
+      "last_update": {
+        "author": "user-bb83abb390",
+        "date": "2025-10-29"
+      },
+      "contributors": [
+        "contributor1",
+        "contributor2"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0024/4-integrate-joule-and-microsoft-copilot/drawio/template.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0024/5-sap-joule-landscape-recommendation/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0024",
+      "subfolder": "5-sap-joule-landscape-recommendation",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "56ae6b",
+      "slug": "/ref-arch/56ae6b",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/56ae6b",
+      "title": "SAP Joule Landscape Recommendation",
+      "tags": [
+        "genai",
+        "agents",
+        "build",
+        "appdev"
+      ],
+      "keywords": [
+        "joule",
+        "joule studio",
+        "custom joule skills",
+        "ai agents",
+        "sap integration",
+        "sap ai",
+        "automation",
+        "sap btp",
+        "hybrid landscapes",
+        "staged landscape",
+        "subaccount model"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 5,
+      "last_update": {
+        "author": "NormanNuernberger",
+        "date": "2026-05-15"
+      },
+      "contributors": [
+        "mar-hol",
+        "fabianleh",
+        "marvinklose",
+        "dermats",
+        "NormanNuernberger"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0024/5-sap-joule-landscape-recommendation/drawio/btp_sa_3_staged.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule",
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0024/6-joule-studio/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0024",
+      "subfolder": "6-joule-studio",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "f5a3ef",
+      "slug": "/ref-arch/f5a3ef",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/f5a3ef",
+      "title": "Joule Studio",
+      "tags": [
+        "genai",
+        "agents",
+        "build",
+        "appdev"
+      ],
+      "keywords": [
+        "joule",
+        "joule studio",
+        "custom joule skills",
+        "ai agents",
+        "sap integration",
+        "sap ai",
+        "automation",
+        "sap btp",
+        "hybrid landscapes"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 6,
+      "last_update": {
+        "author": "fabianleh",
+        "date": "2026-05-15"
+      },
+      "contributors": [
+        "fabianleh",
+        "SelinaHochstrat",
+        "f-buech"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0024/6-joule-studio/drawio/js.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule",
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0024/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0024",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "464deb",
+      "slug": "/ref-arch/464deb",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/464deb",
+      "title": "Integrating and Extending Joule",
+      "tags": [
+        "genai",
+        "agents",
+        "build",
+        "appdev"
+      ],
+      "keywords": [
+        "sap build",
+        "joule studio",
+        "custom joule skills",
+        "ai agents",
+        "sap integration",
+        "sap ai",
+        "automation",
+        "sap btp",
+        "hybrid landscapes"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 250,
+      "last_update": {
+        "author": "fabianleh",
+        "date": "2026-03-16"
+      },
+      "contributors": [
+        "fabianleh",
+        "marvinklose",
+        "dermats",
+        "nagesh-caparthy1",
+        "anbazhagana-uma",
+        "pra1veenk"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0024/drawio/unified_joule.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0024/images/joule_operations.png",
+        "docs/ref-arch/RA0024/images/js.png"
+      ],
+      "matched_topics": [
+        "agentic-ai",
+        "joule",
+        "sap-btp",
+        "sap-s4hana"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0025/1-sap-pi-po-to-integration-suite/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0025",
+      "subfolder": "1-sap-pi-po-to-integration-suite",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "8566b4",
+      "slug": "/ref-arch/8566b4",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/8566b4",
+      "title": "Migrating from SAP Process Integration/Orchestration to SAP Integration Suite",
+      "tags": [
+        "ref-arch",
+        "community-contrib",
+        "integration",
+        "transition"
+      ],
+      "keywords": [
+        "SAP PI/PO migration",
+        "SAP Integration Suite iPaaS",
+        "Edge Integration Cell",
+        "SAP migration tools and assessment"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "abklgithub",
+        "date": "2025-08-02"
+      },
+      "contributors": [
+        "abklgithub"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0025/1-sap-pi-po-to-integration-suite/drawio/sap_architecture_center_is_eic_post.drawio",
+        "docs/ref-arch/RA0025/1-sap-pi-po-to-integration-suite/drawio/sap_architecture_center_is_eic_pre.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0025/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0025",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "4b76ae",
+      "slug": "/ref-arch/4b76ae",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/4b76ae",
+      "title": "Transitioning Architectures from SAP NetWeaver",
+      "tags": [
+        "ref-arch",
+        "community-contrib",
+        "integration",
+        "transition"
+      ],
+      "keywords": [
+        "SAP NetWeaver transition",
+        "security",
+        "governance",
+        "integration strategies"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 260,
+      "last_update": {
+        "author": "abklgithub",
+        "date": "2025-08-02"
+      },
+      "contributors": [
+        "abklgithub"
+      ],
+      "drawio_files": [],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0026/1-extensibility/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0026",
+      "subfolder": "1-extensibility",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "9673f9",
+      "slug": "/ref-arch/9673f9",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/9673f9",
+      "title": "Extensibility, Interoperability, and Partner Technologies",
+      "tags": [
+        "genai",
+        "agents",
+        "appdev",
+        "build"
+      ],
+      "keywords": [
+        "sap",
+        "joule",
+        "embodied AI agents",
+        "physical AI",
+        "robotics",
+        "robots"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "adelyafatykhova",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "adelyafatykhova",
+        "niklasweidenfeller",
+        "AjitKP91",
+        "pra1veenk",
+        "anbazhagan-uma",
+        "eagle-dai"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0026/1-extensibility/drawio/reference-architecture-extensibility.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule",
+        "rag"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0026/2-warehouse-pick-place/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0026",
+      "subfolder": "2-warehouse-pick-place",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "7e4168",
+      "slug": "/ref-arch/7e4168",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/7e4168",
+      "title": "Warehouse Pick & Place",
+      "tags": [
+        "genai",
+        "agents"
+      ],
+      "keywords": [
+        "sap",
+        "joule",
+        "embodied AI agents",
+        "physical AI",
+        "robotics",
+        "robots",
+        "logistics"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "adelyafatykhova",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "adelyafatykhova",
+        "niklasweidenfeller",
+        "AjitKP91",
+        "pra1veenk",
+        "anbazhagan-uma",
+        "eagle-dai"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0026/2-warehouse-pick-place/drawio/reference-architecture-warehouse.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0026/3-asset-inspection/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0026",
+      "subfolder": "3-asset-inspection",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "bd733b",
+      "slug": "/ref-arch/bd733b",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/bd733b",
+      "title": "Asset Inspection",
+      "tags": [
+        "genai",
+        "agents"
+      ],
+      "keywords": [
+        "sap",
+        "joule",
+        "embodied AI agents",
+        "physical AI",
+        "robotics",
+        "robots",
+        "asset management"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "adelyafatykhova",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "adelyafatykhova",
+        "niklasweidenfeller",
+        "AjitKP91",
+        "pra1veenk",
+        "anbazhagan-uma",
+        "eagle-dai"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0026/3-asset-inspection/drawio/reference-architecture-asset.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0026/4-safety-inspection/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0026",
+      "subfolder": "4-safety-inspection",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "9ca181",
+      "slug": "/ref-arch/9ca181",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/9ca181",
+      "title": "Safety Inspection",
+      "tags": [
+        "genai",
+        "agents"
+      ],
+      "keywords": [
+        "sap",
+        "joule",
+        "embodied AI agents",
+        "physical AI",
+        "robotics",
+        "robots"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "adelyafatykhova",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "adelyafatykhova",
+        "niklasweidenfeller",
+        "AjitKP91",
+        "pra1veenk",
+        "anbazhagan-uma",
+        "eagle-dai"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0026/4-safety-inspection/drawio/reference-architecture-safety.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0026/5-quality-inspection/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0026",
+      "subfolder": "5-quality-inspection",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "90f40f",
+      "slug": "/ref-arch/90f40f",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/90f40f",
+      "title": "Quality Inspection",
+      "tags": [
+        "genai",
+        "agents"
+      ],
+      "keywords": [
+        "sap",
+        "joule",
+        "embodied AI agents",
+        "physical AI",
+        "robotics",
+        "robots"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "adelyafatykhova",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "adelyafatykhova",
+        "niklasweidenfeller",
+        "AjitKP91",
+        "pra1veenk",
+        "anbazhagan-uma",
+        "eagle-dai"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0026/5-quality-inspection/drawio/reference-architecture-overview.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0026/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0026",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "0f87e5",
+      "slug": "/ref-arch/0f87e5",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/0f87e5",
+      "title": "Embodied AI Agents & Robotics",
+      "tags": [
+        "genai",
+        "agents"
+      ],
+      "keywords": [
+        "sap",
+        "joule",
+        "embodied AI agents",
+        "physical AI",
+        "robotics",
+        "robots"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 270,
+      "last_update": {
+        "author": "adelyafatykhova",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "adelyafatykhova",
+        "niklasweidenfeller",
+        "AjitKP91",
+        "pra1veenk",
+        "anbazhagan-uma",
+        "eagle-dai"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0026/drawio/reference-architecture-overview.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0027/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0027",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "a3e184",
+      "slug": "/ref-arch/a3e184",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/a3e184",
+      "title": "Log-Driven Security Operations with SAP Enterprise Threat Detection and SIEM/SOAR Platforms",
+      "tags": [
+        "ref-arch",
+        "community-contrib",
+        "security",
+        "integration",
+        "eda"
+      ],
+      "keywords": [
+        "sap enterprise threat detection",
+        "sap security",
+        "siem",
+        "soar",
+        "security operations",
+        "soc architecture",
+        "log-driven security",
+        "event correlation",
+        "incident response",
+        "security automation",
+        "hybrid security architecture",
+        "cloud security monitoring"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 280,
+      "last_update": {
+        "author": "Julian Petersohn",
+        "date": "2026-01-26"
+      },
+      "contributors": [
+        "randomstr1ng"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0027/drawio/siem_soar_etd.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0028/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0028",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "14d25a",
+      "slug": "/ref-arch/14d25a",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/14d25a",
+      "title": "SAP SuccessFactors Suite",
+      "tags": [
+        "ref-arch",
+        "community-contrib",
+        "successfactors"
+      ],
+      "keywords": [
+        "ref-arch",
+        "successfactors",
+        "hcm",
+        "human capital management",
+        "HR",
+        "talent management",
+        "payroll",
+        "employee experience"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 290,
+      "last_update": {
+        "author": "arjenvanhooydonk",
+        "date": "2026-03-18"
+      },
+      "contributors": [
+        "arjenvanhooydonk"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0028/drawio/successfactors.module.integration.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": "1-a2a-and-mcp",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "76ec36",
+      "slug": "/ref-arch/76ec36",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/76ec36",
+      "title": "A2A and MCP for Interoperability",
+      "tags": [
+        "agents",
+        "genai",
+        "cap",
+        "aws",
+        "gcp",
+        "azure",
+        "ibm"
+      ],
+      "keywords": [
+        "sap",
+        "ai agents",
+        "a2a",
+        "mcp",
+        "interoperability",
+        "Agent2Agent",
+        "model context protocol"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "kay-schmitteckert",
+        "date": "2026-05-04"
+      },
+      "contributors": [
+        "kay-schmitteckert",
+        "hterminasyan"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0029/1-a2a-and-mcp/drawio/architecture.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0029/1-a2a-and-mcp/images/a2a-mcp.svg"
+      ],
+      "matched_topics": [
+        "agentic-ai",
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/10-third-party-mcp-access/1-copilot-studio-with-mcp/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": "10-third-party-mcp-access",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "d2e34e",
+      "slug": "/ref-arch/d2e34e",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/d2e34e",
+      "title": "Microsoft Copilot Studio and the MCP Gateway in SAP Integration Suite",
+      "tags": [
+        "agents",
+        "genai",
+        "azure"
+      ],
+      "keywords": [
+        "sap",
+        "ai agents",
+        "a2a",
+        "mcp",
+        "interoperability",
+        "Agent2Agent",
+        "model context protocol",
+        "copilot studio",
+        "microsoft copilot"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "hobru",
+        "date": "2026-06-18"
+      },
+      "contributors": [
+        "kay-schmitteckert",
+        "hterminasyan",
+        "hobru"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0029/10-third-party-mcp-access/1-copilot-studio-with-mcp/drawio/copilot-studio+mcp-gateway.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/10-third-party-mcp-access/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": "10-third-party-mcp-access",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "137800",
+      "slug": "/ref-arch/137800",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/137800",
+      "title": "Third-Party MCP Access to SAP Solutions",
+      "tags": [
+        "agents",
+        "genai",
+        "security",
+        "appdev"
+      ],
+      "keywords": [
+        "sap",
+        "mcp",
+        "model context protocol",
+        "third-party",
+        "mcp server",
+        "mcp gateway",
+        "integration suite",
+        "joule studio",
+        "owasp",
+        "security",
+        "governance",
+        "btp"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 10,
+      "last_update": {
+        "author": "hterminasyan",
+        "date": "2026-06-08"
+      },
+      "contributors": [
+        "hterminasyan",
+        "mgnther"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0029/10-third-party-mcp-access/drawio/architecture.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/2-low-code-ai-agents/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": "2-low-code-ai-agents",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "219c07",
+      "slug": "/ref-arch/219c07",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/219c07",
+      "title": "Low-Code AI Agents with Joule Studio",
+      "tags": [
+        "agents",
+        "genai",
+        "cap",
+        "aws",
+        "gcp",
+        "azure",
+        "ibm"
+      ],
+      "keywords": [
+        "sap",
+        "ai agents",
+        "low-code",
+        "joule studio",
+        "sap build",
+        "managed runtime"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 2,
+      "last_update": {
+        "author": "kay-schmitteckert",
+        "date": "2026-03-19"
+      },
+      "contributors": [
+        "kay-schmitteckert"
+      ],
+      "drawio_files": [],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/3-pro-code-ai-agents/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": "3-pro-code-ai-agents",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "7b6426",
+      "slug": "/ref-arch/7b6426",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/7b6426",
+      "title": "Pro-Code AI Agents on SAP BTP",
+      "tags": [
+        "agents",
+        "genai",
+        "cap",
+        "aws",
+        "gcp",
+        "azure",
+        "ibm"
+      ],
+      "keywords": [
+        "sap",
+        "ai agents",
+        "pro-code",
+        "a2a",
+        "mcp",
+        "sap cloud sdk for ai",
+        "cap",
+        "generative ai hub",
+        "langgraph",
+        "autogen",
+        "crewai",
+        "smolagents"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 3,
+      "last_update": {
+        "author": "kay-schmitteckert",
+        "date": "2026-06-18"
+      },
+      "contributors": [
+        "kay-schmitteckert"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0029/3-pro-code-ai-agents/drawio/reference-architecture-generative-ai-pro-code.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/4-integrate-ai-agents-with-joule/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": "4-integrate-ai-agents-with-joule",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "ae6821",
+      "slug": "/ref-arch/ae6821",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/ae6821",
+      "title": "Integrating AI Agents with Joule",
+      "tags": [
+        "agents",
+        "genai",
+        "cap",
+        "aws",
+        "gcp",
+        "azure",
+        "ibm"
+      ],
+      "keywords": [
+        "sap",
+        "ai agents",
+        "joule",
+        "integration",
+        "joule studio",
+        "a2a",
+        "pro-code",
+        "low-code"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 4,
+      "last_update": {
+        "author": "kay-schmitteckert",
+        "date": "2026-05-04"
+      },
+      "contributors": [
+        "kay-schmitteckert"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0029/4-integrate-ai-agents-with-joule/drawio/architecture.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/5-integrate-joule-agents-and-tools-into-your-ecosystem/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": "5-integrate-joule-agents-and-tools-into-your-ecosystem",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "fe0d1d",
+      "slug": "/ref-arch/fe0d1d",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/fe0d1d",
+      "title": "Integrating Joule Agents into Your Ecosystem",
+      "tags": [
+        "agents",
+        "genai",
+        "cap",
+        "aws",
+        "gcp",
+        "azure",
+        "ibm"
+      ],
+      "keywords": [
+        "sap",
+        "ai agents",
+        "joule",
+        "integration",
+        "ecosystem",
+        "a2a",
+        "agent gateway",
+        "third-party"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 5,
+      "last_update": {
+        "author": "kay-schmitteckert",
+        "date": "2026-05-06"
+      },
+      "contributors": [
+        "kay-schmitteckert"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0029/5-integrate-joule-agents-and-tools-into-your-ecosystem/drawio/architecture.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/6-ai-agents-for-structured-data/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": "6-ai-agents-for-structured-data",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "b6c158",
+      "slug": "/ref-arch/b6c158",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/b6c158",
+      "title": "Agents for Structured Data",
+      "tags": [
+        "agents",
+        "genai",
+        "aws",
+        "gcp",
+        "azure"
+      ],
+      "keywords": [
+        "sap",
+        "ai integration",
+        "structured data agents",
+        "natural language processing",
+        "federated data insights"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 6,
+      "last_update": {
+        "author": "vedant-aero-ml",
+        "date": "2025-05-14"
+      },
+      "contributors": [
+        "vedant-aero-ml",
+        "kay-schmitteckert"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0029/6-ai-agents-for-structured-data/drawio/reference-architecture-generative-ai-intelligent-data-apps.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/7-agentic-engineering-for-sap-extensions/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": "7-agentic-engineering-for-sap-extensions",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "0821c4",
+      "slug": "/ref-arch/0821c4",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/0821c4",
+      "title": "Agentic Engineering for SAP Extensions",
+      "tags": [
+        "genai",
+        "appdev",
+        "agents"
+      ],
+      "keywords": [
+        "sap",
+        "agentic engineering",
+        "context engineering",
+        "grounding",
+        "mcp servers",
+        "ai coding agents",
+        "sap ai core",
+        "SAP Fiori CAP UI5",
+        "sap btp"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 8,
+      "last_update": {
+        "author": "guilherme-segantini",
+        "date": "2026-05-08"
+      },
+      "contributors": [
+        "guilherme-segantini",
+        "mponce"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0029/7-agentic-engineering-for-sap-extensions/drawio/agentic-for-sap-extensions.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/8-ai-agent-identity/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": "8-ai-agent-identity",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "140bdb",
+      "slug": "/ref-arch/140bdb",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/140bdb",
+      "title": "Agent Identity",
+      "tags": [
+        "agents",
+        "genai"
+      ],
+      "keywords": [
+        "sap",
+        "ai integration",
+        "identity",
+        "agent identity",
+        "agent governance",
+        "governance",
+        "access",
+        "identity access management"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 7,
+      "last_update": {
+        "author": "sapgunnar",
+        "date": "2026-05-12"
+      },
+      "contributors": [
+        "sapgunnar"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0029/8-ai-agent-identity/drawio/agent-identity-l0.drawio",
+        "docs/ref-arch/RA0029/8-ai-agent-identity/drawio/agent-identity-l2.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/9-agent-behavior-mining/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": "9-agent-behavior-mining",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "3c8d50",
+      "slug": "/ref-arch/3c8d50",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/3c8d50",
+      "title": "Agent Behavior Mining",
+      "tags": [
+        "agents",
+        "genai"
+      ],
+      "keywords": [
+        "sap",
+        "signavio",
+        "agent mining",
+        "agent behavior mining",
+        "process intelligence",
+        "ai agents",
+        "observability",
+        "joule",
+        "opentelemetry"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 9,
+      "last_update": {
+        "author": "gabriel-kevorkian",
+        "date": "2026-06-02"
+      },
+      "contributors": [],
+      "drawio_files": [
+        "docs/ref-arch/RA0029/9-agent-behavior-mining/drawio/architecture.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0029/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0029",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "98efa0",
+      "slug": "/ref-arch/98efa0",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/98efa0",
+      "title": "Agentic AI & AI Agents",
+      "tags": [
+        "genai",
+        "agents",
+        "appdev",
+        "aws",
+        "gcp",
+        "azure",
+        "ibm"
+      ],
+      "keywords": [
+        "sap",
+        "ai agents",
+        "joule",
+        "joule studio",
+        "a2a",
+        "agent2agent",
+        "mcp",
+        "pro-code",
+        "low-code",
+        "btp",
+        "generative ai hub",
+        "sap cloud sdk for ai"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 300,
+      "last_update": {
+        "author": "kay-schmitteckert",
+        "date": "2026-05-04"
+      },
+      "contributors": [
+        "kay-schmitteckert",
+        "micinit"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0029/drawio/architecture.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "agentic-ai",
+        "joule",
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0030/0-end-to-end/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0030",
+      "subfolder": "0-end-to-end",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "744df4",
+      "slug": "/ref-arch/744df4",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/744df4",
+      "title": "Document Processing with SAP Document AI",
+      "tags": [
+        "appdev",
+        "genai"
+      ],
+      "keywords": [
+        "appdev",
+        "genai"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 0,
+      "last_update": {
+        "author": "pirnz-sap",
+        "date": "2026-06-03"
+      },
+      "contributors": [
+        "pirnz-sap"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0030/0-end-to-end/drawio/idp-architecture-overview.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0030/1-ingestion/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0030",
+      "subfolder": "1-ingestion",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "e26d4d",
+      "slug": "/ref-arch/e26d4d",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/e26d4d",
+      "title": "Document Ingestion Patterns for SAP Document AI",
+      "tags": [
+        "appdev",
+        "genai"
+      ],
+      "keywords": [
+        "appdev",
+        "genai"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "pirnz-sap",
+        "date": "2026-06-03"
+      },
+      "contributors": [
+        "pirnz-sap"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0030/1-ingestion/drawio/document-ingestion-architecture.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0030/2-enrichment/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0030",
+      "subfolder": "2-enrichment",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "b2b40e",
+      "slug": "/ref-arch/b2b40e",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/b2b40e",
+      "title": "Data Extraction and Enrichment Patterns for SAP Document AI",
+      "tags": [
+        "appdev",
+        "genai"
+      ],
+      "keywords": [
+        "appdev",
+        "genai"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 2,
+      "last_update": {
+        "author": "pirnz-sap",
+        "date": "2026-06-03"
+      },
+      "contributors": [
+        "pirnz-sap"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0030/2-enrichment/drawio/extraction-enrichment-architecture.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0030/3-posting/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0030",
+      "subfolder": "3-posting",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "c62bee",
+      "slug": "/ref-arch/c62bee",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/c62bee",
+      "title": "Document Posting and System Integration Patterns for SAP Document AI",
+      "tags": [
+        "appdev",
+        "genai"
+      ],
+      "keywords": [
+        "appdev",
+        "genai"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 3,
+      "last_update": {
+        "author": "pirnz-sap",
+        "date": "2026-06-03"
+      },
+      "contributors": [
+        "pirnz-sap"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0030/3-posting/drawio/document-posting-architecture.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-s4hana"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0030/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0030",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "766aa3",
+      "slug": "/ref-arch/766aa3",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/766aa3",
+      "title": "SAP Document AI",
+      "tags": [
+        "aws",
+        "azure",
+        "gcp",
+        "genai",
+        "cap"
+      ],
+      "keywords": [
+        "aws",
+        "azure",
+        "gcp",
+        "genai",
+        "cap"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 30,
+      "last_update": {
+        "author": "ChrisLenschow",
+        "date": "2026-06-03"
+      },
+      "contributors": [
+        "ChrisLenschow"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0030/drawio/diagram-GIBKZD5oRo.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0031/1-vc-issuance-and-verification/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0031",
+      "subfolder": "1-vc-issuance-and-verification",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "70c37e",
+      "slug": "/ref-arch/70c37e",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/70c37e",
+      "title": "DIV – Verifiable Credential Issuance and Verification",
+      "tags": [
+        "appdev",
+        "integration",
+        "security",
+        "ref-arch"
+      ],
+      "keywords": [
+        "sap",
+        "decentralized identity",
+        "verifiable credentials",
+        "SSI",
+        "DID",
+        "credential issuance",
+        "credential verification",
+        "IATP"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "thomas-t7",
+        "date": "2026-06-15"
+      },
+      "contributors": [
+        "thomas-t7"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0031/1-vc-issuance-and-verification/drawio/decentralized-identity-verification-l1-as-of-2024.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0031/2-bring-your-own-wallet/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0031",
+      "subfolder": "2-bring-your-own-wallet",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "1cb0b6",
+      "slug": "/ref-arch/1cb0b6",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/1cb0b6",
+      "title": "DIV – Bring Your Own Wallet",
+      "tags": [
+        "appdev",
+        "integration",
+        "security",
+        "ref-arch"
+      ],
+      "keywords": [
+        "sap",
+        "decentralized identity",
+        "verifiable credentials",
+        "SSI",
+        "DID",
+        "wallet",
+        "bring your own wallet",
+        "Catena-X",
+        "dataspace",
+        "membership credential",
+        "self-hosted wallet"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 2,
+      "last_update": {
+        "author": "thomas-t7",
+        "date": "2026-06-15"
+      },
+      "contributors": [
+        "thomas-t7"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0031/2-bring-your-own-wallet/drawio/decentralized-identity-verification-l1-byow.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/RA0031/3-product-carbon-footprint-use-case/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0031",
+      "subfolder": "3-product-carbon-footprint-use-case",
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "168c97",
+      "slug": "/ref-arch/168c97",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/168c97",
+      "title": "DIV – Product Carbon Footprint Use Case",
+      "tags": [
+        "appdev",
+        "integration",
+        "security",
+        "ref-arch"
+      ],
+      "keywords": [
+        "sap",
+        "decentralized identity",
+        "verifiable credentials",
+        "SSI",
+        "DID",
+        "product carbon footprint",
+        "PCF",
+        "Catena-X",
+        "supply chain",
+        "carbon data network",
+        "IATP",
+        "bring your own wallet",
+        "BYOW"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 3,
+      "last_update": {
+        "author": "thomas-t7",
+        "date": "2026-06-15"
+      },
+      "contributors": [
+        "thomas-t7"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0031/3-product-carbon-footprint-use-case/drawio/product-carbon-footprint-use-case.drawio"
+      ],
+      "image_files": [],
+      "matched_topics": []
+    },
+    {
+      "source_file": "docs/ref-arch/RA0031/readme.md",
+      "is_landing_page": false,
+      "ra_folder": "RA0031",
+      "subfolder": null,
+      "is_ra_root": true,
+      "is_demo_template": false,
+      "front_matter_id": "458ff4",
+      "slug": "/ref-arch/458ff4",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch/458ff4",
+      "title": "Decentralized Identity Verification",
+      "tags": [
+        "appdev",
+        "integration",
+        "security",
+        "ref-arch"
+      ],
+      "keywords": [
+        "sap",
+        "integration",
+        "security",
+        "ref-arch",
+        "decentralized identity",
+        "verifiable credentials",
+        "self-sovereign identity",
+        "SSI",
+        "DID",
+        "BTP",
+        "trust network"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 31,
+      "last_update": {
+        "author": "thomas-t7",
+        "date": "2026-06-15"
+      },
+      "contributors": [
+        "thomas-t7"
+      ],
+      "drawio_files": [
+        "docs/ref-arch/RA0031/drawio/decentralized-identity-verification-l0.drawio"
+      ],
+      "image_files": [
+        "docs/ref-arch/RA0031/images/digital-business-wallet.png",
+        "docs/ref-arch/RA0031/images/self-sovereign-identity-actors.png"
+      ],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    },
+    {
+      "source_file": "docs/ref-arch/readme.md",
+      "is_landing_page": true,
+      "ra_folder": null,
+      "subfolder": null,
+      "is_ra_root": false,
+      "is_demo_template": false,
+      "front_matter_id": "37afa8",
+      "slug": "/ref-arch",
+      "public_url": "https://architecture.learning.sap.com/docs/ref-arch",
+      "title": "SAP Reference Architecture - Building Blocks for Business Success",
+      "tags": [
+        "ref-arch"
+      ],
+      "keywords": [
+        "SAP Reference Architectures",
+        "Architectures",
+        "AI",
+        "Artificial Intelligence",
+        "reference architectures",
+        "efficiency",
+        "scalability",
+        "interoperability",
+        "standardization",
+        "SAP BTP",
+        "SAP Business Technology Platform",
+        "digital transformation",
+        "business processes",
+        "best practices",
+        "hybrid cloud",
+        "multi-cloud",
+        "governance",
+        "Security",
+        "compliance"
+      ],
+      "draft": false,
+      "unlisted": false,
+      "sidebar_position": 1,
+      "last_update": {
+        "author": "Cameron Khorsandi",
+        "date": "2025-09-15"
+      },
+      "contributors": [],
+      "drawio_files": [],
+      "image_files": [
+        "docs/ref-arch/images/solution-diagram-example.svg"
+      ],
+      "matched_topics": [
+        "sap-btp"
+      ]
+    }
+  ]
+}

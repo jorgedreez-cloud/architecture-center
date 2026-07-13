@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "source.schema.json",
+  "title": "Source",
+  "description": "A provenance-bearing reference: either an internal repository file/section, or an external URL cited by a document. Every Document, Entity and Relationship record must be traceable to at least one Source.",
+  "type": "object",
+  "required": [
+    "source_id",
+    "source_url",
+    "source_file",
+    "source_section",
+    "evidence",
+    "evidence_type",
+    "confidence",
+    "repository_commit",
+    "extraction_date"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "description": "Stable identifier for this source record, e.g. 'source:<sha1(url)[:10]>' for external links or 'doc:<front-matter id>' for internal documents."
+    },
+    "kind": {
+      "type": "string",
+      "enum": ["internal_document", "external_link"],
+      "description": "Whether this source is a file inside this repository or an external URL."
+    },
+    "source_url": {
+      "type": ["string", "null"],
+      "description": "Public URL. For internal documents, the SAP Architecture Center public URL (https://architecture.learning.sap.com/docs<slug>). For external links, the literal URL found in the markdown."
+    },
+    "source_file": {
+      "type": "string",
+      "description": "Repository-relative path of the file this source was extracted from, e.g. docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md."
+    },
+    "source_section": {
+      "type": ["string", "null"],
+      "description": "Markdown heading (## ...) under which the source/link/evidence was found, or null if front matter / document-level."
+    },
+    "domain_category": {
+      "type": "string",
+      "enum": [
+        "SAP Architecture Center",
+        "SAP Help",
+        "SAP Discovery Center",
+        "SAP Community",
+        "SAP Learning",
+        "SAP Developer",
+        "SAP Business Accelerator Hub",
+        "GitHub",
+        "YouTube",
+        "Other"
+      ],
+      "description": "Only present when kind = external_link. Domain classification per FASE 6 rules."
+    },
+    "link_title": {
+      "type": ["string", "null"],
+      "description": "Markdown link text / anchor text as written in the source document."
+    },
+    "evidence": {
+      "type": "string",
+      "description": "Verbatim quoted text (sentence, list item, or markdown link) proving this source's relevance. Never empty."
+    },
+    "evidence_type": {
+      "type": "string",
+      "enum": ["explicit", "inferred"]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "repository_commit": {
+      "type": "string",
+      "description": "Full git SHA of the commit the extraction was run against."
+    },
+    "extraction_date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

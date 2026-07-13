@@ -1,0 +1,7 @@
+# Python 3.9+
+PyYAML>=6.0
+
+# Optional, only needed if you want scripts/*.py to validate records
+# against schemas/*.json at write time (--validate flag). Not required
+# to run the pilot.
+jsonschema>=4.0

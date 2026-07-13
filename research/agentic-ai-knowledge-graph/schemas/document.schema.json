@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "document.schema.json",
+  "title": "Document / ReferenceArchitecture node",
+  "description": "One row per markdown file (type=Document) or per RA folder (type=ReferenceArchitecture, one aggregate row per RA0xxx grouping its Documents). Derived deterministically from front matter and folder structure - always evidence_type=explicit.",
+  "type": "object",
+  "required": [
+    "node_id",
+    "type",
+    "title",
+    "source_id",
+    "source_url",
+    "source_file",
+    "source_section",
+    "evidence",
+    "evidence_type",
+    "confidence",
+    "repository_commit",
+    "extraction_date"
+  ],
+  "properties": {
+    "node_id": {
+      "type": "string",
+      "description": "'doc:<front-matter id>' for Document nodes, 'ra:<RA folder, e.g. RA0029>' for ReferenceArchitecture nodes."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["Document", "ReferenceArchitecture"]
+    },
+    "ra_folder": {
+      "type": "string",
+      "description": "Owning RA folder, e.g. RA0029."
+    },
+    "front_matter_id": {
+      "type": ["string", "null"],
+      "description": "The `id` field from front matter (Document nodes only)."
+    },
+    "slug": {
+      "type": ["string", "null"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": ["string", "null"]
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "contributors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "last_update_date": {
+      "type": ["string", "null"]
+    },
+    "last_update_author": {
+      "type": ["string", "null"]
+    },
+    "draft": {
+      "type": ["boolean", "null"]
+    },
+    "unlisted": {
+      "type": ["boolean", "null"]
+    },
+    "sidebar_position": {
+      "type": ["integer", "null"]
+    },
+    "source_id": { "type": "string" },
+    "source_url": { "type": ["string", "null"] },
+    "source_file": { "type": "string" },
+    "source_section": { "type": ["string", "null"] },
+    "evidence": { "type": "string" },
+    "evidence_type": { "type": "string", "enum": ["explicit", "inferred"] },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "repository_commit": { "type": "string" },
+    "extraction_date": { "type": "string", "format": "date-time" }
+  }
+}

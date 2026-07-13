@@ -1,0 +1,157 @@
+# Ontology for the agentic-ai-knowledge-graph.
+# Defines the closed set of node types and relationship types used across
+# the pilot and (later) full extraction, plus the canonical entity registry
+# used to deduplicate the same real-world entity mentioned across documents.
+#
+# Any node or relationship produced by scripts/extract_document.py or
+# scripts/build_graph.py MUST use a type from this file. Nothing else is
+# permitted in this phase.
+
+node_types:
+  - Document              # a single markdown file (RA root or subpage)
+  - ReferenceArchitecture # one per RA folder (RA0001-RA0031), groups its Documents
+  - SAPProduct
+  - SAPService
+  - Capability
+  - Agent
+  - Protocol
+  - API
+  - DataSource
+  - IdentitySecurity
+  - UseCase
+  - Requirement
+  - Constraint
+  - Diagram
+  - Source               # external reference (SAP Help, GitHub, YouTube, ...)
+  - TechnologyDomain      # derived from front matter `tags` (genai, data, appdev, integration, opsec)
+
+relationship_types:
+  - PART_OF               # Document PART_OF ReferenceArchitecture
+  - USES                  # e.g. ReferenceArchitecture USES SAPService
+  - CONNECTS_TO
+  - REQUIRES
+  - DEPENDS_ON
+  - EXPOSES               # e.g. SAPService EXPOSES API
+  - CONSUMES_DATA_FROM
+  - AUTHENTICATES_WITH    # e.g. SAPService AUTHENTICATES_WITH IdentitySecurity
+  - EXTENDS
+  - SUPPORTS_PROTOCOL     # e.g. Agent SUPPORTS_PROTOCOL Protocol
+  - DOCUMENTED_BY         # Entity DOCUMENTED_BY Source
+  - HAS_SOURCE            # Document HAS_SOURCE Source
+  - HAS_DIAGRAM           # Document HAS_DIAGRAM Diagram
+  - HAS_USE_CASE          # ReferenceArchitecture HAS_USE_CASE UseCase
+  - BELONGS_TO_DOMAIN     # Document/ReferenceArchitecture BELONGS_TO_DOMAIN TechnologyDomain
+  - MENTIONS              # generic, low-confidence: Document MENTIONS Entity
+
+# evidence_type is mandatory on every node and relationship record:
+#   explicit  - directly asserted by the source (literal named mention, a
+#               markdown link in a "Services and Components"/"Resources"
+#               section, an explicit sentence describing the relation, or a
+#               structural fact derivable from the repository itself, e.g.
+#               folder membership or front matter fields).
+#   inferred  - derived by pattern-matching/heuristic that requires
+#               interpretation beyond the literal text (e.g. two entities
+#               co-occurring in the same paragraph with no explicit verb
+#               connecting them).
+# confidence is a float in [0,1]. explicit facts default to 0.9-1.0,
+# inferred facts must be <= 0.6.
+
+# Canonical entity registry: maps text aliases (lowercased, matched as
+# substrings) to a single canonical entity so the same real-world thing
+# mentioned in different documents/wordings collapses to one node.
+canonical_entities:
+  - canonical_id: sap-btp
+    canonical_name: "SAP Business Technology Platform (BTP)"
+    type: SAPService
+    aliases: ["sap btp", "business technology platform"]
+
+  - canonical_id: joule
+    canonical_name: "Joule"
+    type: Agent
+    aliases: ["joule agents", "joule agent", "joule"]
+
+  - canonical_id: joule-studio
+    canonical_name: "Joule Studio"
+    type: SAPService
+    aliases: ["joule studio"]
+
+  - canonical_id: sap-hana-cloud
+    canonical_name: "SAP HANA Cloud"
+    type: SAPService
+    aliases: ["sap hana cloud", "hana cloud"]
+
+  - canonical_id: sap-business-data-cloud
+    canonical_name: "SAP Business Data Cloud"
+    type: SAPProduct
+    aliases: ["sap business data cloud", "business data cloud"]
+
+  - canonical_id: sap-datasphere
+    canonical_name: "SAP Datasphere"
+    type: SAPProduct
+    aliases: ["sap datasphere", "datasphere"]
+
+  - canonical_id: sap-s4hana
+    canonical_name: "SAP S/4HANA"
+    type: SAPProduct
+    aliases: ["sap s/4hana", "s/4hana cloud", "s/4hana"]
+
+  - canonical_id: sap-knowledge-graph
+    canonical_id_note: "product name as used in RA0029/1-a2a-and-mcp"
+    canonical_name: "SAP Knowledge Graph"
+    type: DataSource
+    aliases: ["sap knowledge graph"]
+
+  - canonical_id: sap-ai-core
+    canonical_name: "SAP AI Core"
+    type: SAPService
+    aliases: ["sap ai core"]
+
+  - canonical_id: generative-ai-hub
+    canonical_name: "Generative AI Hub"
+    type: SAPService
+    aliases: ["generative ai hub"]
+
+  - canonical_id: sap-cloud-sdk-for-ai
+    canonical_name: "SAP Cloud SDK for AI"
+    type: SAPService
+    aliases: ["sap cloud sdk for ai"]
+
+  - canonical_id: sap-cloud-identity-services
+    canonical_name: "SAP Cloud Identity Services"
+    type: IdentitySecurity
+    aliases: ["sap cloud identity services", "identity authentication service", "ias"]
+
+  - canonical_id: a2a-protocol
+    canonical_name: "Agent2Agent (A2A) Protocol"
+    type: Protocol
+    aliases: ["agent2agent", "a2a protocol", "a2a"]
+
+  - canonical_id: mcp-protocol
+    canonical_name: "Model Context Protocol (MCP)"
+    type: Protocol
+    aliases: ["model context protocol", "mcp protocol", "mcp"]
+
+  - canonical_id: agent-gateway
+    canonical_name: "Agent Gateway"
+    type: API
+    aliases: ["agent gateway"]
+
+  - canonical_id: mcp-gateway
+    canonical_name: "MCP Gateway (SAP Integration Suite)"
+    type: API
+    aliases: ["mcp gateway"]
+
+  - canonical_id: sap-build-process-automation
+    canonical_name: "SAP Build Process Automation"
+    type: SAPService
+    aliases: ["sap build process automation"]
+
+  - canonical_id: sap-build
+    canonical_name: "SAP Build"
+    type: SAPProduct
+    aliases: ["sap build"]
+
+  - canonical_id: rag
+    canonical_name: "Retrieval Augmented Generation (RAG)"
+    type: Capability
+    aliases: ["retrieval augmented generation", "retrieval-augmented generation", "document grounding"]
