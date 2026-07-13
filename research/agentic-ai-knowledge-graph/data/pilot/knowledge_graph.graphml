@@ -1,16 +1,16 @@
 <?xml version="1.0" ?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns">
   <key id="n_canonical_id" for="node" attr.name="canonical_id" attr.type="string"/>
-  <key id="n_confidence" for="node" attr.name="confidence" attr.type="string"/>
+  <key id="n_confidence" for="node" attr.name="confidence" attr.type="double"/>
   <key id="n_contributors" for="node" attr.name="contributors" attr.type="string"/>
   <key id="n_description" for="node" attr.name="description" attr.type="string"/>
   <key id="n_domain_category" for="node" attr.name="domain_category" attr.type="string"/>
-  <key id="n_draft" for="node" attr.name="draft" attr.type="string"/>
+  <key id="n_draft" for="node" attr.name="draft" attr.type="boolean"/>
   <key id="n_evidence" for="node" attr.name="evidence" attr.type="string"/>
   <key id="n_evidence_type" for="node" attr.name="evidence_type" attr.type="string"/>
   <key id="n_extraction_date" for="node" attr.name="extraction_date" attr.type="string"/>
   <key id="n_extraction_method" for="node" attr.name="extraction_method" attr.type="string"/>
-  <key id="n_found_in_document" for="node" attr.name="found_in_document" attr.type="string"/>
+  <key id="n_found_in_documents" for="node" attr.name="found_in_documents" attr.type="string"/>
   <key id="n_front_matter_id" for="node" attr.name="front_matter_id" attr.type="string"/>
   <key id="n_keywords" for="node" attr.name="keywords" attr.type="string"/>
   <key id="n_kind" for="node" attr.name="kind" attr.type="string"/>
@@ -20,7 +20,7 @@
   <key id="n_name" for="node" attr.name="name" attr.type="string"/>
   <key id="n_ra_folder" for="node" attr.name="ra_folder" attr.type="string"/>
   <key id="n_repository_commit" for="node" attr.name="repository_commit" attr.type="string"/>
-  <key id="n_sidebar_position" for="node" attr.name="sidebar_position" attr.type="string"/>
+  <key id="n_sidebar_position" for="node" attr.name="sidebar_position" attr.type="int"/>
   <key id="n_slug" for="node" attr.name="slug" attr.type="string"/>
   <key id="n_source_file" for="node" attr.name="source_file" attr.type="string"/>
   <key id="n_source_id" for="node" attr.name="source_id" attr.type="string"/>
@@ -29,8 +29,8 @@
   <key id="n_tags" for="node" attr.name="tags" attr.type="string"/>
   <key id="n_title" for="node" attr.name="title" attr.type="string"/>
   <key id="n_type" for="node" attr.name="type" attr.type="string"/>
-  <key id="n_unlisted" for="node" attr.name="unlisted" attr.type="string"/>
-  <key id="e_confidence" for="edge" attr.name="confidence" attr.type="string"/>
+  <key id="n_unlisted" for="node" attr.name="unlisted" attr.type="boolean"/>
+  <key id="e_confidence" for="edge" attr.name="confidence" attr.type="double"/>
   <key id="e_evidence" for="edge" attr.name="evidence" attr.type="string"/>
   <key id="e_evidence_type" for="edge" attr.name="evidence_type" attr.type="string"/>
   <key id="e_extraction_date" for="edge" attr.name="extraction_date" attr.type="string"/>
@@ -47,7 +47,6 @@
   <graph id="agentic-ai-kg-pilot" edgedefault="directed">
     <node id="doc:ff07b1">
       <data key="n_type">Document</data>
-      <data key="n_type">Document</data>
       <data key="n_ra_folder">RA0024</data>
       <data key="n_front_matter_id">ff07b1</data>
       <data key="n_slug">/ref-arch/ff07b1</data>
@@ -58,8 +57,8 @@
       <data key="n_contributors">[&quot;maria-kondratyeva&quot;, &quot;miguelmezamartinez&quot;, &quot;fabianleh&quot;, &quot;bernhardthimmel&quot;, &quot;mar-hol&quot;]</data>
       <data key="n_last_update_date">2026-03-12</data>
       <data key="n_last_update_author">fabianleh</data>
-      <data key="n_draft">False</data>
-      <data key="n_unlisted">False</data>
+      <data key="n_draft">false</data>
+      <data key="n_unlisted">false</data>
       <data key="n_sidebar_position">3</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
@@ -67,11 +66,10 @@
       <data key="n_evidence">front matter of docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="ra:RA0024">
-      <data key="n_type">ReferenceArchitecture</data>
       <data key="n_type">ReferenceArchitecture</data>
       <data key="n_ra_folder">RA0024</data>
       <data key="n_title">Reference Architecture folder RA0024</data>
@@ -80,11 +78,10 @@
       <data key="n_evidence">folder membership: docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md lives under docs/ref-arch/RA0024/</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="doc:98efa0">
-      <data key="n_type">Document</data>
       <data key="n_type">Document</data>
       <data key="n_ra_folder">RA0029</data>
       <data key="n_front_matter_id">98efa0</data>
@@ -96,8 +93,8 @@
       <data key="n_contributors">[&quot;kay-schmitteckert&quot;, &quot;micinit&quot;]</data>
       <data key="n_last_update_date">2026-05-04</data>
       <data key="n_last_update_author">kay-schmitteckert</data>
-      <data key="n_draft">False</data>
-      <data key="n_unlisted">False</data>
+      <data key="n_draft">false</data>
+      <data key="n_unlisted">false</data>
       <data key="n_sidebar_position">300</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
@@ -105,11 +102,10 @@
       <data key="n_evidence">front matter of docs/ref-arch/RA0029/readme.md</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="ra:RA0029">
-      <data key="n_type">ReferenceArchitecture</data>
       <data key="n_type">ReferenceArchitecture</data>
       <data key="n_ra_folder">RA0029</data>
       <data key="n_title">Reference Architecture folder RA0029</data>
@@ -118,11 +114,10 @@
       <data key="n_evidence">folder membership: docs/ref-arch/RA0029/readme.md lives under docs/ref-arch/RA0029/</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="doc:76ec36">
-      <data key="n_type">Document</data>
       <data key="n_type">Document</data>
       <data key="n_ra_folder">RA0029</data>
       <data key="n_front_matter_id">76ec36</data>
@@ -134,8 +129,8 @@
       <data key="n_contributors">[&quot;kay-schmitteckert&quot;, &quot;hterminasyan&quot;]</data>
       <data key="n_last_update_date">2026-05-04</data>
       <data key="n_last_update_author">kay-schmitteckert</data>
-      <data key="n_draft">False</data>
-      <data key="n_unlisted">False</data>
+      <data key="n_draft">false</data>
+      <data key="n_unlisted">false</data>
       <data key="n_sidebar_position">1</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
@@ -143,75 +138,42 @@
       <data key="n_evidence">front matter of docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:TechnologyDomain:genai">
       <data key="n_type">TechnologyDomain</data>
-      <data key="n_type">TechnologyDomain</data>
       <data key="n_name">genai</data>
       <data key="n_extraction_method">front_matter_tag</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;, &quot;doc:98efa0&quot;, &quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_evidence">tags: [genai, agents, build, appdev]</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </node>
-    <node id="entity:TechnologyDomain:agents">
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_name">agents</data>
-      <data key="n_extraction_method">front_matter_tag</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
-      <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
-      <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="n_evidence">tags: [genai, agents, build, appdev]</data>
-      <data key="n_evidence_type">explicit</data>
-      <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </node>
-    <node id="entity:TechnologyDomain:build">
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_name">build</data>
-      <data key="n_extraction_method">front_matter_tag</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
-      <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
-      <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="n_evidence">tags: [genai, agents, build, appdev]</data>
-      <data key="n_evidence_type">explicit</data>
-      <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:TechnologyDomain:appdev">
       <data key="n_type">TechnologyDomain</data>
-      <data key="n_type">TechnologyDomain</data>
       <data key="n_name">appdev</data>
       <data key="n_extraction_method">front_matter_tag</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;, &quot;doc:98efa0&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_evidence">tags: [genai, agents, build, appdev]</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="diagram:doc:ff07b1:joule-studio-ref-arch.drawio">
       <data key="n_type">Diagram</data>
-      <data key="n_type">Diagram</data>
       <data key="n_name">joule-studio-ref-arch.drawio</data>
       <data key="n_extraction_method">drawio_reference</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
@@ -219,16 +181,15 @@
       <data key="n_evidence">![drawio](drawio/joule-studio-ref-arch.drawio)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:sap-btp">
-      <data key="n_type">SAPService</data>
       <data key="n_type">SAPService</data>
       <data key="n_name">SAP Business Technology Platform (BTP)</data>
       <data key="n_canonical_id">sap-btp</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;, &quot;doc:98efa0&quot;, &quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
@@ -236,65 +197,47 @@
       <data key="n_evidence">SAP BTP Connectivity integrates existing workflows with Joule Skills and AI Agents, enabling seamless, automated execution across SAP and non-SAP systems.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:joule">
-      <data key="n_type">Agent</data>
       <data key="n_type">Agent</data>
       <data key="n_name">Joule</data>
       <data key="n_canonical_id">joule</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;, &quot;doc:98efa0&quot;, &quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="n_source_section">__introduction__</data>
       <data key="n_evidence">Joule Studio in SAP Build is a comprehensive platform for developing and enhancing AI capabilities with a user-friendly experience.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:joule-studio">
-      <data key="n_type">SAPService</data>
       <data key="n_type">SAPService</data>
       <data key="n_name">Joule Studio</data>
       <data key="n_canonical_id">joule-studio</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;, &quot;doc:98efa0&quot;, &quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="n_source_section">__introduction__</data>
       <data key="n_evidence">Joule Studio in SAP Build is a comprehensive platform for developing and enhancing AI capabilities with a user-friendly experience.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </node>
-    <node id="entity:sap-hana-cloud">
-      <data key="n_type">SAPService</data>
-      <data key="n_type">SAPService</data>
-      <data key="n_name">SAP HANA Cloud</data>
-      <data key="n_canonical_id">sap-hana-cloud</data>
-      <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
-      <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
-      <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="n_source_section">Characteristics</data>
-      <data key="n_evidence">• **Cloud and On-Premise Solution Integration**: Joule Studio integrates seamlessly with various SAP and third-party cloud solutions, including SAP ECC, SAP S/4HANA, and S/4HANA Cloud Private Edition, providing comprehensive support for hybrid landscapes.</data>
-      <data key="n_evidence_type">explicit</data>
-      <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:sap-s4hana">
-      <data key="n_type">SAPProduct</data>
       <data key="n_type">SAPProduct</data>
       <data key="n_name">SAP S/4HANA</data>
       <data key="n_canonical_id">sap-s4hana</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;, &quot;doc:98efa0&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
@@ -302,33 +245,31 @@
       <data key="n_evidence">• **Cloud and On-Premise Solution Integration**: Joule Studio integrates seamlessly with various SAP and third-party cloud solutions, including SAP ECC, SAP S/4HANA, and S/4HANA Cloud Private Edition, providing comprehensive support for hybrid landscapes.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:sap-ai-core">
-      <data key="n_type">SAPService</data>
       <data key="n_type">SAPService</data>
       <data key="n_name">SAP AI Core</data>
       <data key="n_canonical_id">sap-ai-core</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="n_source_section">Services and Components</data>
-      <data key="n_evidence">- [SAP AI Core](https://discovery-center.</data>
+      <data key="n_source_section">Flow</data>
+      <data key="n_evidence">AI Core plays a crucial role in extending Joule's capabilities.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:sap-cloud-identity-services">
-      <data key="n_type">IdentitySecurity</data>
       <data key="n_type">IdentitySecurity</data>
       <data key="n_name">SAP Cloud Identity Services</data>
       <data key="n_canonical_id">sap-cloud-identity-services</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;, &quot;doc:98efa0&quot;, &quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
@@ -336,16 +277,15 @@
       <data key="n_evidence">Joule Studio relies on SAP Cloud Identity Services for identity management, authentication and identity life-cycle management.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:sap-build-process-automation">
-      <data key="n_type">SAPService</data>
       <data key="n_type">SAPService</data>
       <data key="n_name">SAP Build Process Automation</data>
       <data key="n_canonical_id">sap-build-process-automation</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
@@ -353,32 +293,31 @@
       <data key="n_evidence">Joule Studio is part of SAP Build, which includes SAP Build Apps, SAP Build Code, SAP Build Work Zone, and SAP Build Process Automation.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:sap-build">
-      <data key="n_type">SAPProduct</data>
       <data key="n_type">SAPProduct</data>
       <data key="n_name">SAP Build</data>
       <data key="n_canonical_id">sap-build</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;, &quot;doc:98efa0&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="n_source_section">__introduction__</data>
       <data key="n_evidence">Joule Studio in SAP Build is a comprehensive platform for developing and enhancing AI capabilities with a user-friendly experience.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:rag">
-      <data key="n_type">Capability</data>
       <data key="n_type">Capability</data>
       <data key="n_name">Retrieval Augmented Generation (RAG)</data>
       <data key="n_canonical_id">rag</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
@@ -386,15 +325,14 @@
       <data key="n_evidence">Additionally, customers can provision their own document grounding capabilities in AI Core leveraging the Retrieval Augmented Generation (RAG) service and integrate them into their AI Agents to ground them in specific data.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
-    <node id="entity:req-joule-studio-provisioning">
+    <node id="entity:req-joule-provisioned">
       <data key="n_type">Requirement</data>
-      <data key="n_type">Requirement</data>
-      <data key="n_name">Joule + SAP Build Process Automation must be provisioned before Joule Studio</data>
-      <data key="n_extraction_method">explicit_sentence</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_name">Joule must be provisioned in the target landscape</data>
+      <data key="n_extraction_method">requirement_trigger_sentence</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
@@ -402,15 +340,44 @@
       <data key="n_evidence">To provision Joule Studio, Joule must be set up in the target landscape along with SAP Build Process Automation as part of the SAP Build tenant with the build-default plan utilizing SAP Identity Authentication Service (IAS).</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </node>
+    <node id="entity:req-build-process-automation-provisioned">
+      <data key="n_type">Requirement</data>
+      <data key="n_name">SAP Build Process Automation must be provisioned as part of the SAP Build tenant (build-default plan)</data>
+      <data key="n_extraction_method">requirement_trigger_sentence</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;]</data>
+      <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
+      <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="n_source_section">Flow</data>
+      <data key="n_evidence">To provision Joule Studio, Joule must be set up in the target landscape along with SAP Build Process Automation as part of the SAP Build tenant with the build-default plan utilizing SAP Identity Authentication Service (IAS).</data>
+      <data key="n_evidence_type">explicit</data>
+      <data key="n_confidence">0.9</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </node>
+    <node id="entity:req-ias-utilized-for-provisioning">
+      <data key="n_type">Requirement</data>
+      <data key="n_name">Provisioning must utilize SAP Identity Authentication Service (IAS)</data>
+      <data key="n_extraction_method">requirement_trigger_sentence</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;]</data>
+      <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
+      <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="n_source_section">Flow</data>
+      <data key="n_evidence">To provision Joule Studio, Joule must be set up in the target landscape along with SAP Build Process Automation as part of the SAP Build tenant with the build-default plan utilizing SAP Identity Authentication Service (IAS).</data>
+      <data key="n_evidence_type">explicit</data>
+      <data key="n_confidence">0.9</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:usecase-customer-support-agent">
       <data key="n_type">UseCase</data>
-      <data key="n_type">UseCase</data>
       <data key="n_name">Automated Customer Support Agent Deployment</data>
       <data key="n_extraction_method">use_case_bullet</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
@@ -418,15 +385,14 @@
       <data key="n_evidence">Automated Customer Support Agent Deployment: Joule Studio can be used to create AI agents that automatically handle customer inquiries, retrieve order statuses, and escalate issues when necessary.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:usecase-procurement-negotiation">
       <data key="n_type">UseCase</data>
-      <data key="n_type">UseCase</data>
       <data key="n_name">Procurement Negotiation and Compliance</data>
       <data key="n_extraction_method">use_case_bullet</data>
-      <data key="n_found_in_document">doc:ff07b1</data>
+      <data key="n_found_in_documents">[&quot;doc:ff07b1&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
@@ -434,75 +400,14 @@
       <data key="n_evidence">Procurement Negotiation and Compliance: AI agents built in Joule Studio analyze supplier contracts, monitor compliance, and negotiate procurement deals, leveraging data from SAP ECC and external sources.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </node>
-    <node id="entity:TechnologyDomain:aws">
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_name">aws</data>
-      <data key="n_extraction_method">front_matter_tag</data>
-      <data key="n_found_in_document">doc:98efa0</data>
-      <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="n_evidence">tags: [genai, agents, appdev, aws, gcp, azure, ibm]</data>
-      <data key="n_evidence_type">explicit</data>
-      <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </node>
-    <node id="entity:TechnologyDomain:gcp">
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_name">gcp</data>
-      <data key="n_extraction_method">front_matter_tag</data>
-      <data key="n_found_in_document">doc:98efa0</data>
-      <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="n_evidence">tags: [genai, agents, appdev, aws, gcp, azure, ibm]</data>
-      <data key="n_evidence_type">explicit</data>
-      <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </node>
-    <node id="entity:TechnologyDomain:azure">
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_name">azure</data>
-      <data key="n_extraction_method">front_matter_tag</data>
-      <data key="n_found_in_document">doc:98efa0</data>
-      <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="n_evidence">tags: [genai, agents, appdev, aws, gcp, azure, ibm]</data>
-      <data key="n_evidence_type">explicit</data>
-      <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </node>
-    <node id="entity:TechnologyDomain:ibm">
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_name">ibm</data>
-      <data key="n_extraction_method">front_matter_tag</data>
-      <data key="n_found_in_document">doc:98efa0</data>
-      <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="n_evidence">tags: [genai, agents, appdev, aws, gcp, azure, ibm]</data>
-      <data key="n_evidence_type">explicit</data>
-      <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="diagram:doc:98efa0:architecture.drawio">
       <data key="n_type">Diagram</data>
-      <data key="n_type">Diagram</data>
       <data key="n_name">architecture.drawio</data>
       <data key="n_extraction_method">drawio_reference</data>
-      <data key="n_found_in_document">doc:98efa0</data>
+      <data key="n_found_in_documents">[&quot;doc:98efa0&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
       <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
@@ -510,33 +415,15 @@
       <data key="n_evidence">![drawio](./drawio/architecture.drawio)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
-    <node id="entity:sap-business-data-cloud">
-      <data key="n_type">SAPProduct</data>
-      <data key="n_type">SAPProduct</data>
-      <data key="n_name">SAP Business Data Cloud</data>
-      <data key="n_canonical_id">sap-business-data-cloud</data>
-      <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:98efa0</data>
-      <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="n_source_section">Architecture</data>
-      <data key="n_evidence">- **SAP Cloud Solutions:** Seamless integration with SAP S/4HANA, SuccessFactors, Business Data Cloud, Concur, Customer Experience and Business Networks.</data>
-      <data key="n_evidence_type">explicit</data>
-      <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </node>
-    <node id="entity:generative-ai-hub">
+    <node id="entity:sap-hana-cloud">
       <data key="n_type">SAPService</data>
-      <data key="n_type">SAPService</data>
-      <data key="n_name">Generative AI Hub</data>
-      <data key="n_canonical_id">generative-ai-hub</data>
+      <data key="n_name">SAP HANA Cloud</data>
+      <data key="n_canonical_id">sap-hana-cloud</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:98efa0</data>
+      <data key="n_found_in_documents">[&quot;doc:98efa0&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
       <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
@@ -544,16 +431,47 @@
       <data key="n_evidence">- **Generative AI Hub:** Foundation models, prompt optimization, orchestration capabilities (grounding, templating, data masking, I/O filtering) and vector search via SAP HANA Cloud.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </node>
+    <node id="entity:sap-business-data-cloud">
+      <data key="n_type">SAPProduct</data>
+      <data key="n_name">SAP Business Data Cloud</data>
+      <data key="n_canonical_id">sap-business-data-cloud</data>
+      <data key="n_extraction_method">canonical_lexicon_match</data>
+      <data key="n_found_in_documents">[&quot;doc:98efa0&quot;]</data>
+      <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
+      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
+      <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
+      <data key="n_source_section">Architecture</data>
+      <data key="n_evidence">- **SAP Cloud Solutions:** Seamless integration with SAP S/4HANA, SuccessFactors, Business Data Cloud, Concur, Customer Experience and Business Networks.</data>
+      <data key="n_evidence_type">explicit</data>
+      <data key="n_confidence">0.9</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </node>
+    <node id="entity:generative-ai-hub">
+      <data key="n_type">SAPService</data>
+      <data key="n_name">Generative AI Hub</data>
+      <data key="n_canonical_id">generative-ai-hub</data>
+      <data key="n_extraction_method">canonical_lexicon_match</data>
+      <data key="n_found_in_documents">[&quot;doc:98efa0&quot;]</data>
+      <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
+      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
+      <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
+      <data key="n_source_section">Architecture</data>
+      <data key="n_evidence">- **Generative AI Hub:** Foundation models, prompt optimization, orchestration capabilities (grounding, templating, data masking, I/O filtering) and vector search via SAP HANA Cloud.</data>
+      <data key="n_evidence_type">explicit</data>
+      <data key="n_confidence">0.9</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:sap-cloud-sdk-for-ai">
-      <data key="n_type">SAPService</data>
-      <data key="n_type">SAPService</data>
+      <data key="n_type">DeveloperTool</data>
       <data key="n_name">SAP Cloud SDK for AI</data>
       <data key="n_canonical_id">sap-cloud-sdk-for-ai</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:98efa0</data>
+      <data key="n_found_in_documents">[&quot;doc:98efa0&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
       <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
@@ -561,16 +479,15 @@
       <data key="n_evidence">- **Custom Agents on SAP BTP:** Two development approaches - **Low-Code** via Joule Studio with visual configuration and automatic Joule registration and **Pro-Code** using SAP Cloud SDK for AI with frameworks (LangGraph, AG2, CrewAI, Smolagents) integrated via A2A protocol.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:a2a-protocol">
-      <data key="n_type">Protocol</data>
       <data key="n_type">Protocol</data>
       <data key="n_name">Agent2Agent (A2A) Protocol</data>
       <data key="n_canonical_id">a2a-protocol</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:98efa0</data>
+      <data key="n_found_in_documents">[&quot;doc:98efa0&quot;, &quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
       <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
@@ -578,16 +495,15 @@
       <data key="n_evidence">- **Custom Agents on SAP BTP:** Two development approaches - **Low-Code** via Joule Studio with visual configuration and automatic Joule registration and **Pro-Code** using SAP Cloud SDK for AI with frameworks (LangGraph, AG2, CrewAI, Smolagents) integrated via A2A protocol.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:mcp-protocol">
-      <data key="n_type">Protocol</data>
       <data key="n_type">Protocol</data>
       <data key="n_name">Model Context Protocol (MCP)</data>
       <data key="n_canonical_id">mcp-protocol</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:98efa0</data>
+      <data key="n_found_in_documents">[&quot;doc:98efa0&quot;, &quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
       <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
@@ -595,46 +511,75 @@
       <data key="n_evidence">MCP Servers and APIs provide tools and data sources.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:agent-gateway">
-      <data key="n_type">API</data>
       <data key="n_type">API</data>
       <data key="n_name">Agent Gateway</data>
       <data key="n_canonical_id">agent-gateway</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:98efa0</data>
+      <data key="n_found_in_documents">[&quot;doc:98efa0&quot;, &quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
       <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
+      <data key="n_source_section">__introduction__</data>
       <data key="n_evidence">The Agent Gateway is not yet generally available (GA).</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
-    <node id="entity:TechnologyDomain:cap">
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_type">TechnologyDomain</data>
-      <data key="n_name">cap</data>
-      <data key="n_extraction_method">front_matter_tag</data>
-      <data key="n_found_in_document">doc:76ec36</data>
+    <node id="entity:constraint-agent-gateway-not-ga">
+      <data key="n_type">Constraint</data>
+      <data key="n_name">Agent Gateway is not yet generally available (GA)</data>
+      <data key="n_extraction_method">constraint_trigger_sentence</data>
+      <data key="n_found_in_documents">[&quot;doc:98efa0&quot;, &quot;doc:76ec36&quot;]</data>
+      <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
+      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
+      <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
+      <data key="n_source_section">__introduction__</data>
+      <data key="n_evidence">The Agent Gateway is not yet generally available (GA).</data>
+      <data key="n_evidence_type">explicit</data>
+      <data key="n_confidence">0.9</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </node>
+    <node id="entity:constraint-unidirectional-outbound-only">
+      <data key="n_type">Constraint</data>
+      <data key="n_name">Current architecture (RA0029) supports unidirectional (outbound) communication only</data>
+      <data key="n_extraction_method">constraint_trigger_sentence</data>
+      <data key="n_found_in_documents">[&quot;doc:98efa0&quot;, &quot;doc:76ec36&quot;]</data>
+      <data key="n_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
+      <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
+      <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
+      <data key="n_source_section">__introduction__</data>
+      <data key="n_evidence">As a result, the current architecture supports unidirectional (outbound) communication only.</data>
+      <data key="n_evidence_type">explicit</data>
+      <data key="n_confidence">0.9</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </node>
+    <node id="diagram:doc:76ec36:a2a-mcp.svg">
+      <data key="n_type">Diagram</data>
+      <data key="n_name">a2a-mcp.svg</data>
+      <data key="n_extraction_method">svg_reference</data>
+      <data key="n_found_in_documents">[&quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="n_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="n_evidence">tags: [agents, genai, cap, aws, gcp, azure, ibm]</data>
+      <data key="n_source_section">__introduction__</data>
+      <data key="n_evidence">![A2A_MCP](./images/a2a-mcp.svg)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="diagram:doc:76ec36:architecture.drawio">
       <data key="n_type">Diagram</data>
-      <data key="n_type">Diagram</data>
       <data key="n_name">architecture.drawio</data>
       <data key="n_extraction_method">drawio_reference</data>
-      <data key="n_found_in_document">doc:76ec36</data>
+      <data key="n_found_in_documents">[&quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="n_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
@@ -642,16 +587,15 @@
       <data key="n_evidence">![drawio](./drawio/architecture.drawio)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:sap-knowledge-graph">
-      <data key="n_type">DataSource</data>
       <data key="n_type">DataSource</data>
       <data key="n_name">SAP Knowledge Graph</data>
       <data key="n_canonical_id">sap-knowledge-graph</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:76ec36</data>
+      <data key="n_found_in_documents">[&quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="n_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
@@ -659,39 +603,39 @@
       <data key="n_evidence">At SAP, MCP is used to provide Joule Agents with semantically enriched access to SAP business capabilities and domain knowledge, including content from SAP Knowledge Graph.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="entity:mcp-gateway">
-      <data key="n_type">API</data>
       <data key="n_type">API</data>
       <data key="n_name">MCP Gateway (SAP Integration Suite)</data>
       <data key="n_canonical_id">mcp-gateway</data>
       <data key="n_extraction_method">canonical_lexicon_match</data>
-      <data key="n_found_in_document">doc:76ec36</data>
+      <data key="n_found_in_documents">[&quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="n_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="n_source_section">__introduction__</data>
       <data key="n_evidence">- **MCP Gateway in SAP Integration Suite**, for governed, enterprise-grade exposure and consumption of SAP and non-SAP APIs as MCP-compliant tools.</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">0.9</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
-    <node id="entity:constraint-agent-gateway-not-ga">
-      <data key="n_type">Constraint</data>
-      <data key="n_type">Constraint</data>
-      <data key="n_name">Agent Gateway not GA - unidirectional (outbound) only</data>
-      <data key="n_extraction_method">explicit_sentence</data>
-      <data key="n_found_in_document">doc:76ec36</data>
+    <node id="entity:Requirement:dcae226f5b">
+      <data key="n_type">Requirement</data>
+      <data key="n_name">To ensure secure inbound communication and validate server updates, an Identity Authentication Service (IAS) App2App trust relationship must be established betw</data>
+      <data key="n_extraction_method">requirement_trigger_sentence</data>
+      <data key="n_found_in_documents">[&quot;doc:76ec36&quot;]</data>
       <data key="n_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="n_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="n_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="n_evidence">The Agent Gateway is not yet generally available (GA). As a result, the current architecture supports unidirectional (outbound) communication only.</data>
+      <data key="n_source_section">Bring Your Own Agent (Outbound)</data>
+      <data key="n_evidence">To ensure secure inbound communication and validate server updates, an Identity Authentication Service (IAS) App2App trust relationship must be established between Joule and the target agent server.</data>
       <data key="n_evidence_type">explicit</data>
-      <data key="n_confidence">0.95</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_confidence">0.85</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:0b8a5f432a">
       <data key="n_type">Source</data>
@@ -704,8 +648,8 @@
       <data key="n_evidence">[SAP Build, Joule Studio](https://discovery-center.cloud.sap/ai-feature/e93aa292-e7f4-449d-9586-f1a8510d5ab6/)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:02267df61a">
       <data key="n_type">Source</data>
@@ -718,8 +662,8 @@
       <data key="n_evidence">[SAP Build](https://discovery-center.cloud.sap/serviceCatalog/sap-build/?region=all)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:048f897766">
       <data key="n_type">Source</data>
@@ -732,8 +676,8 @@
       <data key="n_evidence">[SAP AI Core](https://discovery-center.cloud.sap/serviceCatalog/sap-ai-core/?region=all)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:7ff1aa3d25">
       <data key="n_type">Source</data>
@@ -746,8 +690,8 @@
       <data key="n_evidence">[Document Grounding](https://discovery-center.cloud.sap/ai-feature/fedeca14-3e69-472c-a0ea-82396735c35f/)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:4fdaf5ab16">
       <data key="n_type">Source</data>
@@ -760,8 +704,8 @@
       <data key="n_evidence">[SAP Build Process Automation](https://discovery-center.cloud.sap/serviceCatalog/sap-build-process-automation?region=all)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:9d1c84ea03">
       <data key="n_type">Source</data>
@@ -774,8 +718,8 @@
       <data key="n_evidence">[SAP Cloud Identity Services](https://discovery-center.cloud.sap/serviceCatalog/cloud-identity-services?region=all)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:c47b8a5383">
       <data key="n_type">Source</data>
@@ -788,8 +732,8 @@
       <data key="n_evidence">[SAP Connectivity service](https://discovery-center.cloud.sap/serviceCatalog/connectivity-service?region=all)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:438f806e81">
       <data key="n_type">Source</data>
@@ -802,8 +746,8 @@
       <data key="n_evidence">[SAP Destination service](https://discovery-center.cloud.sap/serviceCatalog/destination?region=all)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:a8907d7c4b">
       <data key="n_type">Source</data>
@@ -811,13 +755,13 @@
       <data key="n_source_url">https://www.sap.com/products/artificial-intelligence/joule-studio.html</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_section">Resources</data>
-      <data key="n_domain_category">Other</data>
+      <data key="n_domain_category">SAP.com</data>
       <data key="n_link_title">Joule Studio (sap.com)</data>
       <data key="n_evidence">[Joule Studio (sap.com)](https://www.sap.com/products/artificial-intelligence/joule-studio.html)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:d1af7381bd">
       <data key="n_type">Source</data>
@@ -825,13 +769,13 @@
       <data key="n_source_url">https://www.sap.com/assetdetail/2024/10/1621dba3-d97e-0010-bca6-c68f7e60039b.html</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_section">Resources</data>
-      <data key="n_domain_category">Other</data>
+      <data key="n_domain_category">SAP.com</data>
       <data key="n_link_title">Joule Studio in SAP Build, demo (sap.com)</data>
       <data key="n_evidence">[Joule Studio in SAP Build, demo (sap.com)](https://www.sap.com/assetdetail/2024/10/1621dba3-d97e-0010-bca6-c68f7e60039b.html)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:a91a1cf715">
       <data key="n_type">Source</data>
@@ -844,8 +788,8 @@
       <data key="n_evidence">[Build, Deploy, and Extend AI Agents with Joule Studio (SAP Community Blog Posts)](https://community.sap.com/t5/technology-blog-posts-by-sap/build-deploy-and-extend-ai-agents-with-joule-studio/ba-p/14105964)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:a35867c518">
       <data key="n_type">Source</data>
@@ -858,8 +802,8 @@
       <data key="n_evidence">[Meet Joule Studio in SAP Build (YT video)](https://www.youtube.com/watch?v=JdwfjieiOFY)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:ef73966b30">
       <data key="n_type">Source</data>
@@ -872,8 +816,8 @@
       <data key="n_evidence">[Agent Builder in Joule Studio (YT video)](https://www.youtube.com/watch?v=C37FkIM83xw)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:44c5e13135">
       <data key="n_type">Source</data>
@@ -881,13 +825,13 @@
       <data key="n_source_url">https://ivj-vx.cfapps.eu10.hana.ondemand.com/public/journey/2a840b1a-f1d9-4f42-9c75-8f377599de83/intro</data>
       <data key="n_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="n_source_section">Resources</data>
-      <data key="n_domain_category">Other</data>
+      <data key="n_domain_category">SAP BTP Hosted App</data>
       <data key="n_link_title">Interactive Value Journey</data>
       <data key="n_evidence">[Interactive Value Journey](https://ivj-vx.cfapps.eu10.hana.ondemand.com/public/journey/2a840b1a-f1d9-4f42-9c75-8f377599de83/intro)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:edd3e223b9">
       <data key="n_type">Source</data>
@@ -900,8 +844,8 @@
       <data key="n_evidence">[Joule Development - Pro-Code Development Tools for Joule](https://help.sap.com/docs/joule/joule-development-guide-ba88d1ec6a1b442098863d577c19b0c0/pro-code-development-tools-for-joule?version=CLOUD)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:ee2ec29ef1">
       <data key="n_type">Source</data>
@@ -909,13 +853,13 @@
       <data key="n_source_url">https://www.sap.com/products/artificial-intelligence/ai-foundation-os.html</data>
       <data key="n_source_file">docs/ref-arch/RA0029/readme.md</data>
       <data key="n_source_section">Architecture</data>
-      <data key="n_domain_category">Other</data>
+      <data key="n_domain_category">SAP.com</data>
       <data key="n_link_title">AI Foundation</data>
       <data key="n_evidence">[AI Foundation](https://www.sap.com/products/artificial-intelligence/ai-foundation-os.html)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:07ec1b6989">
       <data key="n_type">Source</data>
@@ -928,8 +872,8 @@
       <data key="n_evidence">[SAP AI Core](https://discovery-center.cloud.sap/serviceCatalog/sap-ai-core?region=all)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:c516b2be8d">
       <data key="n_type">Source</data>
@@ -942,8 +886,8 @@
       <data key="n_evidence">[Generative AI Hub](https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/generative-ai-hub-in-sap-ai-core)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:34d93f6e98">
       <data key="n_type">Source</data>
@@ -956,8 +900,8 @@
       <data key="n_evidence">[SAP Cloud SDK for AI](https://help.sap.com/docs/sap-cloud-sdk)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:2705d33413">
       <data key="n_type">Source</data>
@@ -970,8 +914,8 @@
       <data key="n_evidence">[SAP HANA Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-hana-cloud?region=all)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:dfeca76983">
       <data key="n_type">Source</data>
@@ -984,8 +928,8 @@
       <data key="n_evidence">[SAP Integration Suite](https://discovery-center.cloud.sap/serviceCatalog/integration-suite?region=all)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:4e2ab6b120">
       <data key="n_type">Source</data>
@@ -998,8 +942,8 @@
       <data key="n_evidence">[Reference Implementation for A2A-Compliant Pro-Code Agents on SAP BTP with Joule Integration](https://github.com/SAP-samples/btp-joule-a2a-pro-code-agent)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:4ae1856e64">
       <data key="n_type">Source</data>
@@ -1012,8 +956,8 @@
       <data key="n_evidence">[SAP A2A Agent Toolkit Plugin](https://github.com/SAP-samples/joule-a2a-agent-toolkit/)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:5f475d8b9a">
       <data key="n_type">Source</data>
@@ -1026,8 +970,8 @@
       <data key="n_evidence">[**Agent2Agent (A2A) protocol**](https://a2a-protocol.org/latest/)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:6b32292c41">
       <data key="n_type">Source</data>
@@ -1040,8 +984,8 @@
       <data key="n_evidence">[**Model Context Protocol (MCP)**](https://modelcontextprotocol.io/)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:bb45496c63">
       <data key="n_type">Source</data>
@@ -1054,8 +998,8 @@
       <data key="n_evidence">[Agent2Agent (A2A) Protocol, version 0.3.0](https://a2a-protocol.org/v0.3.0/specification/)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <node id="source:0a88d30482">
       <data key="n_type">Source</data>
@@ -1068,11 +1012,10 @@
       <data key="n_evidence">[Bring Your Own Agent](https://help.sap.com/docs/joule/joule-development-guide-ba88d1ec6a1b442098863d577c19b0c0/code-based-agents-bring-your-own-agent)</data>
       <data key="n_evidence_type">explicit</data>
       <data key="n_confidence">1.0</data>
-      <data key="n_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="n_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="n_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="n_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </node>
     <edge id="rel:doc:ff07b1:PART_OF:ra:RA0024:cec64bb0ee" source="doc:ff07b1" target="ra:RA0024">
-      <data key="e_type">PART_OF</data>
       <data key="e_type">PART_OF</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">ra:RA0024</data>
@@ -1084,11 +1027,10 @@
       <data key="e_evidence">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md is stored under docs/ref-arch/RA0024/</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:BELONGS_TO_DOMAIN:entity:TechnologyDomain:genai:cec64bb0ee" source="doc:ff07b1" target="entity:TechnologyDomain:genai">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
       <data key="e_type">BELONGS_TO_DOMAIN</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">entity:TechnologyDomain:genai</data>
@@ -1100,43 +1042,10 @@
       <data key="e_evidence">front matter tag 'genai'</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:ff07b1:BELONGS_TO_DOMAIN:entity:TechnologyDomain:agents:cec64bb0ee" source="doc:ff07b1" target="entity:TechnologyDomain:agents">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:ff07b1</data>
-      <data key="e_to_id">entity:TechnologyDomain:agents</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
-      <data key="e_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="e_evidence">front matter tag 'agents'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:ff07b1:BELONGS_TO_DOMAIN:entity:TechnologyDomain:build:cec64bb0ee" source="doc:ff07b1" target="entity:TechnologyDomain:build">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:ff07b1</data>
-      <data key="e_to_id">entity:TechnologyDomain:build</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
-      <data key="e_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="e_evidence">front matter tag 'build'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:BELONGS_TO_DOMAIN:entity:TechnologyDomain:appdev:cec64bb0ee" source="doc:ff07b1" target="entity:TechnologyDomain:appdev">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
       <data key="e_type">BELONGS_TO_DOMAIN</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">entity:TechnologyDomain:appdev</data>
@@ -1148,11 +1057,10 @@
       <data key="e_evidence">front matter tag 'appdev'</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_DIAGRAM:diagram:doc:ff07b1:joule-studio-ref-arch.drawio:cec64bb0ee" source="doc:ff07b1" target="diagram:doc:ff07b1:joule-studio-ref-arch.drawio">
-      <data key="e_type">HAS_DIAGRAM</data>
       <data key="e_type">HAS_DIAGRAM</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">diagram:doc:ff07b1:joule-studio-ref-arch.drawio</data>
@@ -1165,11 +1073,10 @@
       <data key="e_evidence">![drawio](drawio/joule-studio-ref-arch.drawio)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:0b8a5f432a:cec64bb0ee" source="doc:ff07b1" target="source:0b8a5f432a">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:0b8a5f432a</data>
@@ -1182,11 +1089,10 @@
       <data key="e_evidence">[SAP Build, Joule Studio](https://discovery-center.cloud.sap/ai-feature/e93aa292-e7f4-449d-9586-f1a8510d5ab6/)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:02267df61a:cec64bb0ee" source="doc:ff07b1" target="source:02267df61a">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:02267df61a</data>
@@ -1199,11 +1105,10 @@
       <data key="e_evidence">[SAP Build](https://discovery-center.cloud.sap/serviceCatalog/sap-build/?region=all)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:048f897766:cec64bb0ee" source="doc:ff07b1" target="source:048f897766">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:048f897766</data>
@@ -1216,11 +1121,10 @@
       <data key="e_evidence">[SAP AI Core](https://discovery-center.cloud.sap/serviceCatalog/sap-ai-core/?region=all)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:7ff1aa3d25:cec64bb0ee" source="doc:ff07b1" target="source:7ff1aa3d25">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:7ff1aa3d25</data>
@@ -1233,11 +1137,10 @@
       <data key="e_evidence">[Document Grounding](https://discovery-center.cloud.sap/ai-feature/fedeca14-3e69-472c-a0ea-82396735c35f/)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:4fdaf5ab16:cec64bb0ee" source="doc:ff07b1" target="source:4fdaf5ab16">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:4fdaf5ab16</data>
@@ -1250,11 +1153,10 @@
       <data key="e_evidence">[SAP Build Process Automation](https://discovery-center.cloud.sap/serviceCatalog/sap-build-process-automation?region=all)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:9d1c84ea03:cec64bb0ee" source="doc:ff07b1" target="source:9d1c84ea03">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:9d1c84ea03</data>
@@ -1267,11 +1169,10 @@
       <data key="e_evidence">[SAP Cloud Identity Services](https://discovery-center.cloud.sap/serviceCatalog/cloud-identity-services?region=all)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:c47b8a5383:cec64bb0ee" source="doc:ff07b1" target="source:c47b8a5383">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:c47b8a5383</data>
@@ -1284,11 +1185,10 @@
       <data key="e_evidence">[SAP Connectivity service](https://discovery-center.cloud.sap/serviceCatalog/connectivity-service?region=all)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:438f806e81:cec64bb0ee" source="doc:ff07b1" target="source:438f806e81">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:438f806e81</data>
@@ -1301,11 +1201,10 @@
       <data key="e_evidence">[SAP Destination service](https://discovery-center.cloud.sap/serviceCatalog/destination?region=all)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:a8907d7c4b:cec64bb0ee" source="doc:ff07b1" target="source:a8907d7c4b">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:a8907d7c4b</data>
@@ -1318,11 +1217,10 @@
       <data key="e_evidence">[Joule Studio (sap.com)](https://www.sap.com/products/artificial-intelligence/joule-studio.html)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:d1af7381bd:cec64bb0ee" source="doc:ff07b1" target="source:d1af7381bd">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:d1af7381bd</data>
@@ -1335,11 +1233,10 @@
       <data key="e_evidence">[Joule Studio in SAP Build, demo (sap.com)](https://www.sap.com/assetdetail/2024/10/1621dba3-d97e-0010-bca6-c68f7e60039b.html)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:a91a1cf715:cec64bb0ee" source="doc:ff07b1" target="source:a91a1cf715">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:a91a1cf715</data>
@@ -1352,11 +1249,10 @@
       <data key="e_evidence">[Build, Deploy, and Extend AI Agents with Joule Studio (SAP Community Blog Posts)](https://community.sap.com/t5/technology-blog-posts-by-sap/build-deploy-and-extend-ai-agents-with-joule-studio/ba-p/14105964)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:a35867c518:cec64bb0ee" source="doc:ff07b1" target="source:a35867c518">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:a35867c518</data>
@@ -1369,11 +1265,10 @@
       <data key="e_evidence">[Meet Joule Studio in SAP Build (YT video)](https://www.youtube.com/watch?v=JdwfjieiOFY)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:ef73966b30:cec64bb0ee" source="doc:ff07b1" target="source:ef73966b30">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:ef73966b30</data>
@@ -1386,11 +1281,10 @@
       <data key="e_evidence">[Agent Builder in Joule Studio (YT video)](https://www.youtube.com/watch?v=C37FkIM83xw)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:44c5e13135:cec64bb0ee" source="doc:ff07b1" target="source:44c5e13135">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:44c5e13135</data>
@@ -1403,11 +1297,10 @@
       <data key="e_evidence">[Interactive Value Journey](https://ivj-vx.cfapps.eu10.hana.ondemand.com/public/journey/2a840b1a-f1d9-4f42-9c75-8f377599de83/intro)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:HAS_SOURCE:source:edd3e223b9:cec64bb0ee" source="doc:ff07b1" target="source:edd3e223b9">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">source:edd3e223b9</data>
@@ -1420,11 +1313,10 @@
       <data key="e_evidence">[Joule Development - Pro-Code Development Tools for Joule](https://help.sap.com/docs/joule/joule-development-guide-ba88d1ec6a1b442098863d577c19b0c0/pro-code-development-tools-for-joule?version=CLOUD)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:MENTIONS:entity:sap-btp:cec64bb0ee" source="doc:ff07b1" target="entity:sap-btp">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">entity:sap-btp</data>
@@ -1437,11 +1329,10 @@
       <data key="e_evidence">SAP BTP Connectivity integrates existing workflows with Joule Skills and AI Agents, enabling seamless, automated execution across SAP and non-SAP systems.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:MENTIONS:entity:joule:cec64bb0ee" source="doc:ff07b1" target="entity:joule">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">entity:joule</data>
@@ -1450,14 +1341,14 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="e_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
       <data key="e_evidence">Joule Studio in SAP Build is a comprehensive platform for developing and enhancing AI capabilities with a user-friendly experience.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:MENTIONS:entity:joule-studio:cec64bb0ee" source="doc:ff07b1" target="entity:joule-studio">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">entity:joule-studio</data>
@@ -1466,31 +1357,14 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="e_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
       <data key="e_evidence">Joule Studio in SAP Build is a comprehensive platform for developing and enhancing AI capabilities with a user-friendly experience.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:ff07b1:MENTIONS:entity:sap-hana-cloud:cec64bb0ee" source="doc:ff07b1" target="entity:sap-hana-cloud">
-      <data key="e_type">MENTIONS</data>
-      <data key="e_type">MENTIONS</data>
-      <data key="e_from_id">doc:ff07b1</data>
-      <data key="e_to_id">entity:sap-hana-cloud</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">SAPService</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
-      <data key="e_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="e_source_section">Characteristics</data>
-      <data key="e_evidence">• **Cloud and On-Premise Solution Integration**: Joule Studio integrates seamlessly with various SAP and third-party cloud solutions, including SAP ECC, SAP S/4HANA, and S/4HANA Cloud Private Edition, providing comprehensive support for hybrid landscapes.</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:MENTIONS:entity:sap-s4hana:cec64bb0ee" source="doc:ff07b1" target="entity:sap-s4hana">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">entity:sap-s4hana</data>
@@ -1503,11 +1377,10 @@
       <data key="e_evidence">• **Cloud and On-Premise Solution Integration**: Joule Studio integrates seamlessly with various SAP and third-party cloud solutions, including SAP ECC, SAP S/4HANA, and S/4HANA Cloud Private Edition, providing comprehensive support for hybrid landscapes.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:MENTIONS:entity:sap-ai-core:cec64bb0ee" source="doc:ff07b1" target="entity:sap-ai-core">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">entity:sap-ai-core</data>
@@ -1516,15 +1389,14 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="e_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="e_source_section">Services and Components</data>
-      <data key="e_evidence">- [SAP AI Core](https://discovery-center.</data>
+      <data key="e_source_section">Flow</data>
+      <data key="e_evidence">AI Core plays a crucial role in extending Joule's capabilities.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:MENTIONS:entity:sap-cloud-identity-services:cec64bb0ee" source="doc:ff07b1" target="entity:sap-cloud-identity-services">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">entity:sap-cloud-identity-services</data>
@@ -1537,11 +1409,10 @@
       <data key="e_evidence">Joule Studio relies on SAP Cloud Identity Services for identity management, authentication and identity life-cycle management.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:MENTIONS:entity:sap-build-process-automation:cec64bb0ee" source="doc:ff07b1" target="entity:sap-build-process-automation">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">entity:sap-build-process-automation</data>
@@ -1554,11 +1425,10 @@
       <data key="e_evidence">Joule Studio is part of SAP Build, which includes SAP Build Apps, SAP Build Code, SAP Build Work Zone, and SAP Build Process Automation.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:MENTIONS:entity:sap-build:cec64bb0ee" source="doc:ff07b1" target="entity:sap-build">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">entity:sap-build</data>
@@ -1567,14 +1437,14 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
       <data key="e_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
       <data key="e_evidence">Joule Studio in SAP Build is a comprehensive platform for developing and enhancing AI capabilities with a user-friendly experience.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:ff07b1:MENTIONS:entity:rag:cec64bb0ee" source="doc:ff07b1" target="entity:rag">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:ff07b1</data>
       <data key="e_to_id">entity:rag</data>
@@ -1587,11 +1457,58 @@
       <data key="e_evidence">Additionally, customers can provision their own document grounding capabilities in AI Core leveraging the Retrieval Augmented Generation (RAG) service and integrate them into their AI Agents to ground them in specific data.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </edge>
+    <edge id="rel:entity:joule-studio:HAS_REQUIREMENT:entity:req-joule-provisioned:cec64bb0ee" source="entity:joule-studio" target="entity:req-joule-provisioned">
+      <data key="e_type">HAS_REQUIREMENT</data>
+      <data key="e_from_id">entity:joule-studio</data>
+      <data key="e_to_id">entity:req-joule-provisioned</data>
+      <data key="e_from_type">SAPService</data>
+      <data key="e_to_type">Requirement</data>
+      <data key="e_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
+      <data key="e_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="e_source_section">Flow</data>
+      <data key="e_evidence">To provision Joule Studio, Joule must be set up in the target landscape along with SAP Build Process Automation as part of the SAP Build tenant with the build-default plan utilizing SAP Identity Authentication Service (IAS).</data>
+      <data key="e_evidence_type">explicit</data>
+      <data key="e_confidence">0.9</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </edge>
+    <edge id="rel:entity:joule-studio:HAS_REQUIREMENT:entity:req-build-process-automation-provisioned:cec64bb0ee" source="entity:joule-studio" target="entity:req-build-process-automation-provisioned">
+      <data key="e_type">HAS_REQUIREMENT</data>
+      <data key="e_from_id">entity:joule-studio</data>
+      <data key="e_to_id">entity:req-build-process-automation-provisioned</data>
+      <data key="e_from_type">SAPService</data>
+      <data key="e_to_type">Requirement</data>
+      <data key="e_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
+      <data key="e_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="e_source_section">Flow</data>
+      <data key="e_evidence">To provision Joule Studio, Joule must be set up in the target landscape along with SAP Build Process Automation as part of the SAP Build tenant with the build-default plan utilizing SAP Identity Authentication Service (IAS).</data>
+      <data key="e_evidence_type">explicit</data>
+      <data key="e_confidence">0.9</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </edge>
+    <edge id="rel:entity:joule-studio:HAS_REQUIREMENT:entity:req-ias-utilized-for-provisioning:cec64bb0ee" source="entity:joule-studio" target="entity:req-ias-utilized-for-provisioning">
+      <data key="e_type">HAS_REQUIREMENT</data>
+      <data key="e_from_id">entity:joule-studio</data>
+      <data key="e_to_id">entity:req-ias-utilized-for-provisioning</data>
+      <data key="e_from_type">SAPService</data>
+      <data key="e_to_type">Requirement</data>
+      <data key="e_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
+      <data key="e_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
+      <data key="e_source_section">Flow</data>
+      <data key="e_evidence">To provision Joule Studio, Joule must be set up in the target landscape along with SAP Build Process Automation as part of the SAP Build tenant with the build-default plan utilizing SAP Identity Authentication Service (IAS).</data>
+      <data key="e_evidence_type">explicit</data>
+      <data key="e_confidence">0.9</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:entity:joule-studio:AUTHENTICATES_WITH:entity:sap-cloud-identity-services:cec64bb0ee" source="entity:joule-studio" target="entity:sap-cloud-identity-services">
-      <data key="e_type">AUTHENTICATES_WITH</data>
       <data key="e_type">AUTHENTICATES_WITH</data>
       <data key="e_from_id">entity:joule-studio</data>
       <data key="e_to_id">entity:sap-cloud-identity-services</data>
@@ -1604,28 +1521,10 @@
       <data key="e_evidence">Joule Studio relies on SAP Cloud Identity Services for identity management, authentication and identity life-cycle management.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.95</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:entity:joule-studio:REQUIRES:entity:req-joule-studio-provisioning:cec64bb0ee" source="entity:joule-studio" target="entity:req-joule-studio-provisioning">
-      <data key="e_type">REQUIRES</data>
-      <data key="e_type">REQUIRES</data>
-      <data key="e_from_id">entity:joule-studio</data>
-      <data key="e_to_id">entity:req-joule-studio-provisioning</data>
-      <data key="e_from_type">SAPService</data>
-      <data key="e_to_type">Requirement</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/ff07b1</data>
-      <data key="e_source_file">docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md</data>
-      <data key="e_source_section">Flow</data>
-      <data key="e_evidence">To provision Joule Studio, Joule must be set up in the target landscape along with SAP Build Process Automation as part of the SAP Build tenant with the build-default plan utilizing SAP Identity Authentication Service (IAS).</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">0.9</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:ra:RA0024:HAS_USE_CASE:entity:usecase-customer-support-agent:cec64bb0ee" source="ra:RA0024" target="entity:usecase-customer-support-agent">
-      <data key="e_type">HAS_USE_CASE</data>
       <data key="e_type">HAS_USE_CASE</data>
       <data key="e_from_id">ra:RA0024</data>
       <data key="e_to_id">entity:usecase-customer-support-agent</data>
@@ -1638,11 +1537,10 @@
       <data key="e_evidence">Automated Customer Support Agent Deployment: Joule Studio can be used to create AI agents that automatically handle customer inquiries, retrieve order statuses, and escalate issues when necessary.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.9</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:ra:RA0024:HAS_USE_CASE:entity:usecase-procurement-negotiation:cec64bb0ee" source="ra:RA0024" target="entity:usecase-procurement-negotiation">
-      <data key="e_type">HAS_USE_CASE</data>
       <data key="e_type">HAS_USE_CASE</data>
       <data key="e_from_id">ra:RA0024</data>
       <data key="e_to_id">entity:usecase-procurement-negotiation</data>
@@ -1655,11 +1553,10 @@
       <data key="e_evidence">Procurement Negotiation and Compliance: AI agents built in Joule Studio analyze supplier contracts, monitor compliance, and negotiate procurement deals, leveraging data from SAP ECC and external sources.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.9</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:entity:joule-studio:CONNECTS_TO:entity:sap-s4hana:cec64bb0ee" source="entity:joule-studio" target="entity:sap-s4hana">
-      <data key="e_type">CONNECTS_TO</data>
       <data key="e_type">CONNECTS_TO</data>
       <data key="e_from_id">entity:joule-studio</data>
       <data key="e_to_id">entity:sap-s4hana</data>
@@ -1672,11 +1569,10 @@
       <data key="e_evidence">Joule Studio integrates seamlessly with various SAP and third-party cloud solutions, including SAP ECC, SAP S/4HANA, and S/4HANA Cloud Private Edition, providing comprehensive support for hybrid landscapes.</data>
       <data key="e_evidence_type">inferred</data>
       <data key="e_confidence">0.5</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:PART_OF:ra:RA0029:ba8be48928" source="doc:98efa0" target="ra:RA0029">
-      <data key="e_type">PART_OF</data>
       <data key="e_type">PART_OF</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">ra:RA0029</data>
@@ -1688,11 +1584,10 @@
       <data key="e_evidence">docs/ref-arch/RA0029/readme.md is stored under docs/ref-arch/RA0029/</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:BELONGS_TO_DOMAIN:entity:TechnologyDomain:genai:ba8be48928" source="doc:98efa0" target="entity:TechnologyDomain:genai">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
       <data key="e_type">BELONGS_TO_DOMAIN</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:TechnologyDomain:genai</data>
@@ -1704,27 +1599,10 @@
       <data key="e_evidence">front matter tag 'genai'</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:98efa0:BELONGS_TO_DOMAIN:entity:TechnologyDomain:agents:ba8be48928" source="doc:98efa0" target="entity:TechnologyDomain:agents">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:98efa0</data>
-      <data key="e_to_id">entity:TechnologyDomain:agents</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_evidence">front matter tag 'agents'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:BELONGS_TO_DOMAIN:entity:TechnologyDomain:appdev:ba8be48928" source="doc:98efa0" target="entity:TechnologyDomain:appdev">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
       <data key="e_type">BELONGS_TO_DOMAIN</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:TechnologyDomain:appdev</data>
@@ -1736,75 +1614,10 @@
       <data key="e_evidence">front matter tag 'appdev'</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:98efa0:BELONGS_TO_DOMAIN:entity:TechnologyDomain:aws:ba8be48928" source="doc:98efa0" target="entity:TechnologyDomain:aws">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:98efa0</data>
-      <data key="e_to_id">entity:TechnologyDomain:aws</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_evidence">front matter tag 'aws'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:98efa0:BELONGS_TO_DOMAIN:entity:TechnologyDomain:gcp:ba8be48928" source="doc:98efa0" target="entity:TechnologyDomain:gcp">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:98efa0</data>
-      <data key="e_to_id">entity:TechnologyDomain:gcp</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_evidence">front matter tag 'gcp'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:98efa0:BELONGS_TO_DOMAIN:entity:TechnologyDomain:azure:ba8be48928" source="doc:98efa0" target="entity:TechnologyDomain:azure">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:98efa0</data>
-      <data key="e_to_id">entity:TechnologyDomain:azure</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_evidence">front matter tag 'azure'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:98efa0:BELONGS_TO_DOMAIN:entity:TechnologyDomain:ibm:ba8be48928" source="doc:98efa0" target="entity:TechnologyDomain:ibm">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:98efa0</data>
-      <data key="e_to_id">entity:TechnologyDomain:ibm</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_evidence">front matter tag 'ibm'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_DIAGRAM:diagram:doc:98efa0:architecture.drawio:ba8be48928" source="doc:98efa0" target="diagram:doc:98efa0:architecture.drawio">
-      <data key="e_type">HAS_DIAGRAM</data>
       <data key="e_type">HAS_DIAGRAM</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">diagram:doc:98efa0:architecture.drawio</data>
@@ -1817,11 +1630,10 @@
       <data key="e_evidence">![drawio](./drawio/architecture.drawio)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_SOURCE:source:ee2ec29ef1:ba8be48928" source="doc:98efa0" target="source:ee2ec29ef1">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">source:ee2ec29ef1</data>
@@ -1834,11 +1646,10 @@
       <data key="e_evidence">[AI Foundation](https://www.sap.com/products/artificial-intelligence/ai-foundation-os.html)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_SOURCE:source:07ec1b6989:ba8be48928" source="doc:98efa0" target="source:07ec1b6989">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">source:07ec1b6989</data>
@@ -1851,11 +1662,10 @@
       <data key="e_evidence">[SAP AI Core](https://discovery-center.cloud.sap/serviceCatalog/sap-ai-core?region=all)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_SOURCE:source:c516b2be8d:ba8be48928" source="doc:98efa0" target="source:c516b2be8d">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">source:c516b2be8d</data>
@@ -1868,11 +1678,10 @@
       <data key="e_evidence">[Generative AI Hub](https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/generative-ai-hub-in-sap-ai-core)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_SOURCE:source:a8907d7c4b:ba8be48928" source="doc:98efa0" target="source:a8907d7c4b">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">source:a8907d7c4b</data>
@@ -1885,11 +1694,10 @@
       <data key="e_evidence">[Joule Studio](https://www.sap.com/products/artificial-intelligence/joule-studio.html)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_SOURCE:source:34d93f6e98:ba8be48928" source="doc:98efa0" target="source:34d93f6e98">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">source:34d93f6e98</data>
@@ -1902,11 +1710,10 @@
       <data key="e_evidence">[SAP Cloud SDK for AI](https://help.sap.com/docs/sap-cloud-sdk)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_SOURCE:source:2705d33413:ba8be48928" source="doc:98efa0" target="source:2705d33413">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">source:2705d33413</data>
@@ -1919,11 +1726,10 @@
       <data key="e_evidence">[SAP HANA Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-hana-cloud?region=all)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_SOURCE:source:4fdaf5ab16:ba8be48928" source="doc:98efa0" target="source:4fdaf5ab16">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">source:4fdaf5ab16</data>
@@ -1936,11 +1742,10 @@
       <data key="e_evidence">[SAP Build Process Automation](https://discovery-center.cloud.sap/serviceCatalog/sap-build-process-automation?region=all)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_SOURCE:source:dfeca76983:ba8be48928" source="doc:98efa0" target="source:dfeca76983">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">source:dfeca76983</data>
@@ -1953,11 +1758,10 @@
       <data key="e_evidence">[SAP Integration Suite](https://discovery-center.cloud.sap/serviceCatalog/integration-suite?region=all)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_SOURCE:source:9d1c84ea03:ba8be48928" source="doc:98efa0" target="source:9d1c84ea03">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">source:9d1c84ea03</data>
@@ -1970,11 +1774,10 @@
       <data key="e_evidence">[SAP Cloud Identity Services](https://discovery-center.cloud.sap/serviceCatalog/cloud-identity-services?region=all)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_SOURCE:source:4e2ab6b120:ba8be48928" source="doc:98efa0" target="source:4e2ab6b120">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">source:4e2ab6b120</data>
@@ -1987,11 +1790,10 @@
       <data key="e_evidence">[Reference Implementation for A2A-Compliant Pro-Code Agents on SAP BTP with Joule Integration](https://github.com/SAP-samples/btp-joule-a2a-pro-code-agent)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:HAS_SOURCE:source:4ae1856e64:ba8be48928" source="doc:98efa0" target="source:4ae1856e64">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">source:4ae1856e64</data>
@@ -2004,11 +1806,10 @@
       <data key="e_evidence">[SAP A2A Agent Toolkit Plugin](https://github.com/SAP-samples/joule-a2a-agent-toolkit/)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:sap-btp:ba8be48928" source="doc:98efa0" target="entity:sap-btp">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:sap-btp</data>
@@ -2021,11 +1822,10 @@
       <data key="e_evidence">The architecture centers around **Joule** as the orchestrator, with custom agents on **SAP BTP** connected to **SAP Cloud Solutions** and **3rd Party Systems**:</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:joule:ba8be48928" source="doc:98efa0" target="entity:joule">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:joule</data>
@@ -2038,11 +1838,10 @@
       <data key="e_evidence">- **3rd Party Integration:** External (AI) platforms (Google Cloud, Microsoft Azure, AWS, IBM Cloud) and (AI) clients consume Joule Agents via the Agent Gateway or are orchestrated by Joule.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:joule-studio:ba8be48928" source="doc:98efa0" target="entity:joule-studio">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:joule-studio</data>
@@ -2055,11 +1854,10 @@
       <data key="e_evidence">- **Custom Agents on SAP BTP:** Two development approaches - **Low-Code** via Joule Studio with visual configuration and automatic Joule registration and **Pro-Code** using SAP Cloud SDK for AI with frameworks (LangGraph, AG2, CrewAI, Smolagents) integrated via A2A protocol.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:sap-hana-cloud:ba8be48928" source="doc:98efa0" target="entity:sap-hana-cloud">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:sap-hana-cloud</data>
@@ -2072,11 +1870,10 @@
       <data key="e_evidence">- **Generative AI Hub:** Foundation models, prompt optimization, orchestration capabilities (grounding, templating, data masking, I/O filtering) and vector search via SAP HANA Cloud.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:sap-business-data-cloud:ba8be48928" source="doc:98efa0" target="entity:sap-business-data-cloud">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:sap-business-data-cloud</data>
@@ -2089,11 +1886,10 @@
       <data key="e_evidence">- **SAP Cloud Solutions:** Seamless integration with SAP S/4HANA, SuccessFactors, Business Data Cloud, Concur, Customer Experience and Business Networks.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:sap-s4hana:ba8be48928" source="doc:98efa0" target="entity:sap-s4hana">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:sap-s4hana</data>
@@ -2106,28 +1902,10 @@
       <data key="e_evidence">- **SAP Cloud Solutions:** Seamless integration with SAP S/4HANA, SuccessFactors, Business Data Cloud, Concur, Customer Experience and Business Networks.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:98efa0:MENTIONS:entity:sap-ai-core:ba8be48928" source="doc:98efa0" target="entity:sap-ai-core">
-      <data key="e_type">MENTIONS</data>
-      <data key="e_type">MENTIONS</data>
-      <data key="e_from_id">doc:98efa0</data>
-      <data key="e_to_id">entity:sap-ai-core</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">SAPService</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_source_section">Services and Components</data>
-      <data key="e_evidence">- [SAP AI Core](https://discovery-center.</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:generative-ai-hub:ba8be48928" source="doc:98efa0" target="entity:generative-ai-hub">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:generative-ai-hub</data>
@@ -2140,16 +1918,15 @@
       <data key="e_evidence">- **Generative AI Hub:** Foundation models, prompt optimization, orchestration capabilities (grounding, templating, data masking, I/O filtering) and vector search via SAP HANA Cloud.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:sap-cloud-sdk-for-ai:ba8be48928" source="doc:98efa0" target="entity:sap-cloud-sdk-for-ai">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:sap-cloud-sdk-for-ai</data>
       <data key="e_from_type">Document</data>
-      <data key="e_to_type">SAPService</data>
+      <data key="e_to_type">DeveloperTool</data>
       <data key="e_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
       <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
@@ -2157,11 +1934,10 @@
       <data key="e_evidence">- **Custom Agents on SAP BTP:** Two development approaches - **Low-Code** via Joule Studio with visual configuration and automatic Joule registration and **Pro-Code** using SAP Cloud SDK for AI with frameworks (LangGraph, AG2, CrewAI, Smolagents) integrated via A2A protocol.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:sap-cloud-identity-services:ba8be48928" source="doc:98efa0" target="entity:sap-cloud-identity-services">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:sap-cloud-identity-services</data>
@@ -2174,11 +1950,10 @@
       <data key="e_evidence">- **Security:** SAP Cloud Identity Services manages authentication, authorization and identity federation across all connections.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:a2a-protocol:ba8be48928" source="doc:98efa0" target="entity:a2a-protocol">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:a2a-protocol</data>
@@ -2191,11 +1966,10 @@
       <data key="e_evidence">- **Custom Agents on SAP BTP:** Two development approaches - **Low-Code** via Joule Studio with visual configuration and automatic Joule registration and **Pro-Code** using SAP Cloud SDK for AI with frameworks (LangGraph, AG2, CrewAI, Smolagents) integrated via A2A protocol.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:mcp-protocol:ba8be48928" source="doc:98efa0" target="entity:mcp-protocol">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:mcp-protocol</data>
@@ -2208,11 +1982,10 @@
       <data key="e_evidence">MCP Servers and APIs provide tools and data sources.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:agent-gateway:ba8be48928" source="doc:98efa0" target="entity:agent-gateway">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:agent-gateway</data>
@@ -2221,31 +1994,14 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
       <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
       <data key="e_evidence">The Agent Gateway is not yet generally available (GA).</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:98efa0:MENTIONS:entity:sap-build-process-automation:ba8be48928" source="doc:98efa0" target="entity:sap-build-process-automation">
-      <data key="e_type">MENTIONS</data>
-      <data key="e_type">MENTIONS</data>
-      <data key="e_from_id">doc:98efa0</data>
-      <data key="e_to_id">entity:sap-build-process-automation</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">SAPService</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_source_section">Services and Components</data>
-      <data key="e_evidence">- [SAP Build Process Automation](https://discovery-center.</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:98efa0:MENTIONS:entity:sap-build:ba8be48928" source="doc:98efa0" target="entity:sap-build">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:98efa0</data>
       <data key="e_to_id">entity:sap-build</data>
@@ -2258,28 +2014,42 @@
       <data key="e_evidence">**Low-Code with Joule Studio:** Build agents through visual configuration in SAP Build for rapid development and deployment.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
-    <edge id="rel:entity:joule:USES:entity:generative-ai-hub:ba8be48928" source="entity:joule" target="entity:generative-ai-hub">
-      <data key="e_type">USES</data>
-      <data key="e_type">USES</data>
-      <data key="e_from_id">entity:joule</data>
-      <data key="e_to_id">entity:generative-ai-hub</data>
-      <data key="e_from_type">Agent</data>
-      <data key="e_to_type">SAPService</data>
+    <edge id="rel:entity:agent-gateway:HAS_CONSTRAINT:entity:constraint-agent-gateway-not-ga:ba8be48928" source="entity:agent-gateway" target="entity:constraint-agent-gateway-not-ga">
+      <data key="e_type">HAS_CONSTRAINT</data>
+      <data key="e_from_id">entity:agent-gateway</data>
+      <data key="e_to_id">entity:constraint-agent-gateway-not-ga</data>
+      <data key="e_from_type">API</data>
+      <data key="e_to_type">Constraint</data>
       <data key="e_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
       <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
-      <data key="e_source_section">Architecture</data>
-      <data key="e_evidence">Generative AI Hub: Foundation models, prompt optimization, orchestration capabilities (grounding, templating, data masking, I/O filtering) and vector search via SAP HANA Cloud.</data>
-      <data key="e_evidence_type">inferred</data>
-      <data key="e_confidence">0.55</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_source_section">__introduction__</data>
+      <data key="e_evidence">The Agent Gateway is not yet generally available (GA).</data>
+      <data key="e_evidence_type">explicit</data>
+      <data key="e_confidence">0.9</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </edge>
+    <edge id="rel:ra:RA0029:HAS_CONSTRAINT:entity:constraint-unidirectional-outbound-only:ba8be48928" source="ra:RA0029" target="entity:constraint-unidirectional-outbound-only">
+      <data key="e_type">HAS_CONSTRAINT</data>
+      <data key="e_from_id">ra:RA0029</data>
+      <data key="e_to_id">entity:constraint-unidirectional-outbound-only</data>
+      <data key="e_from_type">ReferenceArchitecture</data>
+      <data key="e_to_type">Constraint</data>
+      <data key="e_source_id">doc:docs/ref-arch/RA0029/readme.md</data>
+      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
+      <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
+      <data key="e_evidence">As a result, the current architecture supports unidirectional (outbound) communication only.</data>
+      <data key="e_evidence_type">explicit</data>
+      <data key="e_confidence">0.9</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:entity:generative-ai-hub:CONSUMES_DATA_FROM:entity:sap-hana-cloud:ba8be48928" source="entity:generative-ai-hub" target="entity:sap-hana-cloud">
-      <data key="e_type">CONSUMES_DATA_FROM</data>
       <data key="e_type">CONSUMES_DATA_FROM</data>
       <data key="e_from_id">entity:generative-ai-hub</data>
       <data key="e_to_id">entity:sap-hana-cloud</data>
@@ -2289,14 +2059,13 @@
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/98efa0</data>
       <data key="e_source_file">docs/ref-arch/RA0029/readme.md</data>
       <data key="e_source_section">Architecture</data>
-      <data key="e_evidence">Generative AI Hub: ... vector search via SAP HANA Cloud.</data>
+      <data key="e_evidence">**Generative AI Hub:** Foundation models, prompt optimization, orchestration capabilities (grounding, templating, data masking, I/O filtering) and vector search via SAP HANA Cloud.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:entity:joule:AUTHENTICATES_WITH:entity:sap-cloud-identity-services:ba8be48928" source="entity:joule" target="entity:sap-cloud-identity-services">
-      <data key="e_type">AUTHENTICATES_WITH</data>
       <data key="e_type">AUTHENTICATES_WITH</data>
       <data key="e_from_id">entity:joule</data>
       <data key="e_to_id">entity:sap-cloud-identity-services</data>
@@ -2309,11 +2078,10 @@
       <data key="e_evidence">Security: SAP Cloud Identity Services manages authentication, authorization and identity federation across all connections.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:PART_OF:ra:RA0029:497655714f" source="doc:76ec36" target="ra:RA0029">
-      <data key="e_type">PART_OF</data>
       <data key="e_type">PART_OF</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">ra:RA0029</data>
@@ -2325,27 +2093,10 @@
       <data key="e_evidence">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md is stored under docs/ref-arch/RA0029/</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:76ec36:BELONGS_TO_DOMAIN:entity:TechnologyDomain:agents:497655714f" source="doc:76ec36" target="entity:TechnologyDomain:agents">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:76ec36</data>
-      <data key="e_to_id">entity:TechnologyDomain:agents</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_evidence">front matter tag 'agents'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:BELONGS_TO_DOMAIN:entity:TechnologyDomain:genai:497655714f" source="doc:76ec36" target="entity:TechnologyDomain:genai">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
       <data key="e_type">BELONGS_TO_DOMAIN</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">entity:TechnologyDomain:genai</data>
@@ -2357,91 +2108,26 @@
       <data key="e_evidence">front matter tag 'genai'</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
-    <edge id="rel:doc:76ec36:BELONGS_TO_DOMAIN:entity:TechnologyDomain:cap:497655714f" source="doc:76ec36" target="entity:TechnologyDomain:cap">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
+    <edge id="rel:doc:76ec36:HAS_DIAGRAM:diagram:doc:76ec36:a2a-mcp.svg:497655714f" source="doc:76ec36" target="diagram:doc:76ec36:a2a-mcp.svg">
+      <data key="e_type">HAS_DIAGRAM</data>
       <data key="e_from_id">doc:76ec36</data>
-      <data key="e_to_id">entity:TechnologyDomain:cap</data>
+      <data key="e_to_id">diagram:doc:76ec36:a2a-mcp.svg</data>
       <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
+      <data key="e_to_type">Diagram</data>
       <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_evidence">front matter tag 'cap'</data>
+      <data key="e_source_section">__introduction__</data>
+      <data key="e_evidence">![A2A_MCP](./images/a2a-mcp.svg)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:76ec36:BELONGS_TO_DOMAIN:entity:TechnologyDomain:aws:497655714f" source="doc:76ec36" target="entity:TechnologyDomain:aws">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:76ec36</data>
-      <data key="e_to_id">entity:TechnologyDomain:aws</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_evidence">front matter tag 'aws'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:76ec36:BELONGS_TO_DOMAIN:entity:TechnologyDomain:gcp:497655714f" source="doc:76ec36" target="entity:TechnologyDomain:gcp">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:76ec36</data>
-      <data key="e_to_id">entity:TechnologyDomain:gcp</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_evidence">front matter tag 'gcp'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:76ec36:BELONGS_TO_DOMAIN:entity:TechnologyDomain:azure:497655714f" source="doc:76ec36" target="entity:TechnologyDomain:azure">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:76ec36</data>
-      <data key="e_to_id">entity:TechnologyDomain:azure</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_evidence">front matter tag 'azure'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:76ec36:BELONGS_TO_DOMAIN:entity:TechnologyDomain:ibm:497655714f" source="doc:76ec36" target="entity:TechnologyDomain:ibm">
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_type">BELONGS_TO_DOMAIN</data>
-      <data key="e_from_id">doc:76ec36</data>
-      <data key="e_to_id">entity:TechnologyDomain:ibm</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">TechnologyDomain</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_evidence">front matter tag 'ibm'</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:HAS_DIAGRAM:diagram:doc:76ec36:architecture.drawio:497655714f" source="doc:76ec36" target="diagram:doc:76ec36:architecture.drawio">
-      <data key="e_type">HAS_DIAGRAM</data>
       <data key="e_type">HAS_DIAGRAM</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">diagram:doc:76ec36:architecture.drawio</data>
@@ -2454,11 +2140,10 @@
       <data key="e_evidence">![drawio](./drawio/architecture.drawio)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:HAS_SOURCE:source:5f475d8b9a:497655714f" source="doc:76ec36" target="source:5f475d8b9a">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">source:5f475d8b9a</data>
@@ -2471,11 +2156,10 @@
       <data key="e_evidence">[**Agent2Agent (A2A) protocol**](https://a2a-protocol.org/latest/)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:HAS_SOURCE:source:6b32292c41:497655714f" source="doc:76ec36" target="source:6b32292c41">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">source:6b32292c41</data>
@@ -2488,11 +2172,10 @@
       <data key="e_evidence">[**Model Context Protocol (MCP)**](https://modelcontextprotocol.io/)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:HAS_SOURCE:source:bb45496c63:497655714f" source="doc:76ec36" target="source:bb45496c63">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">source:bb45496c63</data>
@@ -2505,11 +2188,10 @@
       <data key="e_evidence">[Agent2Agent (A2A) Protocol, version 0.3.0](https://a2a-protocol.org/v0.3.0/specification/)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:HAS_SOURCE:source:0a88d30482:497655714f" source="doc:76ec36" target="source:0a88d30482">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">source:0a88d30482</data>
@@ -2522,11 +2204,10 @@
       <data key="e_evidence">[Bring Your Own Agent](https://help.sap.com/docs/joule/joule-development-guide-ba88d1ec6a1b442098863d577c19b0c0/code-based-agents-bring-your-own-agent)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:HAS_SOURCE:source:4e2ab6b120:497655714f" source="doc:76ec36" target="source:4e2ab6b120">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">source:4e2ab6b120</data>
@@ -2539,11 +2220,10 @@
       <data key="e_evidence">[Reference Implementation for A2A-Compliant Pro-Code Agents on SAP BTP with Joule Integration](https://github.com/SAP-samples/btp-joule-a2a-pro-code-agent)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:HAS_SOURCE:source:4ae1856e64:497655714f" source="doc:76ec36" target="source:4ae1856e64">
-      <data key="e_type">HAS_SOURCE</data>
       <data key="e_type">HAS_SOURCE</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">source:4ae1856e64</data>
@@ -2556,11 +2236,10 @@
       <data key="e_evidence">[SAP A2A Agent Toolkit Plugin](https://github.com/SAP-samples/joule-a2a-agent-toolkit/)</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">1.0</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:MENTIONS:entity:sap-btp:497655714f" source="doc:76ec36" target="entity:sap-btp">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">entity:sap-btp</data>
@@ -2569,15 +2248,14 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_source_section">Examples</data>
-      <data key="e_evidence">- [Reference Implementation for A2A-Compliant Pro-Code Agents on SAP BTP with Joule Integration](https://github.</data>
+      <data key="e_source_section">SAP's Commitment to Open Standards</data>
+      <data key="e_evidence">By deeply integrating **Agent2Agent (A2A)** and **Model Context Protocol (MCP)** into Joule and the broader SAP Business Technology Platform, SAP ensures that customers benefit from flexible, cross-system AI workflows without vendor lock-in.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:MENTIONS:entity:joule:497655714f" source="doc:76ec36" target="entity:joule">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">entity:joule</data>
@@ -2590,11 +2268,10 @@
       <data key="e_evidence">At SAP, MCP is used to provide Joule Agents with semantically enriched access to SAP business capabilities and domain knowledge, including content from SAP Knowledge Graph.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:MENTIONS:entity:joule-studio:497655714f" source="doc:76ec36" target="entity:joule-studio">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">entity:joule-studio</data>
@@ -2607,11 +2284,10 @@
       <data key="e_evidence">In the **outbound direction**, Joule can call external agents developed using third-party frameworks rather than Joule Studio.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:MENTIONS:entity:sap-knowledge-graph:497655714f" source="doc:76ec36" target="entity:sap-knowledge-graph">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">entity:sap-knowledge-graph</data>
@@ -2624,11 +2300,10 @@
       <data key="e_evidence">At SAP, MCP is used to provide Joule Agents with semantically enriched access to SAP business capabilities and domain knowledge, including content from SAP Knowledge Graph.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:MENTIONS:entity:sap-cloud-identity-services:497655714f" source="doc:76ec36" target="entity:sap-cloud-identity-services">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">entity:sap-cloud-identity-services</data>
@@ -2641,11 +2316,10 @@
       <data key="e_evidence">- **Authentication:** Secured through SAP Cloud Identity Services (IAS) App2App tokens with named user context</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:MENTIONS:entity:a2a-protocol:497655714f" source="doc:76ec36" target="entity:a2a-protocol">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">entity:a2a-protocol</data>
@@ -2654,14 +2328,14 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
       <data key="e_evidence">SAP has adopted two open standards, the **Agent2Agent (A2A) protocol** and the **Model Context Protocol (MCP)**, to create a decoupled architecture where agents and tools can be developed, deployed and updated independently.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:MENTIONS:entity:mcp-protocol:497655714f" source="doc:76ec36" target="entity:mcp-protocol">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">entity:mcp-protocol</data>
@@ -2670,14 +2344,14 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
       <data key="e_evidence">SAP has adopted two open standards, the **Agent2Agent (A2A) protocol** and the **Model Context Protocol (MCP)**, to create a decoupled architecture where agents and tools can be developed, deployed and updated independently.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:MENTIONS:entity:agent-gateway:497655714f" source="doc:76ec36" target="entity:agent-gateway">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">entity:agent-gateway</data>
@@ -2686,14 +2360,14 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
       <data key="e_evidence">The Agent Gateway is not yet generally available (GA).</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:doc:76ec36:MENTIONS:entity:mcp-gateway:497655714f" source="doc:76ec36" target="entity:mcp-gateway">
-      <data key="e_type">MENTIONS</data>
       <data key="e_type">MENTIONS</data>
       <data key="e_from_id">doc:76ec36</data>
       <data key="e_to_id">entity:mcp-gateway</data>
@@ -2702,14 +2376,62 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
       <data key="e_evidence">- **MCP Gateway in SAP Integration Suite**, for governed, enterprise-grade exposure and consumption of SAP and non-SAP APIs as MCP-compliant tools.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </edge>
+    <edge id="rel:doc:76ec36:HAS_REQUIREMENT:entity:Requirement:dcae226f5b:497655714f" source="doc:76ec36" target="entity:Requirement:dcae226f5b">
+      <data key="e_type">HAS_REQUIREMENT</data>
+      <data key="e_from_id">doc:76ec36</data>
+      <data key="e_to_id">entity:Requirement:dcae226f5b</data>
+      <data key="e_from_type">Document</data>
+      <data key="e_to_type">Requirement</data>
+      <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
+      <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_section">Bring Your Own Agent (Outbound)</data>
+      <data key="e_evidence">To ensure secure inbound communication and validate server updates, an Identity Authentication Service (IAS) App2App trust relationship must be established between Joule and the target agent server.</data>
+      <data key="e_evidence_type">explicit</data>
+      <data key="e_confidence">0.85</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </edge>
+    <edge id="rel:entity:agent-gateway:HAS_CONSTRAINT:entity:constraint-agent-gateway-not-ga:497655714f" source="entity:agent-gateway" target="entity:constraint-agent-gateway-not-ga">
+      <data key="e_type">HAS_CONSTRAINT</data>
+      <data key="e_from_id">entity:agent-gateway</data>
+      <data key="e_to_id">entity:constraint-agent-gateway-not-ga</data>
+      <data key="e_from_type">API</data>
+      <data key="e_to_type">Constraint</data>
+      <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
+      <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
+      <data key="e_evidence">The Agent Gateway is not yet generally available (GA).</data>
+      <data key="e_evidence_type">explicit</data>
+      <data key="e_confidence">0.9</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
+    </edge>
+    <edge id="rel:ra:RA0029:HAS_CONSTRAINT:entity:constraint-unidirectional-outbound-only:497655714f" source="ra:RA0029" target="entity:constraint-unidirectional-outbound-only">
+      <data key="e_type">HAS_CONSTRAINT</data>
+      <data key="e_from_id">ra:RA0029</data>
+      <data key="e_to_id">entity:constraint-unidirectional-outbound-only</data>
+      <data key="e_from_type">ReferenceArchitecture</data>
+      <data key="e_to_type">Constraint</data>
+      <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
+      <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
+      <data key="e_evidence">As a result, the current architecture supports unidirectional (outbound) communication only.</data>
+      <data key="e_evidence_type">explicit</data>
+      <data key="e_confidence">0.9</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:entity:joule:SUPPORTS_PROTOCOL:entity:a2a-protocol:497655714f" source="entity:joule" target="entity:a2a-protocol">
-      <data key="e_type">SUPPORTS_PROTOCOL</data>
       <data key="e_type">SUPPORTS_PROTOCOL</data>
       <data key="e_from_id">entity:joule</data>
       <data key="e_to_id">entity:a2a-protocol</data>
@@ -2718,14 +2440,14 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
       <data key="e_evidence">Joule acts as an A2A client to communicate with external agents, while agents themselves use MCP to discover and consume tools from MCP servers.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.95</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:entity:joule:SUPPORTS_PROTOCOL:entity:mcp-protocol:497655714f" source="entity:joule" target="entity:mcp-protocol">
-      <data key="e_type">SUPPORTS_PROTOCOL</data>
       <data key="e_type">SUPPORTS_PROTOCOL</data>
       <data key="e_from_id">entity:joule</data>
       <data key="e_to_id">entity:mcp-protocol</data>
@@ -2734,14 +2456,14 @@
       <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
+      <data key="e_source_section">__introduction__</data>
       <data key="e_evidence">Joule acts as an A2A client to communicate with external agents, while agents themselves use MCP to discover and consume tools from MCP servers.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:entity:agent-gateway:EXPOSES:entity:a2a-protocol:497655714f" source="entity:agent-gateway" target="entity:a2a-protocol">
-      <data key="e_type">EXPOSES</data>
       <data key="e_type">EXPOSES</data>
       <data key="e_from_id">entity:agent-gateway</data>
       <data key="e_to_id">entity:a2a-protocol</data>
@@ -2754,11 +2476,10 @@
       <data key="e_evidence">The Agent Gateway exposes Joule Agents via the A2A protocol with an externally reachable endpoint.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.95</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:entity:agent-gateway:AUTHENTICATES_WITH:entity:sap-cloud-identity-services:497655714f" source="entity:agent-gateway" target="entity:sap-cloud-identity-services">
-      <data key="e_type">AUTHENTICATES_WITH</data>
       <data key="e_type">AUTHENTICATES_WITH</data>
       <data key="e_from_id">entity:agent-gateway</data>
       <data key="e_to_id">entity:sap-cloud-identity-services</data>
@@ -2768,14 +2489,13 @@
       <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
       <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
       <data key="e_source_section">Agent Gateway (Inbound)</data>
-      <data key="e_evidence">Authentication: Secured through SAP Cloud Identity Services (IAS) App2App tokens with named user context.</data>
+      <data key="e_evidence">**Authentication:** Secured through SAP Cloud Identity Services (IAS) App2App tokens with named user context</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.95</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:entity:mcp-protocol:CONSUMES_DATA_FROM:entity:sap-knowledge-graph:497655714f" source="entity:mcp-protocol" target="entity:sap-knowledge-graph">
-      <data key="e_type">CONSUMES_DATA_FROM</data>
       <data key="e_type">CONSUMES_DATA_FROM</data>
       <data key="e_from_id">entity:mcp-protocol</data>
       <data key="e_to_id">entity:sap-knowledge-graph</data>
@@ -2788,11 +2508,10 @@
       <data key="e_evidence">At SAP, MCP is used to provide Joule Agents with semantically enriched access to SAP business capabilities and domain knowledge, including content from SAP Knowledge Graph.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.9</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
     <edge id="rel:entity:agent-gateway:REQUIRES:entity:sap-cloud-identity-services:497655714f" source="entity:agent-gateway" target="entity:sap-cloud-identity-services">
-      <data key="e_type">REQUIRES</data>
       <data key="e_type">REQUIRES</data>
       <data key="e_from_id">entity:agent-gateway</data>
       <data key="e_to_id">entity:sap-cloud-identity-services</data>
@@ -2805,24 +2524,8 @@
       <data key="e_evidence">To ensure secure inbound communication and validate server updates, an Identity Authentication Service (IAS) App2App trust relationship must be established between Joule and the target agent server.</data>
       <data key="e_evidence_type">explicit</data>
       <data key="e_confidence">0.85</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
-    </edge>
-    <edge id="rel:doc:76ec36:MENTIONS:entity:constraint-agent-gateway-not-ga:497655714f" source="doc:76ec36" target="entity:constraint-agent-gateway-not-ga">
-      <data key="e_type">MENTIONS</data>
-      <data key="e_type">MENTIONS</data>
-      <data key="e_from_id">doc:76ec36</data>
-      <data key="e_to_id">entity:constraint-agent-gateway-not-ga</data>
-      <data key="e_from_type">Document</data>
-      <data key="e_to_type">Constraint</data>
-      <data key="e_source_id">doc:docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_source_url">https://architecture.learning.sap.com/docs/ref-arch/76ec36</data>
-      <data key="e_source_file">docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md</data>
-      <data key="e_evidence">The Agent Gateway is not yet generally available (GA). As a result, the current architecture supports unidirectional (outbound) communication only.</data>
-      <data key="e_evidence_type">explicit</data>
-      <data key="e_confidence">0.95</data>
-      <data key="e_repository_commit">4635f734f2f82c6497bc53d5cf972b5cbfec5e52</data>
-      <data key="e_extraction_date">2026-07-13T12:40:19.509590+00:00</data>
+      <data key="e_repository_commit">3402670831094a3102f098a6cc89d6777a25a773</data>
+      <data key="e_extraction_date">2026-07-13T16:46:30.848777+00:00</data>
     </edge>
   </graph>
 </graphml>

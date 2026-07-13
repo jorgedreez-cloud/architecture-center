@@ -35,7 +35,7 @@
     },
     "source_section": {
       "type": ["string", "null"],
-      "description": "Markdown heading (## ...) under which the source/link/evidence was found, or null if front matter / document-level."
+      "description": "Markdown heading (## ...) under which the source/link/evidence was found. null is reserved for facts with no body-text location at all (front matter fields, folder membership). Any evidence taken from the document BODY that precedes the first level 2-4 heading must use the literal string '__introduction__' instead of null (see config/ontology.yaml introduction_section_marker)."
     },
     "domain_category": {
       "type": "string",
@@ -47,11 +47,13 @@
         "SAP Learning",
         "SAP Developer",
         "SAP Business Accelerator Hub",
+        "SAP.com",
+        "SAP BTP Hosted App",
         "GitHub",
         "YouTube",
         "Other"
       ],
-      "description": "Only present when kind = external_link. Domain classification per FASE 6 rules."
+      "description": "Only present when kind = external_link. Domain classification per FASE 6 rules. 'SAP.com' covers www.sap.com corporate/marketing pages and any other *.sap.com subdomain not matched by a more specific rule. 'SAP BTP Hosted App' covers customer/demo apps hosted on *.hana.ondemand.com (including *.cfapps.<region>.hana.ondemand.com Cloud Foundry app routes) - these are SAP-hosted but not documentation, so kept distinct from 'SAP Help'/'SAP Discovery Center'. Classification never inspects or stores URL query parameters or credentials; only the hostname is used."
     },
     "link_title": {
       "type": ["string", "null"],

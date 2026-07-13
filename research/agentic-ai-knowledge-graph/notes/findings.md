@@ -173,3 +173,72 @@ Marcadas explícitamente `evidence_type: inferred`, confianza ≤0.6:
 - No se ha abierto ninguna pull request contra SAP.
 - No se ha fusionado nada con `dev`.
 - No se ha descargado el contenido completo de ninguna fuente externa — `external_links.jsonl` solo inventaria URL, título del enlace, dominio clasificado y documento de procedencia.
+
+## FASE 8 — Auditoría de calidad del piloto y correcciones aplicadas
+
+Tras la revisión de FASE 7 se ejecutó una auditoría crítica dedicada del piloto (13 puntos: duplicados, SAPProduct/SAPService, entidades genéricas, MENTIONS ruidoso, relaciones inferred, evidencia insuficiente, evidencia demasiado larga/imprecisa, Requirement/Constraint no atómicos, normalización de entidades, enlaces mal clasificados, campos obligatorios, GraphML/Cypher vs JSONL, riesgo de escalado a 114 documentos). Se encontraron y corrigieron los siguientes problemas, todos dentro de `research/agentic-ai-knowledge-graph/` (ningún archivo de `docs/`/`src/` fue tocado):
+
+**Críticos:**
+- `scripts/build_graph.py` generaba `MERGE` en Cypher sobre el mapa de propiedades **completo** (incluyendo `extraction_date`, un timestamp distinto en cada ejecución), lo que habría duplicado todo el grafo en Neo4j en cada re-extracción. Corregido: `MERGE (n:Label {id: ...}) SET n += {...}` para nodos, `MERGE (a)-[r:TYPE {relationship_id: ...}]->(b) SET r += {...}` para relaciones. Verificado empíricamente ejecutando `extract_document.py` + `build_graph.py` dos veces seguidas y comparando las claves de `MERGE`: idénticas byte a byte pese al cambio de `extraction_date`.
+- `CURATED_FACTS` era la única vía de extracción de relaciones específicas (14 hechos para 3 documentos, no escalable a 114). Se implementó una capa automática y determinista para `PART_OF`, `HAS_SOURCE`, `HAS_DIAGRAM` (ahora también `.svg`, no solo `.drawio`), `BELONGS_TO_DOMAIN` y `MENTIONS`, más un detector de frases-disparador para `HAS_REQUIREMENT`/`HAS_CONSTRAINT`. `CURATED_FACTS` quedó reducido a 9 hechos que requieren juicio semántico genuino (`AUTHENTICATES_WITH`, `CONNECTS_TO`, `EXPOSES`, `CONSUMES_DATA_FROM`, `SUPPORTS_PROTOCOL`, `REQUIRES`, `HAS_USE_CASE`), documentado explícitamente como capa de *override*, no como vía principal.
+
+**Altos:**
+- `TechnologyDomain` promovía cualquier tag de front matter a nodo (incluyendo `aws/gcp/azure/ibm/cap/build`), contradiciendo el propio comentario de `ontology.yaml`. Restringido al vocabulario cerrado `genai, data, appdev, integration, opsec`, leído desde `config/ontology.yaml` (no hardcodeado). Resultado: de 9 `TechnologyDomain` a 2 (`genai`, `appdev`), cada uno correctamente atribuido a los 2-3 documentos donde aparece.
+- GraphML/Cypher perdían el tipo real de `confidence`/`draft`/`unlisted`/`sidebar_position` (todo forzado a `string`). Corregido: `attr.type` real por campo en GraphML (`double`/`int`/`boolean`/`string`), `null` tratado explícitamente (se omite el `<data>` en vez de escribir el texto `"None"`); Cypher con números sin comillas, booleanos `true`/`false`, listas como listas, `null` como palabra clave.
+- `Requirement`/`Constraint` no eran atómicos ni tenían relación específica. Añadidos `HAS_REQUIREMENT`/`HAS_CONSTRAINT` al conjunto cerrado de `ontology.yaml`. El requisito compuesto de Joule Studio se dividió en 3 hechos atómicos (`req-joule-provisioned`, `req-build-process-automation-provisioned`, `req-ias-utilized-for-provisioning`); la restricción del Agent Gateway se dividió en 2 (`constraint-agent-gateway-not-ga`, `constraint-unidirectional-outbound-only`), esta última ahora correctamente atribuida a **ambos** documentos que comparten el disclaimer (`doc:98efa0` y `doc:76ec36` — el piloto anterior solo la capturaba de uno).
+
+**Medios:**
+- `MENTIONS` se generaba desde títulos de enlace y secciones secundarias (`Resources`/`Examples`). Corregido con `find_substantive_alias_match`: excluye el texto ancla de enlaces markdown y las secciones del vocabulario cerrado `secondary_section_headings` (`Resources`, `Examples`, `Examples in an SAP context` — deliberadamente **sin** incluir `Services and Components`, que es contenido arquitectónico primario). Efecto colateral positivo: `MENTIONS doc:76ec36 → entity:sap-btp` no desapareció, sino que su evidencia mejoró de un título de enlace incidental a una mención sustantiva real en "SAP's Commitment to Open Standards".
+- Evidencia con elipsis (`CONSUMES_DATA_FROM generative-ai-hub → sap-hana-cloud`) sustituida por la cita completa verbatim.
+- `USES entity:joule → entity:generative-ai-hub` (inferred, 0.55) eliminada por completo: su evidencia solo describía Generative AI Hub, nunca mencionaba a Joule.
+- Alias de `sap-ai-core` ampliado con `"ai core"` (bare) y `sap-btp` con `"btp"` (bare) — únicas 2 ampliaciones autorizadas más allá de las ya existentes. Efecto: `entity:sap-ai-core` ahora usa como evidencia la frase sustantiva de la sección Flow ("AI Core plays a crucial role...") en vez del enlace de bajo valor en Services and Components.
+- `found_in_document` (string, solo el primer documento visto) → `found_in_documents` (lista, acumulada en cada documento donde la entidad reaparece).
+- `source_section: null` para texto anterior al primer encabezado → convención explícita `"__introduction__"`.
+- `domain_category` ampliado con `SAP.com` (`www.sap.com` y cualquier otro subdominio `*.sap.com` no cubierto por una regla más específica) y `SAP BTP Hosted App` (`*.hana.ondemand.com`, incluye `*.cfapps.<region>.hana.ondemand.com`). Sin inspeccionar nunca parámetros de query ni credenciales — la clasificación usa solo el hostname.
+- `SAP Cloud SDK for AI` reclasificado de `SAPService` a un nuevo tipo de nodo `DeveloperTool` (SDK cliente sin runtime propio aprovisionable), con la regla de decisión SAPProduct/SAPService/DeveloperTool documentada en `config/ontology.yaml`.
+
+**Bugs adicionales encontrados durante la implementación (no estaban en el diagnóstico original de FASE 7):**
+1. El fence de admonición de Docusaurus (`:::info Disclaimer`) se colaba en la primera frase detectada automáticamente, rompiendo el *override* atómico documentado para esa frase exacta. Corregido con `ADMONITION_FENCE_RE` en `scripts/extract_document.py`.
+2. `type` se serializaba dos veces por nodo/arista en GraphML (bug preexistente al pipeline original, no introducido en esta ronda, detectado al inspeccionar la salida). Corregido excluyendo `type` de `raw_props()` en `scripts/build_graph.py`.
+3. La evidencia de `AUTHENTICATES_WITH agent-gateway → sap-cloud-identity-services` tenía un punto final que no existe en el texto fuente. Detectado por `scripts/validate_pilot.py` (comprobación de literalidad contra el archivo fuente) y corregido.
+
+### Resultado final tras las correcciones
+
+| Métrica | Antes de FASE 8 | Después de FASE 8 |
+|---|---|---|
+| Documentos | 5 | 5 |
+| Entidades | 34 | **32** |
+| Fuentes | 27 | **27** |
+| Relaciones | 105 | **95** |
+| Nodos totales (grafo) | 66 | 64 |
+| Aristas (grafo) | 105 | 95 |
+
+`python3 scripts/validate_pilot.py` (11 categorías de chequeo: esquemas, IDs duplicados, referencias colgantes, tipos de datos, entidades sin fuente, evidencia vacía/no literal, `inferred` con `confidence > 0.6` o evidencia unilateral, `TechnologyDomain` fuera de catálogo, atomicidad de `Requirement`/`Constraint`, paridad de conteos JSONL↔JSON↔GraphML↔Cypher):
+
+```
+documents=5 entities=32 sources=27 relationships=95
+
+CRITICAL: none
+
+WARNINGS: none
+
+RESULT: PASS
+```
+
+Verificado además, ejecutando el pipeline dos veces seguidas: el número de nodos (64) y de relaciones (95) no cambia, y las claves de identidad de `MERGE` en el `.cypher` (por `id` en nodos, por `relationship_id` en relaciones) son idénticas entre ejecuciones — re-ejecutar el pipeline **no** produciría duplicados en Neo4j.
+
+### Cómo reproducir
+
+```bash
+cd research/agentic-ai-knowledge-graph
+python3 scripts/extract_document.py
+python3 scripts/build_graph.py
+python3 scripts/validate_pilot.py
+```
+
+### Limitaciones pendientes (no bloqueantes para este piloto de 3 documentos, sí antes de los 114)
+
+1. **Búsqueda de posición de evidencia ingenua**: el detector de `Requirement`/`Constraint` localiza la frase coincidente en el cuerpo original con `body.find(sentence)` (substring simple). Funciona en este piloto pero no está probado contra frases que crucen un salto de línea duro.
+2. **Triggers de `Requirement`/`Constraint` todavía estrechos**: solo 2-4 patrones de alta precisión por tipo (`must be set up`, `not yet generally available`, `unidirectional`, ...). Ampliarlos para el corpus completo requiere revisión deliberada, no ampliación silenciosa.
+3. **`CURATED_FACTS` sigue siendo 100% manual** para las 9 relaciones que requieren juicio semántico (`AUTHENTICATES_WITH`, `CONNECTS_TO`, `EXPOSES`, `CONSUMES_DATA_FROM`, `SUPPORTS_PROTOCOL`, `REQUIRES`, `HAS_USE_CASE`). Solo las relaciones estructurales/genéricas tienen ruta automática.
+4. **Posible redundancia entre requisito genérico y hecho curado**: `HAS_REQUIREMENT doc:76ec36 → Requirement:dcae226f5b` (genérico, a nivel de Documento, auto-detectado) coexiste con `REQUIRES entity:agent-gateway → entity:sap-cloud-identity-services` (curado, a nivel de entidad) para el mismo hecho real de la frase sobre el trust relationship IAS App2App. Ambos son correctos y verbatim; se deja documentado como solapamiento aceptado, no fusionado.

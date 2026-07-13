@@ -74,7 +74,10 @@
     "source_id": { "type": "string" },
     "source_url": { "type": ["string", "null"] },
     "source_file": { "type": "string" },
-    "source_section": { "type": ["string", "null"] },
+    "source_section": {
+      "type": ["string", "null"],
+      "description": "null here always means 'front matter / folder membership, not body text' (the only evidence_type used for Document/ReferenceArchitecture rows). Not applicable to the '__introduction__' convention, which is for body-text evidence only (see entity.schema.json / relationship.schema.json)."
+    },
     "evidence": { "type": "string" },
     "evidence_type": { "type": "string", "enum": ["explicit", "inferred"] },
     "confidence": { "type": "number", "minimum": 0, "maximum": 1 },

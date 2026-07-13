@@ -2,12 +2,13 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "entity.schema.json",
   "title": "Entity node",
-  "description": "One row per extracted entity mention, resolved to a canonical node. Covers all node types except Document/ReferenceArchitecture (document.schema.json) and Source (source.schema.json): SAPProduct, SAPService, Capability, Agent, Protocol, API, DataSource, IdentitySecurity, UseCase, Requirement, Constraint, Diagram, TechnologyDomain.",
+  "description": "One row per canonical entity (deduplicated across all documents it was found in). Covers all node types except Document/ReferenceArchitecture (document.schema.json) and Source (source.schema.json): SAPProduct, SAPService, DeveloperTool, Capability, Agent, Protocol, API, DataSource, IdentitySecurity, UseCase, Requirement, Constraint, Diagram, TechnologyDomain.",
   "type": "object",
   "required": [
     "node_id",
     "type",
     "name",
+    "found_in_documents",
     "source_id",
     "source_url",
     "source_file",
@@ -26,9 +27,9 @@
     "type": {
       "type": "string",
       "enum": [
-        "SAPProduct", "SAPService", "Capability", "Agent", "Protocol", "API",
-        "DataSource", "IdentitySecurity", "UseCase", "Requirement",
-        "Constraint", "Diagram", "TechnologyDomain"
+        "SAPProduct", "SAPService", "DeveloperTool", "Capability", "Agent",
+        "Protocol", "API", "DataSource", "IdentitySecurity", "UseCase",
+        "Requirement", "Constraint", "Diagram", "TechnologyDomain"
       ]
     },
     "name": { "type": "string" },
@@ -45,17 +46,25 @@
         "canonical_lexicon_match",
         "explicit_sentence",
         "drawio_reference",
-        "use_case_bullet"
+        "svg_reference",
+        "use_case_bullet",
+        "requirement_trigger_sentence",
+        "constraint_trigger_sentence"
       ]
     },
-    "found_in_document": {
-      "type": "string",
-      "description": "node_id of the Document this mention was found in, e.g. 'doc:76ec36'."
+    "found_in_documents": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "node_id of every Document this entity was found in (e.g. ['doc:76ec36', 'doc:98efa0']), in first-seen order. A canonical entity is created once and this list grows every time it is re-encountered in another document - it is never overwritten or limited to the first sighting."
     },
     "source_id": { "type": "string" },
     "source_url": { "type": ["string", "null"] },
     "source_file": { "type": "string" },
-    "source_section": { "type": ["string", "null"] },
+    "source_section": {
+      "type": ["string", "null"],
+      "description": "Markdown heading (## ...) the evidence was found under. null is reserved for facts with no body-text location at all (front_matter_tag entities such as TechnologyDomain). Any evidence taken from the document BODY that precedes the first level 2-4 heading must use the literal string '__introduction__' instead of null (see config/ontology.yaml introduction_section_marker)."
+    },
     "evidence": { "type": "string" },
     "evidence_type": { "type": "string", "enum": ["explicit", "inferred"] },
     "confidence": { "type": "number", "minimum": 0, "maximum": 1 },

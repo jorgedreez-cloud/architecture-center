@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "relationship.schema.json",
   "title": "Relationship (edge)",
-  "description": "One row per directed edge between two nodes (Document, ReferenceArchitecture, Entity or Source). No relationship may exist without evidence - this schema makes evidence/evidence_type/confidence mandatory, matching the FASE 2 requirement.",
+  "description": "One row per directed edge between two nodes (Document, ReferenceArchitecture, Entity or Source). No relationship may exist without evidence - this schema makes evidence/evidence_type/confidence mandatory. Rules enforced by scripts/validate_pilot.py (not expressible in JSON Schema alone): evidence_type=explicit requires confidence >= 0.7 and a literal, non-elided quote; evidence_type=inferred requires confidence <= 0.6 AND evidence text that references (by name or clear paraphrase) both the from-node and the to-node - a relationship whose evidence only describes one side must be removed, not marked inferred.",
   "type": "object",
   "required": [
     "relationship_id",
@@ -30,7 +30,8 @@
         "PART_OF", "USES", "CONNECTS_TO", "REQUIRES", "DEPENDS_ON",
         "EXPOSES", "CONSUMES_DATA_FROM", "AUTHENTICATES_WITH", "EXTENDS",
         "SUPPORTS_PROTOCOL", "DOCUMENTED_BY", "HAS_SOURCE", "HAS_DIAGRAM",
-        "HAS_USE_CASE", "BELONGS_TO_DOMAIN", "MENTIONS"
+        "HAS_USE_CASE", "BELONGS_TO_DOMAIN", "HAS_REQUIREMENT",
+        "HAS_CONSTRAINT", "MENTIONS"
       ]
     },
     "from_id": { "type": "string", "description": "node_id of the source node." },
@@ -40,10 +41,13 @@
     "source_id": { "type": "string" },
     "source_url": { "type": ["string", "null"] },
     "source_file": { "type": "string" },
-    "source_section": { "type": ["string", "null"] },
+    "source_section": {
+      "type": ["string", "null"],
+      "description": "Markdown heading the evidence was found under. null is reserved for facts with no body-text location at all (front matter tags, folder membership). Any evidence taken from the document BODY that precedes the first level 2-4 heading must use the literal string '__introduction__' instead of null."
+    },
     "evidence": {
       "type": "string",
-      "description": "Verbatim quoted text that justifies this specific relationship. Mandatory and non-empty."
+      "description": "Verbatim quoted text that justifies this specific relationship. Mandatory, non-empty, and literal - MUST NOT contain an ellipsis ('...') or any other elision of the source text. If a single sentence is too long, quote the whole sentence rather than truncating it."
     },
     "evidence_type": { "type": "string", "enum": ["explicit", "inferred"] },
     "confidence": { "type": "number", "minimum": 0, "maximum": 1 },

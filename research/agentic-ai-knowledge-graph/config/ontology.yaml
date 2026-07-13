@@ -10,8 +10,22 @@
 node_types:
   - Document              # a single markdown file (RA root or subpage)
   - ReferenceArchitecture # one per RA folder (RA0001-RA0031), groups its Documents
-  - SAPProduct
-  - SAPService
+  - SAPProduct            # branded offering/suite that may bundle several services,
+                          # e.g. SAP S/4HANA, SAP Build, SAP Business Data Cloud,
+                          # SAP Datasphere. Test: "is this a marketed product/suite
+                          # name a customer buys, that may itself contain services?"
+  - SAPService            # an individually provisionable/consumable capability with
+                          # its own runtime, e.g. SAP HANA Cloud, SAP AI Core,
+                          # SAP Build Process Automation, Generative AI Hub. Test:
+                          # "can a customer provision/consume this on its own via
+                          # BTP Cockpit / Discovery Center, independent of a parent
+                          # product bundle?"
+  - DeveloperTool         # SDK, CLI, library or other build/development-time tool
+                          # with no independently provisioned runtime of its own,
+                          # e.g. SAP Cloud SDK for AI. Test: "is this something a
+                          # developer installs/imports to write code against other
+                          # services, rather than a service or product a customer
+                          # provisions?"
   - Capability
   - Agent
   - Protocol
@@ -19,11 +33,19 @@ node_types:
   - DataSource
   - IdentitySecurity
   - UseCase
-  - Requirement
-  - Constraint
+  - Requirement           # one atomic prerequisite fact - never bundle more than
+                          # one "must/needs/requires" claim per node (see FASE 2
+                          # notes in notes/findings.md)
+  - Constraint            # one atomic limitation fact - same atomicity rule as
+                          # Requirement
   - Diagram
   - Source               # external reference (SAP Help, GitHub, YouTube, ...)
-  - TechnologyDomain      # derived from front matter `tags` (genai, data, appdev, integration, opsec)
+  - TechnologyDomain      # derived from front matter `tags`, but ONLY from this
+                          # closed vocabulary: genai, data, appdev, integration,
+                          # opsec. Any other tag (cloud-provider compatibility tags
+                          # like aws/gcp/azure/ibm, framework tags like cap/build,
+                          # etc.) is NOT promoted to a TechnologyDomain node - it
+                          # stays only in the Document row's `tags` array.
 
 relationship_types:
   - PART_OF               # Document PART_OF ReferenceArchitecture
@@ -41,7 +63,22 @@ relationship_types:
   - HAS_DIAGRAM           # Document HAS_DIAGRAM Diagram
   - HAS_USE_CASE          # ReferenceArchitecture HAS_USE_CASE UseCase
   - BELONGS_TO_DOMAIN     # Document/ReferenceArchitecture BELONGS_TO_DOMAIN TechnologyDomain
-  - MENTIONS              # generic, low-confidence: Document MENTIONS Entity
+  - HAS_REQUIREMENT       # Document/ReferenceArchitecture/SAPProduct/SAPService
+                          # HAS_REQUIREMENT Requirement - "this document/architecture/
+                          # product/service has a requirement". from_type is
+                          # whichever of those four node types the requirement is
+                          # most specifically about; default to Document when no
+                          # more specific entity is confidently identifiable.
+  - HAS_CONSTRAINT        # Document/ReferenceArchitecture/SAPProduct/SAPService
+                          # HAS_CONSTRAINT Constraint - "this document/architecture/
+                          # product/service has a constraint/limitation". Same
+                          # from_type rule as HAS_REQUIREMENT.
+  - MENTIONS              # generic, low-confidence: Document MENTIONS Entity.
+                          # Reserved for substantive mentions in the document's own
+                          # prose body. MUST NOT be created from: markdown link
+                          # anchor text alone, or from text located in a "Resources"
+                          # or "Examples"/"Examples in an SAP context" section (see
+                          # scripts/extract_document.py SECONDARY_SECTION_HEADINGS).
 
 # evidence_type is mandatory on every node and relationship record:
 #   explicit  - directly asserted by the source (literal named mention, a
@@ -56,14 +93,48 @@ relationship_types:
 # confidence is a float in [0,1]. explicit facts default to 0.9-1.0,
 # inferred facts must be <= 0.6.
 
-# Canonical entity registry: maps text aliases (lowercased, matched as
-# substrings) to a single canonical entity so the same real-world thing
-# mentioned in different documents/wordings collapses to one node.
+# Machine-readable configuration consumed by scripts/extract_document.py.
+# Kept here (not hardcoded in the script) so the closed vocabulary/section
+# rules stay next to the node/relationship types they constrain.
+
+# Only these front-matter tag values may become a TechnologyDomain node.
+technology_domain_allowed_tags:
+  - genai
+  - data
+  - appdev
+  - integration
+  - opsec
+
+# Section headings (case-insensitive, markdown bold/italic markers ignored)
+# whose content is excluded from MENTIONS substantive-match scanning:
+# supplementary reading / example-scenario sections, not primary
+# architecture content. "Services and Components" is intentionally NOT
+# listed here - it is the primary "this RA uses X" declaration.
+secondary_section_headings:
+  - resources
+  - examples
+  - examples in an sap context
+
+# Convention for source_section when the evidence text appears before the
+# document's first level 2-4 heading (front matter / lead-in paragraphs).
+introduction_section_marker: "__introduction__"
+
+# Canonical entity registry: maps text aliases (lowercased, matched with
+# word boundaries - see extract_document.py find_substantive_alias_match)
+# to a single canonical entity so the same real-world thing mentioned in
+# different documents/wordings collapses to one node. Aliases are only
+# ever added for a clear, literal equivalence actually observed in the
+# corpus (e.g. "AI Core" as the bare form of "SAP AI Core") - never
+# invented speculatively.
 canonical_entities:
   - canonical_id: sap-btp
     canonical_name: "SAP Business Technology Platform (BTP)"
     type: SAPService
-    aliases: ["sap btp", "business technology platform"]
+    # "btp" added deliberately: it is the standard bare short form used
+    # throughout this corpus (e.g. "custom agents on SAP BTP", "BTP Cloud
+    # Foundry"). Matched only with word boundaries (see extract_document.py
+    # find_substantive_alias_match) so it cannot hit inside longer words.
+    aliases: ["sap btp", "business technology platform", "btp"]
 
   - canonical_id: joule
     canonical_name: "Joule"
@@ -104,7 +175,10 @@ canonical_entities:
   - canonical_id: sap-ai-core
     canonical_name: "SAP AI Core"
     type: SAPService
-    aliases: ["sap ai core"]
+    # "ai core" added deliberately: the corpus frequently drops the "SAP"
+    # prefix after first mention (e.g. RA0024 Flow step 4: "AI Core plays a
+    # crucial role..."). Matched only with word boundaries.
+    aliases: ["sap ai core", "ai core"]
 
   - canonical_id: generative-ai-hub
     canonical_name: "Generative AI Hub"
@@ -113,7 +187,13 @@ canonical_entities:
 
   - canonical_id: sap-cloud-sdk-for-ai
     canonical_name: "SAP Cloud SDK for AI"
-    type: SAPService
+    # Reclassified from SAPService to DeveloperTool: it is a client-side SDK
+    # imported into pro-code agent projects (Python/TypeScript), with no
+    # independently provisioned runtime of its own - it does not appear in
+    # BTP Cockpit/Discovery Center as a provisionable service the way SAP AI
+    # Core or SAP HANA Cloud do. See node_types comment in this file for the
+    # SAPProduct/SAPService/DeveloperTool decision rule.
+    type: DeveloperTool
     aliases: ["sap cloud sdk for ai"]
 
   - canonical_id: sap-cloud-identity-services
