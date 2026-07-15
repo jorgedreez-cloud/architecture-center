@@ -1,0 +1,13 @@
+# Manifest for the first agentic-ai-knowledge-graph pilot extraction (the
+# original 3-document FASE 6 pilot: /ref-arch/ff07b1, RA0029 root,
+# RA0029/1-a2a-and-mcp). This is the default --manifest for
+# scripts/extract_document.py, so running the script with no arguments
+# reproduces the pilot 1 behavior exactly.
+#
+# This file is the single source of truth for the pilot 1 document set -
+# it is not duplicated as a Python constant anywhere in scripts/.
+
+documents:
+  - docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md  # /ref-arch/ff07b1
+  - docs/ref-arch/RA0029/readme.md                                    # RA0029 root
+  - docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md                      # RA0029 subpage

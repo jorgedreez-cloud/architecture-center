@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Validation gate for data/pilot/*. Read-only: never modifies any file.
-Exits with status 1 if any CRITICAL check fails, 0 otherwise (WARNINGs do
-not fail the run but are always printed).
+Validation gate for a pilot output directory (default: data/pilot). Read-
+only: never modifies any file. Exits with status 1 if any CRITICAL check
+fails, 0 otherwise (WARNINGs do not fail the run but are always printed).
 
 Checks implemented (see notes/findings.md FASE 5 / user FASE 5 request):
   1. Every JSONL row validates against its schemas/*.schema.json.
@@ -16,8 +16,10 @@ Checks implemented (see notes/findings.md FASE 5 / user FASE 5 request):
   6. Every relationship has a non-empty, literal `evidence` string.
   7. evidence_type=explicit rows: evidence must not contain an ellipsis
      ("...") and must appear verbatim (modulo markdown bold/italic
-     markers) in the cited source_file, when that file is one of the 3
-     pilot documents on disk.
+     markers) in the cited source_file, for every distinct source_file
+     referenced by the loaded documents/entities/sources/relationships
+     that exists on disk (not a fixed list - this generalizes to whatever
+     document set the pilot's manifest covered).
   8. evidence_type=inferred rows: confidence must be <= 0.6, AND the
      evidence text must reference both endpoints of the relationship
      (checked heuristically against each endpoint node's `name`).
@@ -32,18 +34,32 @@ Checks implemented (see notes/findings.md FASE 5 / user FASE 5 request):
 
 Usage:
     python3 scripts/validate_pilot.py
+    python3 scripts/validate_pilot.py --input-dir data/pilot2
 """
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import re
 import sys
 
+from path_safety import PathSecurityError, resolve_within, validate_ra_document_path
+
 RESEARCH_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 REPO_ROOT = os.path.abspath(os.path.join(RESEARCH_ROOT, "..", ".."))
-PILOT_DIR = os.path.join(RESEARCH_ROOT, "data", "pilot")
+DEFAULT_DIR = "data/pilot"
 SCHEMAS_DIR = os.path.join(RESEARCH_ROOT, "schemas")
+DATA_ROOT = os.path.join(RESEARCH_ROOT, "data")
+
+
+def resolve_input_dir(raw: str) -> str:
+    """Validate --input-dir: must resolve inside data/, must already exist
+    as a directory. See audit finding F3."""
+    return resolve_within(
+        raw, base_dir=RESEARCH_ROOT, allowed_root=DATA_ROOT,
+        must_exist=True, must_be_dir=True, label="--input-dir",
+    )
 
 try:
     import jsonschema
@@ -187,18 +203,41 @@ def check_entities_have_source(report: Report, entities):
 # ---------------------------------------------------------------------------
 # 6/7/8. Evidence checks
 # ---------------------------------------------------------------------------
-def load_source_bodies() -> dict[str, str]:
+def collect_source_files(*row_lists: list[dict]) -> set[str]:
+    """Every distinct source_file referenced by any loaded row - not a
+    fixed document list, so this generalizes to whatever manifest the
+    pilot run under validation actually covered."""
+    files: set[str] = set()
+    for rows in row_lists:
+        for row in rows:
+            sf = row.get("source_file")
+            if sf:
+                files.add(sf)
+    return files
+
+
+def load_source_bodies(source_files: set[str]) -> tuple[dict[str, str], list[str]]:
+    """Returns (bodies, rejected). Only source_file values that resolve
+    (after collapsing ../ and symlinks) inside REPO_ROOT, under
+    docs/ref-arch/, ending in .md, are opened - see audit finding F3.
+    Anything else is skipped (its verbatim-evidence check is skipped, same
+    as the pre-existing "file not found on disk" behavior) and reported
+    back so main() can surface it as a WARNING."""
     bodies = {}
-    for rel_path in (
-        "docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md",
-        "docs/ref-arch/RA0029/readme.md",
-        "docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md",
-    ):
-        abs_path = os.path.join(REPO_ROOT, rel_path)
-        if os.path.isfile(abs_path):
-            with open(abs_path, encoding="utf-8") as f:
-                bodies[rel_path] = f.read()
-    return bodies
+    rejected = []
+    for rel_path in source_files:
+        try:
+            real = resolve_within(
+                rel_path, base_dir=REPO_ROOT, allowed_root=REPO_ROOT,
+                must_exist=True, must_be_file=True, label="source_file",
+            )
+            validate_ra_document_path(real, REPO_ROOT, label="source_file")
+        except PathSecurityError:
+            rejected.append(rel_path)
+            continue
+        with open(real, encoding="utf-8") as f:
+            bodies[rel_path] = f.read()
+    return bodies, rejected
 
 
 # Structural relationship types whose "evidence" is a synthesized
@@ -285,13 +324,13 @@ def check_atomic_requirements_constraints(report: Report, entities):
 # ---------------------------------------------------------------------------
 # 11. Count parity across JSONL / JSON / GraphML / Cypher
 # ---------------------------------------------------------------------------
-def check_count_parity(report: Report, documents, entities, sources, relationships):
+def check_count_parity(report: Report, documents, entities, sources, relationships, input_dir: str):
     jsonl_node_count = len(documents) + len(entities) + len(sources)
     jsonl_edge_count = len(relationships)
 
-    json_path = os.path.join(PILOT_DIR, "knowledge_graph.json")
-    graphml_path = os.path.join(PILOT_DIR, "knowledge_graph.graphml")
-    cypher_path = os.path.join(PILOT_DIR, "knowledge_graph.cypher")
+    json_path = os.path.join(input_dir, "knowledge_graph.json")
+    graphml_path = os.path.join(input_dir, "knowledge_graph.graphml")
+    cypher_path = os.path.join(input_dir, "knowledge_graph.cypher")
 
     if os.path.isfile(json_path):
         with open(json_path, encoding="utf-8") as f:
@@ -333,19 +372,37 @@ def check_count_parity(report: Report, documents, entities, sources, relationshi
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--input-dir", default=DEFAULT_DIR,
+                         help=f"directory to read *.jsonl and knowledge_graph.* from (default: {DEFAULT_DIR})")
+    args = parser.parse_args()
+
+    try:
+        input_dir = resolve_input_dir(args.input_dir)
+    except PathSecurityError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        sys.exit(2)
+
     report = Report()
 
-    documents = read_jsonl(os.path.join(PILOT_DIR, "documents.jsonl"))
-    entities = read_jsonl(os.path.join(PILOT_DIR, "entities.jsonl"))
-    sources = read_jsonl(os.path.join(PILOT_DIR, "sources.jsonl"))
-    relationships = read_jsonl(os.path.join(PILOT_DIR, "relationships.jsonl"))
+    documents = read_jsonl(os.path.join(input_dir, "documents.jsonl"))
+    entities = read_jsonl(os.path.join(input_dir, "entities.jsonl"))
+    sources = read_jsonl(os.path.join(input_dir, "sources.jsonl"))
+    relationships = read_jsonl(os.path.join(input_dir, "relationships.jsonl"))
 
     ontology = load_yaml(os.path.join(RESEARCH_ROOT, "config", "ontology.yaml"))
     allowed_tags = set(ontology["technology_domain_allowed_tags"])
 
     entity_by_id = {e["node_id"]: e for e in entities}
     doc_by_id = {d["node_id"]: d for d in documents}
-    source_bodies = load_source_bodies()
+    source_files = collect_source_files(documents, entities, sources, relationships)
+    source_bodies, rejected_source_files = load_source_bodies(source_files)
+    for rel_path in rejected_source_files:
+        report.warn(
+            f"[unsafe-source-file] source_file rejected by path validation "
+            f"(outside docs/ref-arch/ or outside the repository); "
+            f"verbatim-evidence check skipped: {rel_path!r}"
+        )
 
     check_schemas(report, documents, entities, sources, relationships)
     known_ids = check_duplicate_ids(report, documents, entities, sources, relationships)
@@ -355,7 +412,7 @@ def main():
     check_relationship_evidence(report, relationships, entity_by_id, doc_by_id, source_bodies)
     check_technology_domain_catalog(report, entities, allowed_tags)
     check_atomic_requirements_constraints(report, entities)
-    check_count_parity(report, documents, entities, sources, relationships)
+    check_count_parity(report, documents, entities, sources, relationships, input_dir)
 
     print(f"documents={len(documents)} entities={len(entities)} sources={len(sources)} relationships={len(relationships)}")
     print()

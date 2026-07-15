@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Deep, evidence-anchored extraction for a small, explicit list of documents
-(the FASE 6 pilot: /ref-arch/ff07b1, RA0029 root, RA0029/1-a2a-and-mcp).
+Deep, evidence-anchored extraction for a document list read from a YAML
+manifest (see config/pilots/*.yaml). Defaults to config/pilots/pilot1.yaml,
+the original 3-document FASE 6 pilot (/ref-arch/ff07b1, RA0029 root,
+RA0029/1-a2a-and-mcp).
 
 For each document this script produces, in memory, rows for:
   - documents.jsonl   (Document + ReferenceArchitecture nodes)
@@ -50,11 +52,18 @@ which one produced it:
      target node and/or the from-entity is split out and made more
      specific/granular. Nothing is invented; see notes/findings.md.
 
+The document list is read from a YAML manifest (see config/pilots/*.yaml,
+key `documents:` - a list of repo-root-relative paths). The manifest is the
+single source of truth for which documents a given pilot run covers; it is
+never duplicated as a Python constant.
+
 Usage:
     python3 scripts/extract_document.py
+    python3 scripts/extract_document.py --manifest config/pilots/pilot2.yaml --output-dir data/pilot2
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import os
@@ -66,17 +75,76 @@ from urllib.parse import urlparse
 
 import yaml
 
+from path_safety import (
+    PathSecurityError,
+    resolve_within,
+    validate_manifest_extension,
+    validate_ra_document_path,
+)
+
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 RESEARCH_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 SITE_URL = "https://architecture.learning.sap.com"
 FRONT_MATTER_RE = re.compile(r"^---\n(.*?\n)---\n", re.DOTALL)
 INTRODUCTION_MARKER = "__introduction__"
 
-PILOT_DOCS = [
-    "docs/ref-arch/RA0024/3-extend-joule-with-joule-studio/readme.md",  # /ref-arch/ff07b1
-    "docs/ref-arch/RA0029/readme.md",                                    # RA0029 root
-    "docs/ref-arch/RA0029/1-a2a-and-mcp/readme.md",                      # RA0029 subpage
-]
+DEFAULT_MANIFEST = "config/pilots/pilot1.yaml"
+DEFAULT_OUTPUT_DIR = "data/pilot"
+
+
+def resolve_manifest_path(raw: str) -> str:
+    """Validate --manifest: must resolve inside config/pilots/, must exist
+    as a regular .yaml/.yml file. See audit finding F1."""
+    allowed_root = os.path.join(RESEARCH_ROOT, "config", "pilots")
+    real = resolve_within(
+        raw, base_dir=RESEARCH_ROOT, allowed_root=allowed_root,
+        must_exist=True, must_be_file=True, label="--manifest",
+    )
+    validate_manifest_extension(real, label="--manifest")
+    return real
+
+
+def resolve_document_path(rel_path: str) -> str:
+    """Validate one manifest `documents:` entry: must be a relative path,
+    must resolve (after collapsing ../ and symlinks) inside REPO_ROOT, must
+    live under docs/ref-arch/, must end in .md, must exist as a regular
+    file. See audit finding F1."""
+    if os.path.isabs(rel_path):
+        raise PathSecurityError("manifest document entry must be a relative path")
+    real = resolve_within(
+        rel_path, base_dir=REPO_ROOT, allowed_root=REPO_ROOT,
+        must_exist=True, must_be_file=True, label="manifest document entry",
+    )
+    validate_ra_document_path(real, REPO_ROOT, label="manifest document entry")
+    return real
+
+
+def resolve_output_dir(raw: str, manifest_real_path: str, allow_pilot1_overwrite: bool) -> str:
+    """Validate --output-dir: must resolve inside data/, must not be an
+    existing file, and must not target data/pilot/ unless the manifest is
+    pilot1.yaml or --allow-pilot1-overwrite was passed explicitly. See
+    audit finding F2."""
+    allowed_root = os.path.join(RESEARCH_ROOT, "data")
+    real = resolve_within(raw, base_dir=RESEARCH_ROOT, allowed_root=allowed_root, label="--output-dir")
+    if os.path.isfile(real):
+        raise PathSecurityError("--output-dir must not resolve to an existing file")
+
+    pilot1_dir_real = os.path.realpath(os.path.join(RESEARCH_ROOT, "data", "pilot"))
+    manifest_is_pilot1 = os.path.basename(manifest_real_path) == "pilot1.yaml"
+    if real == pilot1_dir_real and not manifest_is_pilot1 and not allow_pilot1_overwrite:
+        raise PathSecurityError(
+            "--output-dir data/pilot is reserved for config/pilots/pilot1.yaml; "
+            "pass --allow-pilot1-overwrite to target it with a different manifest"
+        )
+    return real
+
+
+def load_manifest(path: str) -> list[str]:
+    manifest = load_yaml(path)
+    docs = manifest.get("documents") or []
+    if not docs:
+        raise ValueError(f"manifest {path} has no `documents` entries")
+    return docs
 
 
 def repo_commit() -> str:
@@ -302,6 +370,8 @@ class Extractor:
         self._ra_nodes_seen: set[str] = set()
         self._entity_rows_by_id: dict[str, dict] = {}
         self._source_nodes_seen: dict[str, str] = {}  # url -> node_id
+        self._relationships_by_id: dict[str, dict] = {}
+        self._duplicate_relationships_consolidated = 0
 
     # ---------- shared provenance helper ----------
     def _prov(self, source_file, source_section, source_url, evidence, evidence_type, confidence):
@@ -317,6 +387,28 @@ class Extractor:
             "extraction_date": self.extraction_date,
         }
 
+    def _is_canonical_citation_section(self, section) -> bool:
+        return bool(section) and section.lower() in self.secondary_headings
+
+    def _prefer_evidence(self, current: dict, candidate: dict) -> bool:
+        """True if `candidate`'s evidence/section/evidence_type/confidence
+        should replace `current`'s when the same relationship (identical
+        from_id/type/to_id/source_file, i.e. identical relationship_id) is
+        observed a second time in the same document with different quoted
+        text - e.g. the same source URL linked once in prose and again in
+        a 'Resources' list. Prefers the occurrence quoted from the
+        document's canonical citation/example section (config/ontology.yaml
+        secondary_section_headings, e.g. 'Resources') over an incidental
+        inline mention, since that section is the deliberate citation of
+        the fact rather than a passing reference. Falls back to the longer
+        quoted text when neither or both occurrences are from such a
+        section - a purely lexical, content-agnostic tiebreaker."""
+        current_canonical = self._is_canonical_citation_section(current["source_section"])
+        candidate_canonical = self._is_canonical_citation_section(candidate["source_section"])
+        if candidate_canonical != current_canonical:
+            return candidate_canonical
+        return len(candidate["evidence"]) > len(current["evidence"])
+
     def add_relationship(self, rel_type, from_id, to_id, from_type, to_type,
                           source_file, source_section, source_url, evidence,
                           evidence_type, confidence):
@@ -330,7 +422,22 @@ class Extractor:
             "to_type": to_type,
             **self._prov(source_file, source_section, source_url, evidence, evidence_type, confidence),
         }
-        self.relationships.append(row)
+        existing = self._relationships_by_id.get(rid)
+        if existing is None:
+            self.relationships.append(row)
+            self._relationships_by_id[rid] = row
+            return
+
+        # Same relationship_id seen again in the same document: not a second
+        # semantic fact (identical from/type/to/source_file), just a repeat
+        # citation/mention. Consolidate into the single existing row instead
+        # of appending a duplicate.
+        self._duplicate_relationships_consolidated += 1
+        if row["evidence"] != existing["evidence"] and self._prefer_evidence(existing, row):
+            existing["evidence"] = row["evidence"]
+            existing["source_section"] = row["source_section"]
+            existing["evidence_type"] = row["evidence_type"]
+            existing["confidence"] = row["confidence"]
 
     def get_or_create_entity(self, node_id, type_, name, doc_node_id, canonical_id,
                               extraction_method, rel_path, section, doc_url,
@@ -357,8 +464,8 @@ class Extractor:
 
     # ---------- automatic / deterministic extraction ----------
     def process_document(self, rel_path: str):
-        abs_path = os.path.join(REPO_ROOT, rel_path)
-        with open(abs_path, encoding="utf-8") as f:
+        real_abs_path = resolve_document_path(rel_path)
+        with open(real_abs_path, encoding="utf-8") as f:
             raw = f.read()
         fm, body = parse_front_matter(raw)
         body_lower = body.lower()
@@ -571,14 +678,17 @@ class Extractor:
                 rel_path, section, doc_url, fact["evidence"], fact["evidence_type"], fact["confidence"],
             )
 
-    def run(self):
-        for rel_path in PILOT_DOCS:
+    def run(self, doc_list: list[str]):
+        for rel_path in doc_list:
             doc_node_id, ra_node_id, fm, body, rel_path, doc_url = self.process_document(rel_path)
             self.apply_curated_facts(doc_node_id, ra_node_id, rel_path, doc_url, body)
 
-    def write(self):
-        out_dir = os.path.join(RESEARCH_ROOT, "data", "pilot")
+    def write(self, out_dir: str):
+        print(f"Consolidated {self._duplicate_relationships_consolidated} duplicate relationship(s) "
+              f"into their single existing row (same from_id/type/to_id/source_file).")
         os.makedirs(out_dir, exist_ok=True)
+        if os.path.realpath(out_dir) != out_dir:
+            raise PathSecurityError("--output-dir changed after creation (possible symlink race); aborting")
 
         def dump(name, rows):
             path = os.path.join(out_dir, name)
@@ -733,7 +843,28 @@ CURATED_FACTS = {
 }
 
 
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--manifest", default=DEFAULT_MANIFEST,
+                         help=f"YAML manifest with a `documents:` list (default: {DEFAULT_MANIFEST})")
+    parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR,
+                         help=f"directory to write *.jsonl into (default: {DEFAULT_OUTPUT_DIR})")
+    parser.add_argument("--allow-pilot1-overwrite", action="store_true",
+                         help="required to target --output-dir data/pilot with a manifest other than pilot1.yaml")
+    args = parser.parse_args()
+
+    try:
+        manifest_real = resolve_manifest_path(args.manifest)
+        doc_list = load_manifest(manifest_real)
+        output_dir_real = resolve_output_dir(args.output_dir, manifest_real, args.allow_pilot1_overwrite)
+
+        ex = Extractor()
+        ex.run(doc_list)
+        ex.write(output_dir_real)
+    except PathSecurityError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        sys.exit(2)
+
+
 if __name__ == "__main__":
-    ex = Extractor()
-    ex.run()
-    ex.write()
+    main()

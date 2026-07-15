@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """
-Merge data/pilot/{documents,entities,sources,relationships}.jsonl into a
-single consolidated graph and export it three ways:
+Merge {documents,entities,sources,relationships}.jsonl from an input
+directory into a single consolidated graph and export it three ways, into
+an output directory:
 
-  data/pilot/knowledge_graph.json     - {"nodes": [...], "edges": [...]}
-  data/pilot/knowledge_graph.graphml  - GraphML (Gephi, yEd, ...)
-  data/pilot/knowledge_graph.cypher   - Cypher MERGE statements for Neo4j
+  knowledge_graph.json     - {"nodes": [...], "edges": [...]}
+  knowledge_graph.graphml  - GraphML (Gephi, yEd, ...)
+  knowledge_graph.cypher   - Cypher MERGE statements for Neo4j
+
+Both directories default to data/pilot (the original pilot 1 output),
+preserving pre-refactor behavior when run with no arguments.
 
 external_links.jsonl is NOT merged into the graph - it is a raw inventory
 artifact (one row per link occurrence, unresolved), kept separate from
@@ -23,20 +27,45 @@ instead of duplicating anything.
 
 Usage:
     python3 scripts/build_graph.py
+    python3 scripts/build_graph.py --input-dir data/pilot2 --output-dir data/pilot2
 """
 from __future__ import annotations
 
+import argparse
 import json
 import os
+import sys
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as minidom
 
+from path_safety import PathSecurityError, resolve_within
+
 RESEARCH_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-PILOT_DIR = os.path.join(RESEARCH_ROOT, "data", "pilot")
+DEFAULT_DIR = "data/pilot"
+DATA_ROOT = os.path.join(RESEARCH_ROOT, "data")
 
 
-def read_jsonl(name: str) -> list[dict]:
-    path = os.path.join(PILOT_DIR, name)
+def resolve_input_dir(raw: str) -> str:
+    """Validate --input-dir: must resolve inside data/, must already exist
+    as a directory. See audit findings F1/F2."""
+    return resolve_within(
+        raw, base_dir=RESEARCH_ROOT, allowed_root=DATA_ROOT,
+        must_exist=True, must_be_dir=True, label="--input-dir",
+    )
+
+
+def resolve_output_dir(raw: str) -> str:
+    """Validate --output-dir: must resolve inside data/, must not already
+    be an existing file. May not yet exist as a directory (created later
+    in main())."""
+    real = resolve_within(raw, base_dir=RESEARCH_ROOT, allowed_root=DATA_ROOT, label="--output-dir")
+    if os.path.isfile(real):
+        raise PathSecurityError("--output-dir must not resolve to an existing file")
+    return real
+
+
+def read_jsonl(input_dir: str, name: str) -> list[dict]:
+    path = os.path.join(input_dir, name)
     if not os.path.isfile(path):
         return []
     with open(path, encoding="utf-8") as f:
@@ -54,20 +83,20 @@ def raw_props(row: dict, id_key: str) -> dict:
     return {k: v for k, v in row.items() if k not in (id_key, "type")}
 
 
-def build_nodes() -> list[dict]:
+def build_nodes(input_dir: str) -> list[dict]:
     nodes = []
-    for row in read_jsonl("documents.jsonl"):
+    for row in read_jsonl(input_dir, "documents.jsonl"):
         nodes.append({"id": row["node_id"], "type": row["type"], "props": raw_props(row, "node_id")})
-    for row in read_jsonl("entities.jsonl"):
+    for row in read_jsonl(input_dir, "entities.jsonl"):
         nodes.append({"id": row["node_id"], "type": row["type"], "props": raw_props(row, "node_id")})
-    for row in read_jsonl("sources.jsonl"):
+    for row in read_jsonl(input_dir, "sources.jsonl"):
         nodes.append({"id": row["source_id"], "type": "Source", "props": raw_props(row, "source_id")})
     return nodes
 
 
-def build_edges() -> list[dict]:
+def build_edges(input_dir: str) -> list[dict]:
     edges = []
-    for row in read_jsonl("relationships.jsonl"):
+    for row in read_jsonl(input_dir, "relationships.jsonl"):
         edges.append({
             "id": row["relationship_id"],
             "type": row["type"],
@@ -78,8 +107,8 @@ def build_edges() -> list[dict]:
     return edges
 
 
-def write_json(nodes, edges):
-    out_path = os.path.join(PILOT_DIR, "knowledge_graph.json")
+def write_json(output_dir: str, nodes, edges):
+    out_path = os.path.join(output_dir, "knowledge_graph.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump({"nodes": nodes, "edges": edges}, f, indent=2, ensure_ascii=False, default=str)
     print(f"Wrote {out_path} ({len(nodes)} nodes, {len(edges)} edges)")
@@ -127,7 +156,7 @@ def compute_key_types(items: list[dict]) -> dict[str, str]:
     return types
 
 
-def write_graphml(nodes, edges):
+def write_graphml(output_dir: str, nodes, edges):
     ns = "http://graphml.graphdrawing.org/xmlns"
     ET.register_namespace("", ns)
     root = ET.Element(f"{{{ns}}}graphml")
@@ -173,7 +202,7 @@ def write_graphml(nodes, edges):
 
     raw = ET.tostring(root, encoding="unicode")
     pretty = minidom.parseString(raw).toprettyxml(indent="  ")
-    out_path = os.path.join(PILOT_DIR, "knowledge_graph.graphml")
+    out_path = os.path.join(output_dir, "knowledge_graph.graphml")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(pretty)
     print(f"Wrote {out_path}")
@@ -202,7 +231,7 @@ def cypher_literal(v) -> str:
     return "'" + cypher_escape_string(str(v)) + "'"
 
 
-def write_cypher(nodes, edges):
+def write_cypher(output_dir: str, nodes, edges):
     lines = [
         "// Auto-generated by scripts/build_graph.py - pilot data only.",
         "// Idempotent: nodes MERGE on `id` alone; relationships MERGE on",
@@ -224,27 +253,45 @@ def write_cypher(nodes, edges):
         )
         lines.append(f"{match_clause} SET r += {{{set_str}}};" if set_str else f"{match_clause};")
 
-    out_path = os.path.join(PILOT_DIR, "knowledge_graph.cypher")
+    out_path = os.path.join(output_dir, "knowledge_graph.cypher")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
     print(f"Wrote {out_path}")
 
 
 def main():
-    nodes = build_nodes()
-    edges = build_edges()
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--input-dir", default=DEFAULT_DIR,
+                         help=f"directory to read *.jsonl from (default: {DEFAULT_DIR})")
+    parser.add_argument("--output-dir", default=DEFAULT_DIR,
+                         help=f"directory to write knowledge_graph.* into (default: {DEFAULT_DIR})")
+    args = parser.parse_args()
 
-    # sanity check: every edge endpoint must resolve to a known node id
-    node_ids = {n["id"] for n in nodes}
-    dangling = [e for e in edges if e["source"] not in node_ids or e["target"] not in node_ids]
-    if dangling:
-        print(f"WARNING: {len(dangling)} relationship(s) reference an unknown node id:")
-        for e in dangling:
-            print(f"  {e['id']}: {e['source']} -> {e['target']}")
+    try:
+        input_dir = resolve_input_dir(args.input_dir)
+        output_dir = resolve_output_dir(args.output_dir)
 
-    write_json(nodes, edges)
-    write_graphml(nodes, edges)
-    write_cypher(nodes, edges)
+        os.makedirs(output_dir, exist_ok=True)
+        if os.path.realpath(output_dir) != output_dir:
+            raise PathSecurityError("--output-dir changed after creation (possible symlink race); aborting")
+
+        nodes = build_nodes(input_dir)
+        edges = build_edges(input_dir)
+
+        # sanity check: every edge endpoint must resolve to a known node id
+        node_ids = {n["id"] for n in nodes}
+        dangling = [e for e in edges if e["source"] not in node_ids or e["target"] not in node_ids]
+        if dangling:
+            print(f"WARNING: {len(dangling)} relationship(s) reference an unknown node id:")
+            for e in dangling:
+                print(f"  {e['id']}: {e['source']} -> {e['target']}")
+
+        write_json(output_dir, nodes, edges)
+        write_graphml(output_dir, nodes, edges)
+        write_cypher(output_dir, nodes, edges)
+    except PathSecurityError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        sys.exit(2)
 
 
 if __name__ == "__main__":

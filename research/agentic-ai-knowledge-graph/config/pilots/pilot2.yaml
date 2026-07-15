@@ -1,0 +1,21 @@
+# Manifest for the second agentic-ai-knowledge-graph pilot extraction (8
+# documents, approved to diversify coverage beyond pilot 1: Joule +
+# S/4HANA, Joule IAM, pro-code agents, agent identity, BDC identity,
+# SAP Datasphere, SAP HANA Cloud, API Managed Integration).
+#
+# Run with:
+#   python3 scripts/extract_document.py --manifest config/pilots/pilot2.yaml --output-dir data/pilot2
+#
+# No CURATED_FACTS have been prepared for these 8 documents on purpose:
+# this run measures how far the automatic/deterministic extraction layer
+# generalizes without manual curation (see notes/findings.md).
+
+documents:
+  - docs/ref-arch/RA0024/1-joule-for-sap-s4-hana/readme.md
+  - docs/ref-arch/RA0024/2-joule-iam/readme.md
+  - docs/ref-arch/RA0029/3-pro-code-ai-agents/readme.md
+  - docs/ref-arch/RA0029/8-ai-agent-identity/readme.md
+  - docs/ref-arch/RA0013/6-cloud-identity-services-bdc/readme.md
+  - docs/ref-arch/RA0003/readme.md
+  - docs/ref-arch/RA0012/readme.md
+  - docs/ref-arch/RA0022/readme.md
